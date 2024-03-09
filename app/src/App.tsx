@@ -5,6 +5,7 @@ import Sidebar from './components/Sidebar';
 import Home from "./pages/Home"
 import Companies from './pages/Companies';
 import Conferences from './pages/Conferences';
+import Education from './pages/Education';
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/companies" element={<Companies />} />
           <Route path="/conferences" element={<Conferences />} />
+          <Route path="/education" element={<Education />} />
         </Routes>
       </Router>
     </>
