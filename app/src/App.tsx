@@ -7,6 +7,7 @@ import Companies from './pages/Companies';
 import Conferences from './pages/Conferences';
 import Education from './pages/Education';
 import Certificates from './pages/Certificates';
+import Communities from './pages/Communities';
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
           <Route path="/conferences" element={<Conferences />} />
           <Route path="/education" element={<Education />} />
           <Route path="/certificates" element={<Certificates />} />
+          <Route path="/community" element={<Communities />} />
         </Routes>
       </Router>
     </>
