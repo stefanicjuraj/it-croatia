@@ -1,6 +1,10 @@
+// Hooks
+import { useConference } from '../../hooks/useConference';
+// Icons
 import ticket from '/assets/icons/ticket.svg';
 
 export const TableBody = ({ conferences }: { conferences: Array<object> }) => {
+    const { countdown } = useConference();
 
     return (
         <tbody>
@@ -30,10 +34,14 @@ export const TableBody = ({ conferences }: { conferences: Array<object> }) => {
                     <td className="px-7 py-7 text-md">
                         {(conference as { Location: string }).Location}
                     </td>
-                    <td className="px-7 py-7 text-md">
+                    <td className="px-7 py-7 text-md whitespace-nowrap">
                         {(conference as { startDate: string, endDate: string }).startDate}
                         <br />
                         {(conference as { endDate: string }).endDate}
+                        <br />
+                        <p className="text-[#999] text-sm mt-1">
+                            {countdown((conference as { startDate: string }).startDate)}
+                        </p>
                     </td>
                     <td className="px-10 text-lg py-7">
                         <a className="inline-flex items-center hover:shadow hover:ring-indigo-500 focus:ring-2 focus:outline-none focus:ring-gray-200 rounded-xl"
