@@ -1,4 +1,13 @@
 import { Link } from "react-router-dom";
+// Icons
+import company from "/assets/icons/company.svg";
+import conference from "/assets/icons/conference.svg";
+import internship from "/assets/icons/internship.svg";
+import education from "/assets/icons/education.svg";
+import certificate from "/assets/icons/certificate.svg";
+import podcast from "/assets/icons/podcast.svg";
+import arrow from "/assets/icons/arrow.svg";
+import community from "/assets/icons/community.svg";
 
 export default function Home() {
     return (
@@ -16,84 +25,98 @@ export default function Home() {
                     <Link to="/companies">
                         <div className="bg-[#222] sm:mb-0 mb-8 px-6 py-6 rounded-xl hover:ring-1 hover:ring-indigo-300 animation glow delay-2">
                             <div className="flex justify-center items-center mb-4 w-16 h-16 rounded-full bg-[#111]">
+                                <img src={company} alt="Company icon" className="w-8 h-8" />
                             </div>
                             <h1 className="mb-4 text-2xl font-bold">Companies</h1>
                             <p className="text-gray-300">
                                 View companies conducting business operations, providing services, or offering consultancy in Croatia.
                             </p>
                             <div className="flex flex-row-reverse px-1 py-1">
+                                <img src={arrow} className="w-8 h-8" alt="arrow" />
                             </div>
                         </div>
                     </Link>
                     <Link to="/conferences">
                         <div className="bg-[#222] sm:mb-0 mb-8 px-6 py-6 rounded-xl hover:ring-1 hover:ring-indigo-300 animation glow delay-3">
                             <div className="flex justify-center items-center mb-4 w-16 h-16 rounded-full bg-[#111]">
+                                <img src={conference} alt="Company icon" className="w-8 h-8" />
                             </div>
                             <h1 className="mb-2 text-2xl font-bold">Conferences</h1>
                             <p className="text-gray-300">
                                 Attend conferences and presentations with industry knowledge professionals and enthusiasts.
                             </p>
                             <div className="flex flex-row-reverse px-1 py-1">
+                                <img src={arrow} className="w-8 h-8" alt="arrow" />
                             </div>
                         </div>
                     </Link>
                     <Link to="/education">
                         <div className="bg-[#222] sm:mb-0 mb-8 px-6 py-6 rounded-xl hover:ring-1 hover:ring-indigo-300 animation glow delay-4">
                             <div className="flex justify-center items-center mb-4 w-16 h-16 rounded-full bg-[#111]">
+                                <img src={education} alt="Company icon" className="w-8 h-8" />
                             </div>
                             <h1 className="mb-2 text-2xl font-bold">Education</h1>
                             <p className="text-gray-300">
                                 Enroll into colleges, courses, lectures, and classes to learn more about IT and software development.
                             </p>
                             <div className="flex flex-row-reverse px-1 py-1">
+                                <img src={arrow} className="w-8 h-8" alt="arrow" />
                             </div>
                         </div>
                     </Link>
                     <Link to="/certificates">
                         <div className="bg-[#222] sm:mb-0 mb-8 px-6 py-6 rounded-xl hover:ring-1 hover:ring-indigo-300 animation glow delay-5">
                             <div className="flex justify-center items-center mb-4 w-16 h-16 rounded-full bg-[#111]">
+                                <img src={certificate} alt="Company icon" className="w-8 h-8" />
                             </div>
                             <h1 className="mb-2 text-2xl font-bold">Certificates</h1>
                             <p className="text-gray-300">
                                 Search for the certifications to master and demonstrate your professional knowledge and skills.
                             </p>
                             <div className="flex flex-row-reverse px-1 py-1">
+                                <img src={arrow} className="w-8 h-8" alt="arrow" />
                             </div>
                         </div>
                     </Link>
                     <Link to="/communities">
                         <div className="bg-[#222] sm:mb-0 mb-8 px-6 py-6 rounded-xl hover:ring-1 hover:ring-indigo-300 animation glow delay-5">
                             <div className="flex justify-center items-center mb-4 w-16 h-16 rounded-full bg-[#111]">
+                                <img src={community} alt="Company icon" className="w-8 h-8" />
                             </div>
                             <h1 className="mb-2 text-2xl font-bold">Communities</h1>
                             <p className="text-gray-300">
                                 Find communities and groups to connect and network with other IT professionals and enthusiasts.
                             </p>
                             <div className="flex flex-row-reverse px-1 py-1">
+                                <img src={arrow} className="w-8 h-8" alt="arrow" />
                             </div>
                         </div>
                     </Link>
                     <Link to="/certificates">
                         <div className="bg-[#222] sm:mb-0 mb-8 px-6 py-6 rounded-xl hover:ring-1 hover:ring-indigo-300 animation glow delay-6">
                             <div className="flex justify-center items-center mb-4 w-16 h-16 rounded-full bg-[#111]">
+                                <img src={podcast} alt="Company icon" className="w-8 h-8" />
                             </div>
                             <h1 className="mb-2 text-2xl font-bold">Podcasts</h1>
                             <p className="text-gray-300">
                                 Listen to podcasts and interviews about IT related topics with industry professionals and enthusiasts.
                             </p>
                             <div className="flex flex-row-reverse px-1 py-1">
+                                <img src={arrow} className="w-8 h-8" alt="arrow" />
                             </div>
                         </div>
                     </Link>
                     <Link to="/certificates">
                         <div className="bg-[#222] sm:mb-0 mb-8 px-6 py-6 rounded-xl hover:ring-1 hover:ring-indigo-300 animation glow delay-7">
                             <div className="flex justify-center items-center mb-4 w-16 h-16 rounded-full bg-[#111]">
+                                <img src={internship} alt="Company icon" className="w-8 h-8" />
                             </div>
                             <h1 className="mb-2 text-2xl font-bold">Internships</h1>
                             <p className="text-gray-300">
                                 Start your career and enhance your professional knowledge by applying to internship programs.
                             </p>
                             <div className="flex flex-row-reverse px-1 py-1">
+                                <img src={arrow} className="w-8 h-8" alt="arrow" />
                             </div>
                         </div>
                     </Link>
