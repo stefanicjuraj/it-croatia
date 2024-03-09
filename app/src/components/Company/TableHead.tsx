@@ -9,13 +9,13 @@ export default function TableHead() {
                     Industry
                 </th>
                 <th scope="col" className="py-8 px-7">
-                    LinkedIn
+                    Location
                 </th>
                 <th scope="col" className="py-8 px-7">
                     Employees
                 </th>
                 <th scope="col" className="py-8 px-7">
-                    Location
+                    LinkedIn
                 </th>
             </tr>
         </thead>

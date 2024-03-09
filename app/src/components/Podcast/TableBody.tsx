@@ -10,7 +10,7 @@ export const TableBody = ({ podcasts }: { podcasts: Array<object> }) => {
                         {(podcast as { Podcast: string }).Podcast}
                         <br />
                     </td>
-                    <td className="text-xs text-white px-7 py-7">
+                    <td className="text-sm text-white px-7 py-7">
                         {(podcast as { Topic: Array<string> }).Topic.map((topic, index) => (
                             <span key={index} className="px-3 py-2 mr-1 bg-indigo-500 rounded-full">
                                 {topic}

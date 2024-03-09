@@ -24,6 +24,12 @@ export const TableBody = ({ companies }: { companies: Array<object> }) => {
                             </span>
                         ))}
                     </td>
+                    <td className="px-7 py-7 text-md">
+                        {(company as { Location: string }).Location}
+                    </td>
+                    <td className="px-8 py-7 text-md">
+                        {(company as { Employees: string }).Employees}
+                    </td>
                     <td className="px-10 py-7">
                         <a className="inline-flex items-center hover:shadow hover:ring-indigo-500 focus:ring-2 focus:outline-none focus:ring-gray-200 rounded-xl"
                             href={(company as { LinkedIn: string })["LinkedIn"]}
@@ -31,12 +37,6 @@ export const TableBody = ({ companies }: { companies: Array<object> }) => {
                         >
                             <img src={linkedin} className="w-10 h-10" alt="LinkedIn icon" />
                         </a>
-                    </td>
-                    <td className="px-8 py-7 text-md">
-                        {(company as { Employees: string }).Employees}
-                    </td>
-                    <td className="px-7 py-7 text-md">
-                        {(company as { Location: string }).Location}
                     </td>
                 </tr>
             ))}

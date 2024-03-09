@@ -10,17 +10,17 @@ export const TableBody = ({ internships }: { internships: Array<object> }) => {
                         {(internship as { Internship: string }).Internship}
                         <br />
                     </td>
-                    <td className="px-7 py-7 text-md">
-                        <a href={(internship as { Company: string })?.Company} className="underline">
-                            {(internship as { Company: string })?.Company}
-                        </a>
-                    </td>
                     <td className="text-sm text-white px-7 py-7">
                         {(internship as { Department: string[] }).Department.map((topic, index) => (
                             <span key={index} className="px-3 py-2 mr-1 bg-indigo-500 rounded-full">
                                 {topic}
                             </span>
                         ))}
+                    </td>
+                    <td className="px-7 py-7 text-md">
+                        <a href={(internship as { Company: string })?.Company} className="underline">
+                            {(internship as { Company: string })?.Company}
+                        </a>
                     </td>
                     <td className="px-10 text-lg py-7">
                         <a className="inline-flex items-center hover:shadow hover:ring-indigo-500 focus:ring-2 focus:outline-none focus:ring-gray-200 rounded-xl"

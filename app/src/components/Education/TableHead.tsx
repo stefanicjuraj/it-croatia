@@ -6,13 +6,13 @@ export default function TableHead() {
                     Occupation
                 </th>
                 <th scope="col" className="py-8 px-7">
-                    Type
-                </th>
-                <th scope="col" className="py-8 px-7">
                     Topics
                 </th>
                 <th scope="col" className="py-8 px-7">
                     Organizer
+                </th>
+                <th scope="col" className="py-8 px-7">
+                    Type
                 </th>
                 <th scope="col" className="py-8 px-7">
                     Enroll

@@ -9,10 +9,7 @@ export const TableBody = ({ education }: { education: Array<object> }) => {
                     <td className="text-lg px-7 py-7 whitespace-nowrap">
                         {(education as { Course: string })?.Course}
                     </td>
-                    <td className="px-7 py-7 text-md">
-                        {(education as { Type: string })?.Type}
-                    </td>
-                    <td className="text-xs text-white px-7 py-7">
+                    <td className="text-sm text-white px-7 py-7">
                         {(education as { Topic: string[] })?.Topic.map((topic, index) => (
                             <span key={index} className="px-3 py-2 mr-1 bg-indigo-500 rounded-full">
                                 {topic}
@@ -26,6 +23,9 @@ export const TableBody = ({ education }: { education: Array<object> }) => {
                         >
                             {(education as { Organizer: string })?.Organizer}
                         </a>
+                    </td>
+                    <td className="px-7 py-7 text-md">
+                        {(education as { Type: string })?.Type}
                     </td>
                     <td className="px-10 py-7">
                         <a className="inline-flex items-center hover:shadow hover:ring-indigo-500 focus:ring-2 focus:outline-none focus:ring-gray-200 rounded-xl"

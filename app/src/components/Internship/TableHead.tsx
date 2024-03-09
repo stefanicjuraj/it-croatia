@@ -6,10 +6,10 @@ export default function TableHead() {
                     Internship
                 </th>
                 <th scope="col" className="py-8 px-7">
-                    Company
+                    Department
                 </th>
                 <th scope="col" className="py-8 px-7">
-                    Department
+                    Company
                 </th>
                 <th scope="col" className="py-8 px-7">
                     Apply
