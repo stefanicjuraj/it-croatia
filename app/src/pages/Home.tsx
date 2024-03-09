@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+// Components
+import Subscribe from "../components/Subscribe";
 // Icons
 import company from "/assets/icons/company.svg";
 import conference from "/assets/icons/conference.svg";
@@ -126,6 +128,7 @@ export default function Home() {
                     <h2 className="mb-4 text-5xl font-bold">By popular demand</h2>
                     <h3 className="text-2xl italic font-normal">You asked. We answered.</h3>
                     <img src={image} className="w-full mx-auto mt-16 mb-16 sm:w-2/3"></img>
+                    <Subscribe />
                 </div>
             </section>
         </>
