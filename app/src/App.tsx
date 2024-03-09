@@ -8,6 +8,7 @@ import Conferences from './pages/Conferences';
 import Education from './pages/Education';
 import Certificates from './pages/Certificates';
 import Communities from './pages/Communities';
+import Podcasts from './pages/Podcasts';
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
           <Route path="/education" element={<Education />} />
           <Route path="/certificates" element={<Certificates />} />
           <Route path="/community" element={<Communities />} />
+          <Route path="/podcasts" element={<Podcasts />} />
         </Routes>
       </Router>
     </>
