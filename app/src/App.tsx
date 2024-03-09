@@ -22,7 +22,7 @@ export default function App() {
           <Route path="/conferences" element={<Conferences />} />
           <Route path="/education" element={<Education />} />
           <Route path="/certificates" element={<Certificates />} />
-          <Route path="/community" element={<Communities />} />
+          <Route path="/communities" element={<Communities />} />
           <Route path="/podcasts" element={<Podcasts />} />
           <Route path="/internships" element={<Internships />} />
         </Routes>
