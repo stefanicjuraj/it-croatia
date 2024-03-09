@@ -1,3 +1,5 @@
+import chevron from '/assets/icons/chevron.svg';
+
 export const Filter = ({ toggleDropdown, dropdown, industryTags, tags, mapTags, checkboxInput }: {
     toggleDropdown: () => void;
     dropdown: boolean;
@@ -15,6 +17,7 @@ export const Filter = ({ toggleDropdown, dropdown, industryTags, tags, mapTags, 
                     onClick={toggleDropdown}
                 >
                     Industry
+                    <img src={chevron} className="h-5 w-5 ml-3" />
                 </button>
                 {dropdown && (
                     <div id="checkbox" className="absolute z-10 w-56 bg-[#222] border border-[#333] divide-y divide-gray-100 rounded-lg shadow mt-2">
