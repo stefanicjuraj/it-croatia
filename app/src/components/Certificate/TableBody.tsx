@@ -9,12 +9,6 @@ export const TableBody = ({ certificate }: { certificate: Array<object> }) => {
                     <td className="text-lg px-7 py-7 whitespace-nowrap">
                         {(certificate as { Certificate: string }).Certificate}
                         <br />
-                        <a className="text-sm text-[#999] hover:underline"
-                            href={(certificate as { Website: string })["Website"]}
-                            target="_blank" rel="noopener noreferrer"
-                        >
-                            {(certificate as { Website: string })["Website"]}
-                        </a>
                     </td>
                     <td className="text-sm text-white px-7 py-7">
                         {(certificate as { Topic: string[] }).Topic.map((topic, index) => (

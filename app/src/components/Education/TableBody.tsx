@@ -7,14 +7,7 @@ export const TableBody = ({ education }: { education: Array<object> }) => {
             {education.map((education, index) => (
                 <tr key={index} className="bg-[#222] border-t border-[#555] text-md">
                     <td className="text-lg px-7 py-7 whitespace-nowrap">
-                        {(education as { Course: string, Website: string })?.Course}
-                        <br />
-                        <a className="text-sm text-[#999] hover:underline"
-                            href={(education as { Website: string })?.Website}
-                            target="_blank" rel="noopener noreferrer"
-                        >
-                            {(education as { Website: string })?.Website}
-                        </a>
+                        {(education as { Course: string })?.Course}
                     </td>
                     <td className="px-7 py-7 text-md">
                         {(education as { Type: string })?.Type}

@@ -9,12 +9,6 @@ export const TableBody = ({ internships }: { internships: Array<object> }) => {
                     <td className="text-lg px-7 py-7 whitespace-nowrap">
                         {(internship as { Internship: string }).Internship}
                         <br />
-                        <a className="text-sm text-[#999] hover:underline"
-                            href={(internship as { Website: string })["Website"]}
-                            target="_blank" rel="noopener noreferrer"
-                        >
-                            {(internship as { Website: string })["Website"]}
-                        </a>
                     </td>
                     <td className="px-7 py-7 text-md">
                         <a href={(internship as { Company: string })?.Company} className="underline">
