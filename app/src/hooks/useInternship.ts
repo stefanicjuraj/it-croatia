@@ -9,7 +9,7 @@ export const useInternship = () => {
   const [internship, setInternship] = useState<Internship[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
-  const [searchTerm, setSearchTerm] = useState<string>("");
+  const [search, setSearch] = useState<string>("");
   const [filterInternship, setfilterInternship] = useState<Internship[]>([]);
 
   useEffect(() => {
@@ -35,27 +35,27 @@ export const useInternship = () => {
   useEffect(() => {
     setfilterInternship(
       internship.filter((internship) =>
-        internship.Internship.toLowerCase().includes(searchTerm.toLowerCase())
+        internship.Internship.toLowerCase().includes(search.toLowerCase())
       )
     );
-  }, [internship, searchTerm]);
+  }, [internship, search]);
 
   const searchInput = (event: React.ChangeEvent<HTMLInputElement>) => {
     const input = event.target.value;
-    setSearchTerm(input);
+    setSearch(input);
   };
 
   const handleSearchTermChange = (term: string) => {
-    setSearchTerm(term);
+    setSearch(term);
   };
 
   return {
     internship: filterInternship,
     loading,
     error,
-    setSearchTerm,
+    setSearch,
     handleSearchTermChange,
-    searchTerm,
+    search,
     searchInput,
   };
 };

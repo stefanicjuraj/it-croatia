@@ -9,7 +9,7 @@ export const useEducation = () => {
   const [education, setEducation] = useState<Education[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
-  const [searchTerm, setSearchTerm] = useState<string>("");
+  const [search, setSearch] = useState<string>("");
   const [filterEducation, setFilteredEducation] = useState<Education[]>([]);
 
   useEffect(() => {
@@ -35,27 +35,27 @@ export const useEducation = () => {
   useEffect(() => {
     setFilteredEducation(
       education.filter((education) =>
-        education.Course.toLowerCase().includes(searchTerm.toLowerCase())
+        education.Course.toLowerCase().includes(search.toLowerCase())
       )
     );
-  }, [education, searchTerm]);
+  }, [education, search]);
 
   const searchInput = (event: React.ChangeEvent<HTMLInputElement>) => {
     const input = event.target.value;
-    setSearchTerm(input);
+    setSearch(input);
   };
 
   const handleSearchTermChange = (term: string) => {
-    setSearchTerm(term);
+    setSearch(term);
   };
 
   return {
     education: filterEducation,
     loading,
     error,
-    setSearchTerm,
+    setSearch,
     handleSearchTermChange,
-    searchTerm,
+    search,
     searchInput,
   };
 };

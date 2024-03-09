@@ -41,7 +41,7 @@ export const useConference = () => {
   }, [conferences, search]);
 
   const searchInput = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const input = event.target.value.toLowerCase();
+    const input = event.target.value;
     setSearch(input);
   };
 

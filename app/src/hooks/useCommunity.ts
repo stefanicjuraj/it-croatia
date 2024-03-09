@@ -9,7 +9,7 @@ export const useCommunity = () => {
   const [community, setCommunity] = useState<Community[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
-  const [searchTerm, setSearchTerm] = useState<string>("");
+  const [search, setSearch] = useState<string>("");
   const [filterCommunity, setFilterCommunity] = useState<Community[]>([]);
 
   useEffect(() => {
@@ -35,27 +35,27 @@ export const useCommunity = () => {
   useEffect(() => {
     setFilterCommunity(
       community.filter((community) =>
-        community.Community.toLowerCase().includes(searchTerm.toLowerCase())
+        community.Community.toLowerCase().includes(search.toLowerCase())
       )
     );
-  }, [community, searchTerm]);
+  }, [community, search]);
 
   const searchInput = (event: React.ChangeEvent<HTMLInputElement>) => {
     const input = event.target.value;
-    setSearchTerm(input);
+    setSearch(input);
   };
 
   const handleSearchChange = (term: string) => {
-    setSearchTerm(term);
+    setSearch(term);
   };
 
   return {
     community: filterCommunity,
     loading,
     error,
-    setSearchTerm,
+    setSearch,
     handleSearchChange,
-    searchTerm,
+    search,
     searchInput,
   };
 };
