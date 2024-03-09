@@ -27,7 +27,7 @@ export default function Communities() {
                                 <Search
                                     search={searchTerm}
                                     searchInput={searchInput}
-                                    placeholder="Search by certificate"
+                                    placeholder="Search by community"
                                 />
                                 <p id="searchResults" className="text-black absolute right-2 bottom-2 bg-[#eee] focus:ring-4 focus:outline-none rounded-xl text-base px-5 py-2">
                                     {community.length} results
