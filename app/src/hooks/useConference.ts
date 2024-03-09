@@ -49,6 +49,17 @@ export const useConference = () => {
     setSearch(term);
   };
 
+  const countdown = (startDate: string) => {
+    const now = new Date();
+    const currentYear = now.getFullYear();
+    const fullStartDate = `${startDate}, ${currentYear}`;
+    const start = new Date(fullStartDate);
+    const difference = start.getTime() - now.getTime();
+    const daysLeft = Math.ceil(difference / (1000 * 3600 * 24));
+
+    return daysLeft > 0 ? `in ${daysLeft} days` : "ENDED";
+  };
+
   return {
     conferences: filterConferences,
     loading,
@@ -57,5 +68,6 @@ export const useConference = () => {
     searchTerm,
     search,
     searchInput,
+    countdown,
   };
 };
