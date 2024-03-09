@@ -9,6 +9,7 @@ import Education from './pages/Education';
 import Certificates from './pages/Certificates';
 import Communities from './pages/Communities';
 import Podcasts from './pages/Podcasts';
+import Internships from './pages/Internships';
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="/certificates" element={<Certificates />} />
           <Route path="/community" element={<Communities />} />
           <Route path="/podcasts" element={<Podcasts />} />
+          <Route path="/internships" element={<Internships />} />
         </Routes>
       </Router>
     </>
