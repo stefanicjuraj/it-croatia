@@ -8,6 +8,7 @@ import certificate from "/assets/icons/certificate.svg";
 import podcast from "/assets/icons/podcast.svg";
 import arrow from "/assets/icons/arrow.svg";
 import community from "/assets/icons/community.svg";
+import image from "/assets/icons/cro-it.png";
 
 export default function Home() {
     return (
@@ -124,6 +125,7 @@ export default function Home() {
                 <div className="px-4 py-4 mt-24 mb-24 text-center text-indigo-300 animation glow delay-8" >
                     <h2 className="mb-4 text-5xl font-bold">By popular demand</h2>
                     <h3 className="text-2xl italic font-normal">You asked. We answered.</h3>
+                    <img src={image} className="w-full mx-auto mt-16 mb-16 sm:w-2/3"></img>
                 </div>
             </section>
         </>
