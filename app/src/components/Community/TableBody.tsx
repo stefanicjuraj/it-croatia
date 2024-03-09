@@ -1,0 +1,32 @@
+export const TableBody = ({ communities }: { communities: Array<object> }) => {
+
+    return (
+        <tbody>
+            {communities.map((community, index) => (
+                <tr key={index} className="bg-[#222] border-t border-[#555] text-md">
+                    <td className="text-lg px-7 py-7 whitespace-nowrap">
+                        {(community as { Community: string }).Community}
+                    </td>
+                    <td className="px-7 py-7 text-md w-1/3">
+                        {(community as { Description: string }).Description}
+                    </td>
+                    <td className="text-xs text-white px-7 py-7">
+                        {(community as { Topic: Array<string> }).Topic.map((topic, index) => (
+                            <span key={index} className="px-3 py-2 mr-1 bg-indigo-500 rounded-full">
+                                {topic}
+                            </span>
+                        ))}
+                    </td>
+                    <td className="px-10 text-lg py-7">
+                        <a className="inline-flex items-center hover:shadow hover:ring-indigo-500 focus:ring-2 focus:outline-none focus:ring-gray-200 rounded-xl"
+                            href={(community as { Join: string })["Join"]}
+                            target="_blank" rel="noopener noreferrer"
+                        >
+                        </a>
+                    </td>
+                </tr>
+            ))}
+        </tbody>
+    )
+
+}
