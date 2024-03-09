@@ -8,7 +8,7 @@ import TableHead from '../components/Community/TableHead';
 import { TableBody } from '../components/Community/TableBody';
 
 export default function Communities() {
-    const { community, loading, error, searchInput, searchTerm } = useCommunity();
+    const { community, loading, error, searchInput, search } = useCommunity();
 
     if (error) {
         return <div>Error</div>;
@@ -25,7 +25,7 @@ export default function Communities() {
                         <div className="flex items-center mb-8 flex-wrap sm:flex-nowrap">
                             <div className="mr-4 relative w-96 text-white">
                                 <Search
-                                    search={searchTerm}
+                                    search={search}
                                     searchInput={searchInput}
                                     placeholder="Search by community"
                                 />

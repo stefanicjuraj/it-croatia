@@ -8,7 +8,7 @@ import TableHead from '../components/Certificate/TableHead';
 import { TableBody } from '../components/Certificate/TableBody';
 
 export default function Certificates() {
-    const { certificates, loading, error, searchInput, searchTerm } = useCertificate();
+    const { certificates, loading, error, searchInput, search } = useCertificate();
 
     if (error) {
         return <div>Error</div>;
@@ -25,7 +25,7 @@ export default function Certificates() {
                         <div className="flex items-center mb-8 flex-wrap sm:flex-nowrap">
                             <div className="mr-4 relative w-96 text-white">
                                 <Search
-                                    search={searchTerm}
+                                    search={search}
                                     searchInput={searchInput}
                                     placeholder="Search by certificate"
                                 />

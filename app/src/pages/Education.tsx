@@ -8,7 +8,7 @@ import TableHead from '../components/Education/TableHead';
 import { TableBody } from '../components/Education/TableBody';
 
 export default function Education() {
-    const { education, loading, error, searchInput, searchTerm } = useEducation();
+    const { education, loading, error, searchInput, search } = useEducation();
 
     if (error) {
         return <div>Error</div>;
@@ -25,7 +25,7 @@ export default function Education() {
                         <div className="flex items-center mb-8 flex-wrap sm:flex-nowrap">
                             <div className="mr-4 relative w-96 text-white">
                                 <Search
-                                    search={searchTerm}
+                                    search={search}
                                     searchInput={searchInput}
                                     placeholder="Search by occupation"
                                 />

@@ -8,7 +8,7 @@ import TableHead from '../components/Podcast/TableHead';
 import { TableBody } from '../components/Podcast/TableBody';
 
 export default function Podcasts() {
-    const { podcast, loading, error, searchInput, searchTerm } = usePodcast();
+    const { podcast, loading, error, searchInput, search } = usePodcast();
 
     if (error) {
         return <div>Error</div>;
@@ -25,7 +25,7 @@ export default function Podcasts() {
                         <div className="flex items-center mb-8 flex-wrap sm:flex-nowrap">
                             <div className="mr-4 relative w-96 text-white">
                                 <Search
-                                    search={searchTerm}
+                                    search={search}
                                     searchInput={searchInput}
                                     placeholder="Search by podcast"
                                 />

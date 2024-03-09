@@ -8,7 +8,7 @@ import TableHead from '../components/Internship/TableHead';
 import { TableBody } from '../components/Internship/TableBody';
 
 export default function Internships() {
-    const { internship, loading, error, searchInput, searchTerm } = useInternship();
+    const { internship, loading, error, searchInput, search } = useInternship();
 
     if (error) {
         return <div>Error</div>;
@@ -25,7 +25,7 @@ export default function Internships() {
                         <div className="flex items-center mb-8 flex-wrap sm:flex-nowrap">
                             <div className="mr-4 relative w-96 text-white">
                                 <Search
-                                    search={searchTerm}
+                                    search={search}
                                     searchInput={searchInput}
                                     placeholder="Search by company"
                                 />
