@@ -1,3 +1,5 @@
+import apply from '/assets/icons/apply.svg';
+
 export const TableBody = ({ certificate }: { certificate: Array<object> }) => {
 
     return (
@@ -29,7 +31,9 @@ export const TableBody = ({ certificate }: { certificate: Array<object> }) => {
                         </a>
                     </td>
                     <td className="px-10 text-lg py-7">
-                        <a href={(certificate as { Enroll: string })["Enroll"]} className="inline-flex items-center hover:shadow hover:ring-indigo-500 focus:ring-2 focus:outline-none focus:ring-gray-200 rounded-xl" target="_blank" rel="noopener noreferrer">
+                        <a href={(certificate as { Enroll: string })["Enroll"]} className="inline-flex items-center hover:shadow hover:ring-indigo-500 focus:ring-2 focus:outline-none focus:ring-gray-200 rounded-xl" target="_blank" rel="noopener noreferrer"
+                        >
+                            <img src={apply} className="w-8 h-8" alt="Apply for certificate icon" />
                         </a>
                     </td>
                 </tr>

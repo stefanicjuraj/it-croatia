@@ -1,3 +1,5 @@
+import apply from '/assets/icons/apply.svg';
+
 export const TableBody = ({ education }: { education: Array<object> }) => {
 
     return (
@@ -37,6 +39,7 @@ export const TableBody = ({ education }: { education: Array<object> }) => {
                             href={(education as { Enroll: string })?.Enroll}
                             target="_blank" rel="noopener noreferrer"
                         >
+                            <img src={apply} className="w-8 h-8" alt="Apply for education icon" />
                         </a>
                     </td>
                 </tr>

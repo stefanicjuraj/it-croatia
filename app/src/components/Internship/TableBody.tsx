@@ -1,3 +1,5 @@
+import apply from '/assets/icons/apply.svg';
+
 export const TableBody = ({ internships }: { internships: Array<object> }) => {
 
     return (
@@ -31,6 +33,7 @@ export const TableBody = ({ internships }: { internships: Array<object> }) => {
                             href={(internship as { Apply: string })["Apply"]}
                             target="_blank" rel="noopener noreferrer"
                         >
+                            <img src={apply} className="w-8 h-8" alt="Apply for internship icon" />
                         </a>
                     </td>
                 </tr>

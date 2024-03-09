@@ -1,3 +1,5 @@
+import listen from '/assets/icons/headphones.svg';
+
 export const TableBody = ({ podcasts }: { podcasts: Array<object> }) => {
 
     return (
@@ -27,6 +29,7 @@ export const TableBody = ({ podcasts }: { podcasts: Array<object> }) => {
                             href={(podcast as { Listen: string })["Listen"]}
                             target="_blank" rel="noopener noreferrer"
                         >
+                            <img src={listen} className="w-8 h-8" alt="Listen podcast icon" />
                         </a>
                     </td>
                 </tr>

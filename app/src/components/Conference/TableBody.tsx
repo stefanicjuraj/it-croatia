@@ -1,3 +1,5 @@
+import ticket from '/assets/icons/ticket.svg';
+
 export const TableBody = ({ conferences }: { conferences: Array<object> }) => {
 
     return (
@@ -38,6 +40,7 @@ export const TableBody = ({ conferences }: { conferences: Array<object> }) => {
                             href={(conference as { Ticket: string })["Ticket"]}
                             target="_blank" rel="noopener noreferrer"
                         >
+                            <img src={ticket} className="w-8 h-8" alt="Conference ticket icon" />
                         </a>
                     </td>
                 </tr>

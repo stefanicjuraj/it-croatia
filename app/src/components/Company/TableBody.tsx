@@ -1,3 +1,5 @@
+import linkedin from '/assets/icons/linkedin.svg';
+
 export const TableBody = ({ companies }: { companies: Array<object> }) => {
     return (
         <tbody>
@@ -27,6 +29,7 @@ export const TableBody = ({ companies }: { companies: Array<object> }) => {
                             href={(company as { LinkedIn: string })["LinkedIn"]}
                             target="_blank" rel="noopener noreferrer"
                         >
+                            <img src={linkedin} className="w-10 h-10" alt="LinkedIn icon" />
                         </a>
                     </td>
                     <td className="px-8 py-7 text-md">

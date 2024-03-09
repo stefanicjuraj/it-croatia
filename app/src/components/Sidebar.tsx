@@ -1,5 +1,14 @@
 import { Link } from "react-router-dom";
 import { useSidebar } from "../hooks/useSidebar";
+// Icons
+import menu from "/assets/icons/menu.svg";
+import company from "/assets/icons/company.svg";
+import conference from "/assets/icons/conference.svg";
+import internship from "/assets/icons/internship.svg";
+import education from "/assets/icons/education.svg";
+import certificate from "/assets/icons/certificate.svg";
+import podcast from "/assets/icons/podcast.svg";
+import community from "/assets/icons/community.svg";
 
 export default function Sidebar() {
     const { sidebarOpen, toggleSidebar, activePath } = useSidebar();
@@ -18,7 +27,9 @@ export default function Sidebar() {
                                 type="button"
                                 onClick={toggleSidebar}
                                 data-drawer-target="sidebar"
-                                aria-controls="sidebar">
+                                aria-controls="sidebar"
+                            >
+                                <img src={menu} alt="Sidebar menu icon" className="w-7 h-7" />
                             </button>
                         </div>
                         <div className="flex items-center">
@@ -45,36 +56,43 @@ export default function Sidebar() {
                         </li>
                         <li>
                             <Link to="/companies" className={`flex items-center p-3 rounded-xl group hover:bg-[#333] ${activeClass("/companies")}`}>
+                                <img src={company} alt="Home icon" className="w-6 h-6" />
                                 <h1 className="flex-1 ms-2 whitespace-nowrap">Companies</h1>
                             </Link>
                         </li>
                         <li>
                             <Link to="/conferences" className={`flex items-center p-3 rounded-xl group hover:bg-[#333] ${activeClass("/conferences")}`}>
+                                <img src={conference} alt="Home icon" className="w-6 h-6" />
                                 <h1 className="flex-1 ms-2 whitespace-nowrap">Conferences</h1>
                             </Link>
                         </li>
                         <li>
                             <Link to="/education" className={`flex items-center p-3 rounded-xl group hover:bg-[#333] ${activeClass("/education")}`}>
+                                <img src={education} alt="Home icon" className="w-6 h-6" />
                                 <h1 className="flex-1 ms-3 whitespace-nowrap">Education</h1>
                             </Link>
                         </li>
                         <li>
                             <Link to="/certificates" className={`flex items-center p-3 rounded-xl group hover:bg-[#333] ${activeClass("/certificates")}`}>
+                                <img src={certificate} alt="Home icon" className="w-6 h-6" />
                                 <h1 className="flex-1 ms-3 whitespace-nowrap">Certificates</h1>
                             </Link>
                         </li>
                         <li>
                             <Link to="/communities" className={`flex items-center p-3 rounded-xl group hover:bg-[#333] ${activeClass("/communities")}`}>
+                                <img src={community} alt="Home icon" className="w-6 h-6" />
                                 <h1 className="flex-1 ms-3 whitespace-nowrap">Communities</h1>
                             </Link>
                         </li>
                         <li>
                             <Link to="/podcasts" className={`flex items-center p-3 rounded-xl group hover:bg-[#333] ${activeClass("/podcasts")}`}>
+                                <img src={podcast} alt="Home icon" className="w-6 h-6" />
                                 <h1 className="flex-1 ms-3 whitespace-nowrap">Podcasts</h1>
                             </Link>
                         </li>
                         <li>
                             <Link to="/internships" className={`flex items-center p-3 rounded-xl group hover:bg-[#333] ${activeClass("/internships")}`}>
+                                <img src={internship} alt="Home icon" className="w-6 h-6" />
                                 <h1 className="flex-1 ms-3 whitespace-nowrap">Internships</h1>
                             </Link>
                         </li>

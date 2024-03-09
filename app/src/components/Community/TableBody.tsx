@@ -1,3 +1,5 @@
+import join from '/assets/icons/apply.svg';
+
 export const TableBody = ({ communities }: { communities: Array<object> }) => {
 
     return (
@@ -22,6 +24,7 @@ export const TableBody = ({ communities }: { communities: Array<object> }) => {
                             href={(community as { Join: string })["Join"]}
                             target="_blank" rel="noopener noreferrer"
                         >
+                            <img src={join} className="w-8 h-8" alt="Join community icon" />
                         </a>
                     </td>
                 </tr>
