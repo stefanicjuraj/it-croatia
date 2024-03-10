@@ -1,6 +1,14 @@
+import { useState } from 'react';
 import searchicon from '/assets/icons/search.svg';
 
-export const Search = ({ search, searchInput, placeholder }: { search: string, searchInput: (event: React.ChangeEvent<HTMLInputElement>) => void, placeholder: string }) => {
+export const Search = ({ placeholder, onSearchChange }: { placeholder: string, onSearchChange: (searchTerm: string) => void }) => {
+    const [search, setSearch] = useState('');
+
+    const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const searchValue = event.target.value.replace(/[^a-zA-Z0-9 ]/g, '');
+        setSearch(searchValue);
+        onSearchChange(searchValue);
+    };
 
     return (
         <form className="flex items-center relative w-96 mr-4">
@@ -11,7 +19,7 @@ export const Search = ({ search, searchInput, placeholder }: { search: string, s
                 <input className="block w-96 p-4 pl-10 text-white bg-[#222] border-[#333] rounded-xl focus:border-indigo-400"
                     type="text"
                     value={search}
-                    onChange={searchInput}
+                    onChange={handleSearch}
                     placeholder={placeholder}
                     autoComplete="off"
                 />
