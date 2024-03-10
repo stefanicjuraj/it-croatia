@@ -1,3 +1,4 @@
+import { useState } from 'react';
 // Hooks
 import { useConference } from '../hooks/useConference';
 // Components
@@ -8,7 +9,14 @@ import TableHead from '../components/Conference/TableHead';
 import { TableBody } from '../components/Conference/TableBody';
 
 export default function Conferences() {
-    const { conferences, loading, error, search, searchInput } = useConference();
+    const { conferences, loading, error } = useConference();
+    const [conferenceSearch, setConferenceSearch] = useState("");
+
+    const searchConference = conferences.filter((conferences) => {
+        const conferenceName = conferences.Conference.toLowerCase();
+        const search = conferenceSearch.toLowerCase();
+        return conferenceName.includes(search);
+    });
 
     if (error) {
         return <div>Error</div>;
@@ -25,11 +33,10 @@ export default function Conferences() {
                         <div className="flex items-center mb-8 flex-wrap sm:flex-nowrap">
                             <div className="mr-4 relative w-96 text-white">
                                 <Search
-                                    search={search}
-                                    searchInput={searchInput}
+                                    onSearchChange={setConferenceSearch}
                                     placeholder="Search by conference" />
                                 <p id="searchResults" className="text-black absolute right-2 bottom-2 bg-[#eee] focus:ring-4 focus:outline-none rounded-xl text-base px-5 py-2">
-                                    {conferences.length} results
+                                    {searchConference.length} results
                                 </p>
                             </div>
                         </div>
@@ -38,7 +45,7 @@ export default function Conferences() {
                         <div className="max-w-screen-xl mx-auto overflow-x-auto rounded-t-xl rounded-b-xl">
                             <table className="w-full text-left text-white">
                                 <TableHead />
-                                <TableBody conferences={conferences} />
+                                <TableBody conferences={searchConference} />
                             </table>
                         </div>
                     </section>

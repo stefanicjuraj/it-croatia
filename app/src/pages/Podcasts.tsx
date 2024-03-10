@@ -1,3 +1,4 @@
+import { useState } from 'react';
 // Hooks
 import { usePodcast } from '../hooks/usePodcast';
 // Components
@@ -8,7 +9,14 @@ import TableHead from '../components/Podcast/TableHead';
 import { TableBody } from '../components/Podcast/TableBody';
 
 export default function Podcasts() {
-    const { podcast, loading, error, searchInput, search } = usePodcast();
+    const { podcast, loading, error } = usePodcast();
+    const [podcastSearch, setPodcastSearch] = useState("");
+
+    const searchPodcast = podcast.filter((podcast) => {
+        const podcastName = podcast.Podcast.toLowerCase();
+        const search = podcastSearch.toLowerCase();
+        return podcastName.includes(search);
+    });
 
     if (error) {
         return <div>Error</div>;
@@ -25,12 +33,11 @@ export default function Podcasts() {
                         <div className="flex items-center mb-8 flex-wrap sm:flex-nowrap">
                             <div className="mr-4 relative w-96 text-white">
                                 <Search
-                                    search={search}
-                                    searchInput={searchInput}
+                                    onSearchChange={setPodcastSearch}
                                     placeholder="Search by podcast"
                                 />
                                 <p id="searchResults" className="text-black absolute right-2 bottom-2 bg-[#eee] focus:ring-4 focus:outline-none rounded-xl text-base px-5 py-2">
-                                    {podcast.length} results
+                                    {searchPodcast.length} results
                                 </p>
                             </div>
                         </div>
@@ -39,7 +46,7 @@ export default function Podcasts() {
                         <div className="max-w-screen-xl mx-auto overflow-x-auto rounded-t-xl rounded-b-xl">
                             <table className="w-full text-left text-white">
                                 <TableHead />
-                                <TableBody podcasts={podcast} />
+                                <TableBody podcasts={searchPodcast} />
                             </table>
                         </div>
                     </section>

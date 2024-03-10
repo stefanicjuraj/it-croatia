@@ -1,3 +1,4 @@
+import { useState } from 'react';
 // Hooks
 import { useCertificate } from '../hooks/useCertificate';
 // Components
@@ -8,7 +9,15 @@ import TableHead from '../components/Certificate/TableHead';
 import { TableBody } from '../components/Certificate/TableBody';
 
 export default function Certificates() {
-    const { certificates, loading, error, searchInput, search } = useCertificate();
+    const { certificates, loading, error } = useCertificate();
+    const [certificateSearch, setCertificateSearch] = useState("");
+
+    const searchCertificate = certificates.filter((certificates) => {
+        const certificateName = certificates.Certificate.toLowerCase();
+        const search = certificateSearch.toLowerCase();
+        return certificateName.includes(search);
+    });
+
 
     if (error) {
         return <div>Error</div>;
@@ -25,12 +34,11 @@ export default function Certificates() {
                         <div className="flex items-center mb-8 flex-wrap sm:flex-nowrap">
                             <div className="mr-4 relative w-96 text-white">
                                 <Search
-                                    search={search}
-                                    searchInput={searchInput}
+                                    onSearchChange={setCertificateSearch}
                                     placeholder="Search by certificate"
                                 />
                                 <p id="searchResults" className="text-black absolute right-2 bottom-2 bg-[#eee] focus:ring-4 focus:outline-none rounded-xl text-base px-5 py-2">
-                                    {certificates.length} results
+                                    {searchCertificate.length} results
                                 </p>
                             </div>
                         </div>
@@ -39,7 +47,7 @@ export default function Certificates() {
                         <div className="max-w-screen-xl mx-auto overflow-x-auto rounded-t-xl rounded-b-xl">
                             <table className="w-full text-left text-white">
                                 <TableHead />
-                                <TableBody certificate={certificates} />
+                                <TableBody certificate={searchCertificate} />
                             </table>
                         </div>
                     </section>

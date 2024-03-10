@@ -1,3 +1,4 @@
+import { useState } from 'react';
 // Hooks
 import { useEducation } from '../hooks/useEducation';
 // Components
@@ -8,7 +9,14 @@ import TableHead from '../components/Education/TableHead';
 import { TableBody } from '../components/Education/TableBody';
 
 export default function Education() {
-    const { education, loading, error, searchInput, search } = useEducation();
+    const { education, loading, error } = useEducation();
+    const [educationSearch, setEducationSearch] = useState("");
+
+    const searchEducation = education.filter((education) => {
+        const educationName = education.Course.toLowerCase();
+        const search = educationSearch.toLowerCase();
+        return educationName.includes(search);
+    });
 
     if (error) {
         return <div>Error</div>;
@@ -25,12 +33,11 @@ export default function Education() {
                         <div className="flex items-center mb-8 flex-wrap sm:flex-nowrap">
                             <div className="mr-4 relative w-96 text-white">
                                 <Search
-                                    search={search}
-                                    searchInput={searchInput}
+                                    onSearchChange={setEducationSearch}
                                     placeholder="Search by occupation"
                                 />
                                 <p id="searchResults" className="text-black absolute right-2 bottom-2 bg-[#eee] focus:ring-4 focus:outline-none rounded-xl text-base px-5 py-2">
-                                    {education.length} results
+                                    {searchEducation.length} results
                                 </p>
                             </div>
                         </div>
@@ -39,7 +46,7 @@ export default function Education() {
                         <div className="max-w-screen-xl mx-auto overflow-x-auto rounded-t-xl rounded-b-xl">
                             <table className="w-full text-left text-white">
                                 <TableHead />
-                                <TableBody education={education} />
+                                <TableBody education={searchEducation} />
                             </table>
                         </div>
                     </section>
