@@ -10,6 +10,7 @@ import Certificates from './pages/Certificates';
 import Communities from './pages/Communities';
 import Podcasts from './pages/Podcasts';
 import Internships from './pages/Internships';
+import Contribute from './pages/Contribute';
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
           <Route path="/communities" element={<Communities />} />
           <Route path="/podcasts" element={<Podcasts />} />
           <Route path="/internships" element={<Internships />} />
+          <Route path="/contribute" element={<Contribute />} />
         </Routes>
       </Router>
     </>
