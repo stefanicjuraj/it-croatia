@@ -11,12 +11,15 @@ import Communities from './pages/Communities';
 import Podcasts from './pages/Podcasts';
 import Internships from './pages/Internships';
 import Contribute from './pages/Contribute';
+// Utils
+import ScrollToTop from './utils/scrollToTop';
 
 export default function App() {
   return (
     <>
       <Router>
         <Sidebar />
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/companies" element={<Companies />} />
