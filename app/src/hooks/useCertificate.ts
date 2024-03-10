@@ -9,10 +9,6 @@ export const useCertificate = () => {
   const [certificates, setCertificates] = useState<Certificate[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
-  const [search, setSearch] = useState<string>("");
-  const [filterCertificates, setFilterCertificates] = useState<Certificate[]>(
-    []
-  );
 
   useEffect(() => {
     const fetchCertificates = async () => {
@@ -34,30 +30,9 @@ export const useCertificate = () => {
     fetchCertificates();
   }, []);
 
-  useEffect(() => {
-    setFilterCertificates(
-      certificates.filter((certificate) =>
-        certificate.Certificate.toLowerCase().includes(search.toLowerCase())
-      )
-    );
-  }, [certificates, search]);
-
-  const searchInput = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const input = event.target.value;
-    setSearch(input);
-  };
-
-  const handleSearchChange = (term: string) => {
-    setSearch(term);
-  };
-
   return {
-    certificates: filterCertificates,
+    certificates,
     loading,
     error,
-    setSearch,
-    handleSearchChange,
-    search,
-    searchInput,
   };
 };

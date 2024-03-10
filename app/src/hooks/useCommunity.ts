@@ -9,8 +9,6 @@ export const useCommunity = () => {
   const [community, setCommunity] = useState<Community[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
-  const [search, setSearch] = useState<string>("");
-  const [filterCommunity, setFilterCommunity] = useState<Community[]>([]);
 
   useEffect(() => {
     const fetchCommunities = async () => {
@@ -32,30 +30,9 @@ export const useCommunity = () => {
     fetchCommunities();
   }, []);
 
-  useEffect(() => {
-    setFilterCommunity(
-      community.filter((community) =>
-        community.Community.toLowerCase().includes(search.toLowerCase())
-      )
-    );
-  }, [community, search]);
-
-  const searchInput = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const input = event.target.value;
-    setSearch(input);
-  };
-
-  const handleSearchChange = (term: string) => {
-    setSearch(term);
-  };
-
   return {
-    community: filterCommunity,
+    community,
     loading,
     error,
-    setSearch,
-    handleSearchChange,
-    search,
-    searchInput,
   };
 };

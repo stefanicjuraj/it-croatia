@@ -9,8 +9,6 @@ export const useCompany = () => {
   const [companies, setCompanies] = useState<Company[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
-  const [search, setSearch] = useState<string>("");
-  const [filterCompanies, setfilterCompanies] = useState<Company[]>([]);
   const [tags, setTags] = useState<string[]>([]);
   const [dropdown, setDropdown] = useState(false);
 
@@ -59,26 +57,6 @@ export const useCompany = () => {
     fetchCompanies();
   }, []);
 
-  useEffect(() => {
-    setfilterCompanies(
-      companies.filter(
-        (company) =>
-          company.Company.toLowerCase().includes(search.toLowerCase()) &&
-          (tags.length === 0 ||
-            company.Industry.some((industry) => tags.includes(industry)))
-      )
-    );
-  }, [companies, search, tags]);
-
-  const searchInput = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const input = event.target.value.toLowerCase();
-    setSearch(input);
-  };
-
-  const searchTerm = (term: string) => {
-    setSearch(term);
-  };
-
   const toggleDropdown = () => setDropdown(!dropdown);
 
   const tagInput = (tags: string[]) => {
@@ -93,17 +71,13 @@ export const useCompany = () => {
   };
 
   return {
-    companies: filterCompanies,
+    companies: companies,
     loading,
     error,
-    setSearch,
-    searchTerm,
-    search,
     tagInput,
     tags,
     toggleDropdown,
     dropdown,
-    searchInput,
     checkboxInput,
     industryTags,
     mapTags,

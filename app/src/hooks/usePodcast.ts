@@ -9,8 +9,6 @@ export const usePodcast = () => {
   const [podcast, setPodcast] = useState<Podcast[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
-  const [search, setSearch] = useState<string>("");
-  const [filterPodcasts, setFilterPodcasts] = useState<Podcast[]>([]);
 
   useEffect(() => {
     const fetchPodcasts = async () => {
@@ -32,30 +30,9 @@ export const usePodcast = () => {
     fetchPodcasts();
   }, []);
 
-  useEffect(() => {
-    setFilterPodcasts(
-      podcast.filter((podcast) =>
-        podcast.Podcast.toLowerCase().includes(search.toLowerCase())
-      )
-    );
-  }, [podcast, search]);
-
-  const searchInput = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const input = event.target.value;
-    setSearch(input);
-  };
-
-  const handleSearchInput = (term: string) => {
-    setSearch(term);
-  };
-
   return {
-    podcast: filterPodcasts,
+    podcast,
     loading,
     error,
-    setSearch,
-    handleSearchInput,
-    search,
-    searchInput,
   };
 };

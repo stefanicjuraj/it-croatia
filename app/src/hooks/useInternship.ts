@@ -9,8 +9,6 @@ export const useInternship = () => {
   const [internship, setInternship] = useState<Internship[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
-  const [search, setSearch] = useState<string>("");
-  const [filterInternship, setfilterInternship] = useState<Internship[]>([]);
 
   useEffect(() => {
     const fetchInternships = async () => {
@@ -32,30 +30,9 @@ export const useInternship = () => {
     fetchInternships();
   }, []);
 
-  useEffect(() => {
-    setfilterInternship(
-      internship.filter((internship) =>
-        internship.Internship.toLowerCase().includes(search.toLowerCase())
-      )
-    );
-  }, [internship, search]);
-
-  const searchInput = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const input = event.target.value;
-    setSearch(input);
-  };
-
-  const handleSearchTermChange = (term: string) => {
-    setSearch(term);
-  };
-
   return {
-    internship: filterInternship,
+    internship,
     loading,
     error,
-    setSearch,
-    handleSearchTermChange,
-    search,
-    searchInput,
   };
 };
