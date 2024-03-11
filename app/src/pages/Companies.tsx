@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 // Hooks
 import { useCompany } from '../hooks/useCompany';
 // Components
@@ -8,17 +8,34 @@ import { Search } from '../components/Search';
 import { Filter } from '../components/Company/Filter';
 import TableHead from '../components/Company/TableHead';
 import { TableBody } from '../components/Company/TableBody';
+import { Location } from '../components/Company/Location';
 
 export default function Companies() {
     const { companies, loading, error, industryTags, checkboxInput, tags, mapTags } = useCompany();
     const [companySearch, setCompanySearch] = useState("");
+    const [selectLocations, setselectLocations] = useState<string[]>([]);
+    const [locations, setLocations] = useState<string[]>([]);
 
     const searchCompany = companies.filter((company) => {
         const companyName = company.Company.toLowerCase();
         const companyIndustry = company.Industry.some((industry) => tags.includes(industry));
+        const companyLocation = selectLocations.length === 0 || selectLocations.includes(company.Location);
         const search = companySearch.toLowerCase();
-        return companyName.includes(search) && (tags.length === 0 || companyIndustry);
+        return companyName.includes(search) && (tags.length === 0 || companyIndustry) && companyLocation;
     });
+
+    useEffect(() => {
+        const uniqueLocations = [...new Set(companies.map(company => company.Location))];
+        setLocations(uniqueLocations);
+    }, [companies]);
+
+    const handleLocationCheckboxInput = (location: string) => {
+        setselectLocations(prevLocations =>
+            prevLocations.includes(location)
+                ? prevLocations.filter(l => l !== location)
+                : [...prevLocations, location]
+        );
+    };
 
     if (error) {
         return <div>Error</div>;
@@ -47,6 +64,11 @@ export default function Companies() {
                                 tags={tags}
                                 mapTags={mapTags}
                                 checkboxInput={checkboxInput}
+                            />
+                            <Location
+                                locations={locations}
+                                selectLocations={selectLocations}
+                                checkboxInput={handleLocationCheckboxInput}
                             />
                         </div>
                     </section>
