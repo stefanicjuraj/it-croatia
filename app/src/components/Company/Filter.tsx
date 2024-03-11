@@ -1,25 +1,27 @@
+import { useState } from 'react';
 import chevron from '/assets/icons/chevron.svg';
 
-export const Filter = ({ toggleDropdown, dropdown, industryTags, tags, mapTags, checkboxInput }: {
-    toggleDropdown: () => void;
-    dropdown: boolean;
+export const Filter = ({ industryTags, tags, mapTags, checkboxInput }: {
     industryTags: string[];
     tags: string[];
     mapTags: Record<string, string>;
     checkboxInput: (tag: string) => void;
 }) => {
 
+    const [dropdownOpen, isDropdownOpen] = useState(false);
+    const toggle = () => isDropdownOpen(!dropdownOpen);
+
     return (
         <>
             <div className="relative mt-4 sm:mt-0">
                 <button className="w-full flex items-center justify-center py-4 px-5 text-white bg-[#222] border border-[#333] rounded-xl"
                     type="button"
-                    onClick={toggleDropdown}
+                    onClick={toggle}
                 >
                     Industry
                     <img src={chevron} className="h-5 w-5 ml-3" />
                 </button>
-                {dropdown && (
+                {dropdownOpen && (
                     <div id="checkbox" className="absolute z-10 w-56 bg-[#222] border border-[#333] divide-y divide-gray-100 rounded-lg shadow mt-2">
                         <ul className="p-3 space-y-1 text-md text-white"
                             aria-labelledby="checkbox"
