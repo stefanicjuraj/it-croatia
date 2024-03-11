@@ -10,7 +10,7 @@ import TableHead from '../components/Company/TableHead';
 import { TableBody } from '../components/Company/TableBody';
 
 export default function Companies() {
-    const { companies, loading, error, toggleDropdown, industryTags, dropdown, checkboxInput, tags, mapTags } = useCompany();
+    const { companies, loading, error, industryTags, checkboxInput, tags, mapTags } = useCompany();
     const [companySearch, setCompanySearch] = useState("");
 
     const searchCompany = companies.filter((company) => {
@@ -43,8 +43,6 @@ export default function Companies() {
                                 </p>
                             </div>
                             <Filter
-                                toggleDropdown={toggleDropdown}
-                                dropdown={dropdown}
                                 industryTags={industryTags}
                                 tags={tags}
                                 mapTags={mapTags}
