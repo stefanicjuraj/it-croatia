@@ -10,7 +10,6 @@ export const useCompany = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [tags, setTags] = useState<string[]>([]);
-  const [dropdown, setDropdown] = useState(false);
 
   const industryTags = [
     "Software Development",
@@ -57,8 +56,6 @@ export const useCompany = () => {
     fetchCompanies();
   }, []);
 
-  const toggleDropdown = () => setDropdown(!dropdown);
-
   const tagInput = (tags: string[]) => {
     setTags(tags);
   };
@@ -76,8 +73,6 @@ export const useCompany = () => {
     error,
     tagInput,
     tags,
-    toggleDropdown,
-    dropdown,
     checkboxInput,
     industryTags,
     mapTags,
