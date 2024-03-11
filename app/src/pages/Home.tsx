@@ -95,7 +95,7 @@ export default function Home() {
                             </div>
                         </div>
                     </Link>
-                    <Link to="/certificates">
+                    <Link to="/podcasts">
                         <div className="bg-[#222] sm:mb-0 mb-8 px-6 py-6 rounded-xl hover:ring-1 hover:ring-indigo-300 animation glow delay-6">
                             <div className="flex justify-center items-center mb-4 w-16 h-16 rounded-full bg-[#111]">
                                 <img src={podcast} alt="Company icon" className="w-8 h-8" />
@@ -109,7 +109,7 @@ export default function Home() {
                             </div>
                         </div>
                     </Link>
-                    <Link to="/certificates">
+                    <Link to="/internships">
                         <div className="bg-[#222] sm:mb-0 mb-8 px-6 py-6 rounded-xl hover:ring-1 hover:ring-indigo-300 animation glow delay-7">
                             <div className="flex justify-center items-center mb-4 w-16 h-16 rounded-full bg-[#111]">
                                 <img src={internship} alt="Company icon" className="w-8 h-8" />
