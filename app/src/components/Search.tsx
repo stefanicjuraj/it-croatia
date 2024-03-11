@@ -16,7 +16,7 @@ export const Search = ({ placeholder, onSearchChange }: { placeholder: string, o
                 <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
                     <img src={searchicon} className="w-5 h-5" alt="Search icon" />
                 </div>
-                <input className="block w-96 p-4 pl-10 text-white bg-[#222] border-[#333] rounded-xl focus:border-indigo-400"
+                <input className="block w-96 p-4 pl-10 text-white bg-[#222] border-[#333] rounded-xl focus:border-indigo-400 hover:border-indigo-400"
                     type="text"
                     value={search}
                     onChange={handleSearch}

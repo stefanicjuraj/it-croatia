@@ -13,7 +13,7 @@ export const Location = ({ locations, selectLocations, checkboxInput }: {
     return (
         <>
             <div className="relative mt-4 sm:mt-0 ml-4">
-                <button className="w-full flex items-center justify-center py-4 px-5 text-white bg-[#222] border border-[#333] rounded-xl"
+                <button className="w-full flex items-center justify-center py-4 px-5 text-white bg-[#222] border border-[#333] rounded-xl hover:border-indigo-400"
                     type="button"
                     onClick={toggle}
                 >
