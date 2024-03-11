@@ -19,7 +19,10 @@ export const Filter = ({ industryTags, tags, mapTags, checkboxInput }: {
                     onClick={toggle}
                 >
                     Industry
-                    <img src={chevron} className="h-5 w-5 ml-3" />
+                    <span className="ml-2 text-sm text-white rounded-full bg-[#333] px-2.5 py-1">
+                        {tags.length}
+                    </span>
+                    <img src={chevron} className={`h-5 w-5 ml-2 transition-transform ${dropdownOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {dropdownOpen && (
                     <div id="checkbox" className="absolute z-10 w-56 bg-[#222] border border-[#333] divide-y divide-gray-100 rounded-lg shadow mt-2">
