@@ -36,7 +36,7 @@ export default function Podcasts() {
                                     onSearchChange={setPodcastSearch}
                                     placeholder="Search podcasts"
                                 />
-                                <p id="searchResults" className="text-black absolute right-2 bottom-2 bg-[#eee] focus:ring-4 focus:outline-none rounded-xl text-base px-5 py-2">
+                                <p className="absolute right-2 bottom-2 bg-[#333] rounded-full px-5 py-2">
                                     {searchPodcast.length} results
                                 </p>
                             </div>

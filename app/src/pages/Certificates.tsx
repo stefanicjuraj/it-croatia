@@ -37,7 +37,7 @@ export default function Certificates() {
                                     onSearchChange={setCertificateSearch}
                                     placeholder="Search certificates"
                                 />
-                                <p id="searchResults" className="text-black absolute right-2 bottom-2 bg-[#eee] focus:ring-4 focus:outline-none rounded-xl text-base px-5 py-2">
+                                <p className="absolute right-2 bottom-2 bg-[#333] rounded-full px-5 py-2">
                                     {searchCertificate.length} results
                                 </p>
                             </div>
