@@ -32,10 +32,10 @@ export default function Certificates() {
                 <>
                     <section className="max-w-screen-xl px-4 mx-auto sm:px-0 relative animation glow delay-1">
                         <div className="flex items-center mb-8 flex-wrap sm:flex-nowrap">
-                            <div className="mr-4 relative w-96 text-white">
+                            <div className="mr-4 relative sm:w-96 w-80 text-white">
                                 <Search
                                     onSearchChange={setCertificateSearch}
-                                    placeholder="Search by certificate"
+                                    placeholder="Search certificates"
                                 />
                                 <p id="searchResults" className="text-black absolute right-2 bottom-2 bg-[#eee] focus:ring-4 focus:outline-none rounded-xl text-base px-5 py-2">
                                     {searchCertificate.length} results
