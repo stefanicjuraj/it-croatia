@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useState } from 'react';
 // Hooks
 import { useCompany } from '../hooks/useCompany';
@@ -15,6 +16,12 @@ export default function Companies() {
     const [companySearch, setCompanySearch] = useState("");
     const [selectLocations, setselectLocations] = useState<string[]>([]);
     const [locations, setLocations] = useState<string[]>([]);
+    const [sortOrder, setSortOrder] = useState('');
+
+    useEffect(() => {
+        const uniqueLocations = [...new Set(companies.map(company => company.Location))];
+        setLocations(uniqueLocations);
+    }, [companies]);
 
     const searchCompany = companies.filter((company) => {
         const companyName = company.Company.toLowerCase();
@@ -24,10 +31,20 @@ export default function Companies() {
         return companyName.includes(search) && (tags.length === 0 || companyIndustry) && companyLocation;
     });
 
-    useEffect(() => {
-        const uniqueLocations = [...new Set(companies.map(company => company.Location))];
-        setLocations(uniqueLocations);
-    }, [companies]);
+    const sortEmployees = React.useMemo(() => {
+        return searchCompany.slice().sort((a, b) => {
+            if (sortOrder === 'asc') {
+                return Number(a.Employees) - Number(b.Employees);
+            } else if (sortOrder === 'desc') {
+                return Number(b.Employees) - Number(a.Employees);
+            }
+            return 0;
+        });
+    }, [searchCompany, sortOrder]);
+
+    const toggleSortEmployees = () => {
+        setSortOrder(prevSortOrder => prevSortOrder === 'asc' ? 'desc' : 'asc');
+    };
 
     const handleLocationCheckboxInput = (location: string) => {
         setselectLocations(prevLocations =>
@@ -75,8 +92,8 @@ export default function Companies() {
                     <section className="px-4 mx-auto mb-40">
                         <div className="max-w-screen-xl mx-auto overflow-x-auto rounded-t-xl rounded-b-xl">
                             <table className="w-full text-left text-white">
-                                <TableHead />
-                                <TableBody companies={searchCompany} />
+                                <TableHead sortEmployees={toggleSortEmployees} />
+                                <TableBody companies={sortEmployees} />
                             </table>
                         </div>
                     </section>
