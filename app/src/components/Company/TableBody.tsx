@@ -15,7 +15,7 @@ export const TableBody = ({ companies }: { companies: Array<object> }) => {
                             {(company as { Website: string })["Website"]}
                         </a>
                     </td>
-                    <td className="text-sm text-white px-7 py-7">
+                    <td className="text-sm text-white px-7 py-7 whitespace-nowrap">
                         {(company as { Industry: string[] }).Industry.map((industry, index) => (
                             <span className="px-3 py-2 mr-1 bg-indigo-500 rounded-full"
                                 key={index}
