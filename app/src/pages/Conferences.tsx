@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 // Hooks
 import { useConference } from '../hooks/useConference';
 // Components
@@ -9,14 +9,42 @@ import TableHead from '../components/Conference/TableHead';
 import { TableBody } from '../components/Conference/TableBody';
 
 export default function Conferences() {
-    const { conferences, loading, error } = useConference();
+    const { conferences, loading, error, countdown } = useConference();
     const [conferenceSearch, setConferenceSearch] = useState("");
+    const [sortOrder, setSortOrder] = useState('');
 
     const searchConference = conferences.filter((conferences) => {
         const conferenceName = conferences.Conference.toLowerCase();
         const search = conferenceSearch.toLowerCase();
         return conferenceName.includes(search);
     });
+
+    const toggleSortDates = () => {
+        setSortOrder(prevSortOrder => prevSortOrder === 'asc' ? 'desc' : 'asc');
+    };
+
+    const getDaysLeft = (startDate: string) => {
+        const result = countdown(startDate);
+        const daysMatch = result.match(/\d+/);
+        return daysMatch ? parseInt(daysMatch[0], 10) : 0;
+    };
+
+    const sortConferences = useMemo(() => {
+        return conferences.filter(conference => {
+            const conferenceName = conference.Conference.toLowerCase();
+            const search = conferenceSearch.toLowerCase();
+            return conferenceName.includes(search);
+        }).sort((a, b) => {
+            const daysLeftA = getDaysLeft(a.startDate);
+            const daysLeftB = getDaysLeft(b.startDate);
+            if (sortOrder === 'asc') {
+                return daysLeftA - daysLeftB;
+            } else if (sortOrder === 'desc') {
+                return daysLeftB - daysLeftA;
+            }
+            return 0;
+        });
+    }, [conferences, conferenceSearch, sortOrder]); // eslint-disable-line
 
     if (error) {
         return <div>Error</div>;
@@ -44,8 +72,8 @@ export default function Conferences() {
                     <section className="px-4 mx-auto mb-40">
                         <div className="max-w-screen-xl mx-auto overflow-x-auto rounded-t-xl rounded-b-xl">
                             <table className="w-full text-left text-white">
-                                <TableHead />
-                                <TableBody conferences={searchConference} />
+                                <TableHead sortDates={toggleSortDates} />
+                                <TableBody conferences={sortConferences} />
                             </table>
                         </div>
                     </section>
