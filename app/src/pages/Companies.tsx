@@ -19,8 +19,9 @@ export default function Companies() {
     const [sortOrder, setSortOrder] = useState('');
 
     useEffect(() => {
-        const uniqueLocations = [...new Set(companies.map(company => company.Location))];
-        setLocations(uniqueLocations);
+        const locations = [...new Set(companies.map(company => company.Location))]
+            .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+        setLocations(locations);
     }, [companies]);
 
     const searchCompany = companies.filter((company) => {
