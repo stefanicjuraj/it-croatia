@@ -15,7 +15,7 @@ export const useCommunity = () => {
           throw new Error("Error fetching data.");
         }
         const data = await response.json();
-        setCommunity(data.community);
+        setCommunity(data.communities);
       } catch (error) {
         setError("Error fetching data: " + error);
       } finally {

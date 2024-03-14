@@ -15,7 +15,7 @@ export const useInternship = () => {
           throw new Error("Error fetching data.");
         }
         const data = await response.json();
-        setInternship(data.internship);
+        setInternship(data.internships);
       } catch (error) {
         setError("Error fetching data: " + error);
       } finally {
