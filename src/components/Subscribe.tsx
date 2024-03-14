@@ -17,7 +17,7 @@ export default function Subscribe() {
                     maxLength={50}
                     required />
             </div>
-            <button type="submit" className="flex px-5 py-3 mx-auto font-normal text-center text-white bg-indigo-500 rounded-lg text-md hover:bg-indigo-500 focus:ring-1 focus:outline-none focus:ring-indigo-300">
+            <button type="submit" className="flex px-5 py-3 mx-auto font-normal text-center text-white bg-indigo-400 rounded-lg text-md hover:bg-indigo-500 focus:ring-1 focus:outline-none focus:ring-indigo-300">
                 Subscribe to receive updates
                 <img src={arrow} className="w-6 h-6 ms-2" alt="Arrow icon" />
             </button>
