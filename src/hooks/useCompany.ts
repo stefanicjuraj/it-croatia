@@ -9,27 +9,17 @@ export const useCompany = () => {
   const [tags, setTags] = useState<string[]>([]);
 
   const industryTags = [
+    "Information Technology",
     "Software Development",
+    "Game Development",
     "IT Services",
-    "IT Consulting",
-    "Internet",
-    "Security",
-    "Electronics",
-    "Information Services",
+    "Cybersecurity",
+    "Design Services",
     "Marketing Services",
-    "Media",
+    "Media Technology",
   ];
 
   const mapTags: { [key: string]: string } = {
-    "IT Services": "IT Services",
-    "IT Consulting": "IT Consulting",
-    "Software Development": "Software Development",
-    Information: "Information",
-    Media: "Media Services",
-    Internet: "Internet Services",
-    Electronics: "Electronics",
-    "Marketing Services": "Marketing Services",
-    "Information Services": "Information Services",
     Security: "Cybersecurity",
   };
 
@@ -64,7 +54,7 @@ export const useCompany = () => {
   };
 
   return {
-    companies: companies,
+    companies,
     loading,
     error,
     tagInput,
