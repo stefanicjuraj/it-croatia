@@ -1,7 +1,4 @@
 import { useEffect, useState } from "react";
-import { doc, getDoc } from "firebase/firestore";
-// Services
-import { db } from "../services/firebase";
 // Types
 import Company from "../types/company";
 
@@ -39,15 +36,14 @@ export const useCompany = () => {
   useEffect(() => {
     const fetchCompanies = async () => {
       try {
-        const docRef = await getDoc(doc(db, "collection", "document"));
-        if (docRef.exists()) {
-          const data = docRef.data();
-          setCompanies(data.companies);
-        } else {
-          setError("No such document!");
+        const response = await fetch("/data/companies.json");
+        if (!response.ok) {
+          throw new Error("Error fetching data.");
         }
+        const data = await response.json();
+        setCompanies(data.companies);
       } catch (error) {
-        setError("Error fetching document.");
+        setError("Error fetching data: " + error);
       } finally {
         setLoading(false);
       }

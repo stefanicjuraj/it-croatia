@@ -1,7 +1,4 @@
 import { useEffect, useState } from "react";
-import { doc, getDoc } from "firebase/firestore";
-// Services
-import { db } from "../services/firebase";
 // Types
 import Certificate from "../types/certificate";
 
@@ -13,15 +10,14 @@ export const useCertificate = () => {
   useEffect(() => {
     const fetchCertificates = async () => {
       try {
-        const docRef = await getDoc(doc(db, "collection", "document"));
-        if (docRef.exists()) {
-          const data = docRef.data();
-          setCertificates(data.certificates);
-        } else {
-          setError("No such document!");
+        const response = await fetch("/data/certificates.json");
+        if (!response.ok) {
+          throw new Error("Error fetching data.");
         }
+        const data = await response.json();
+        setCertificates(data.certificates);
       } catch (error) {
-        setError("Error fetching document.");
+        setError("Error fetching data: " + error);
       } finally {
         setLoading(false);
       }
@@ -29,7 +25,6 @@ export const useCertificate = () => {
 
     fetchCertificates();
   }, []);
-
   return {
     certificates,
     loading,

@@ -1,7 +1,4 @@
 import { useEffect, useState } from "react";
-import { doc, getDoc } from "firebase/firestore";
-// Services
-import { db } from "../services/firebase";
 // Types
 import Podcast from "../types/podcast";
 
@@ -13,15 +10,14 @@ export const usePodcast = () => {
   useEffect(() => {
     const fetchPodcasts = async () => {
       try {
-        const docRef = await getDoc(doc(db, "collection", "document"));
-        if (docRef.exists()) {
-          const data = docRef.data();
-          setPodcast(data.podcasts);
-        } else {
-          setError("No such document!");
+        const response = await fetch("/data/podcasts.json");
+        if (!response.ok) {
+          throw new Error("Error fetching data.");
         }
+        const data = await response.json();
+        setPodcast(data.podcasts);
       } catch (error) {
-        setError("Error fetching document.");
+        setError("Error fetching data: " + error);
       } finally {
         setLoading(false);
       }

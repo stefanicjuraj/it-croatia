@@ -1,7 +1,4 @@
 import { useEffect, useState } from "react";
-import { doc, getDoc } from "firebase/firestore";
-// Services
-import { db } from "../services/firebase";
 // Types
 import Community from "../types/community";
 
@@ -13,15 +10,14 @@ export const useCommunity = () => {
   useEffect(() => {
     const fetchCommunities = async () => {
       try {
-        const docRef = await getDoc(doc(db, "collection", "document"));
-        if (docRef.exists()) {
-          const data = docRef.data();
-          setCommunity(data.communities);
-        } else {
-          setError("No such document!");
+        const response = await fetch("/data/communities.json");
+        if (!response.ok) {
+          throw new Error("Error fetching data.");
         }
+        const data = await response.json();
+        setCommunity(data.community);
       } catch (error) {
-        setError("Error fetching document.");
+        setError("Error fetching data: " + error);
       } finally {
         setLoading(false);
       }
