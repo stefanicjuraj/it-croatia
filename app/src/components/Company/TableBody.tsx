@@ -1,9 +1,16 @@
 import linkedin from '/assets/icons/linkedin.svg';
 
 export const TableBody = ({ companies }: { companies: Array<object> }) => {
+
+    const sortCompanies = companies.slice().sort((a, b) => {
+        const companyA = (a as { Company: string }).Company.toLowerCase();
+        const companyB = (b as { Company: string }).Company.toLowerCase();
+        return companyA.localeCompare(companyB);
+    });
+
     return (
         <tbody>
-            {companies.map((company, index) => (
+            {sortCompanies.map((company, index) => (
                 <tr key={index} className="bg-[#222] border-t border-[#444]">
                     <td className="text-lg px-7 py-7 whitespace-nowrap">
                         {(company as { Company: string }).Company}
