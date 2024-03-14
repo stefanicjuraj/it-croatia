@@ -16,10 +16,16 @@ export default function Home() {
     return (
         <>
             <section className="max-w-screen-xl mx-auto mt-40 text-white" >
-                <div className="px-4 py-4 mt-40 mb-24 animation glow delay-1" >
-                    <h1 className="mb-16 font-bold text-center text-indigo-300 text-7xl">
+                <div className="px-4 py-4 mt-40 mb-24 animation glow delay-1 text-center">
+                    <h1 className="mb-8 font-bold text-center text-indigo-300 text-7xl">
                         IT Croatia
                     </h1>
+                    <p className="mx-auto mb-8 text-sm text-center inline-flex bg-[#222] px-5 py-2 rounded-full">
+                        <span className="flex items-center mx-auto">
+                            <span className="flex w-2 h-2 mr-2 bg-indigo-300 rounded-full animate-pulse"></span>
+                        </span>
+                        In development
+                    </p>
                     <p className="w-full mx-auto text-xl text-center sm:w-4/5 sm:text-2xl">
                         Explore a collection of IT companies, conferences, education, certificates, communities, podcasts, and internships in Croatia
                     </p>
