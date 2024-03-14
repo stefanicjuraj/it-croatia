@@ -12,10 +12,10 @@ export default function Podcasts() {
     const { podcast, loading, error } = usePodcast();
     const [podcastSearch, setPodcastSearch] = useState("");
 
-    const searchPodcast = podcast.filter((podcast) => {
-        const podcastName = podcast.Podcast.toLowerCase();
+    const searchPodcast = podcast?.filter((podcast) => {
+        const podcastName = podcast?.Podcast?.toLowerCase();
         const search = podcastSearch.toLowerCase();
-        return podcastName.includes(search);
+        return podcastName?.includes(search);
     });
 
     if (error) {
