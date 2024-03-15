@@ -33,10 +33,13 @@ export default function Sidebar() {
                                 <img src={menu} alt="Sidebar menu icon" className="w-7 h-7" />
                             </button>
                         </div>
-                        <div className="flex items-center">
+                        <div className="flex items-center text-white">
                             <div>
                                 <p className="text-white text-md">Last updated:</p>
-                                <p className="text-white text-md">January 01</p>
+                                <span className="inline-flex items-center mx-auto mt-2">
+                                    <span className="flex w-2 h-2 mr-2 bg-indigo-300 rounded-full animate-pulse"></span>
+                                </span>
+                                -
                             </div>
                         </div>
                     </div>
