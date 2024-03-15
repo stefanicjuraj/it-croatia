@@ -25,7 +25,7 @@ export const TableBody = ({ conferences }: { conferences: Array<object> }) => {
                         ))}
                     </td>
                     <td className="px-7 py-7 text-md">
-                        <a className="underline"
+                        <a className="hover:underline"
                             href={(conference as { Organizer: string })["Organizer"]}
                         >
                             {(conference as { Organizer: string })["Organizer"]}
