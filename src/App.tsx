@@ -1,4 +1,5 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { Analytics } from "@vercel/analytics/react"
 // Components
 import Sidebar from './components/Sidebar';
 // Pages
@@ -18,6 +19,7 @@ export default function App() {
   return (
     <>
       <Router>
+        <Analytics />
         <Sidebar />
         <ScrollToTop />
         <Routes>
