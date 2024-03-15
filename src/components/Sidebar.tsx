@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useSidebar } from "../hooks/useSidebar";
 // Icons
@@ -13,10 +14,20 @@ import contribute from "/assets/icons/contribute.svg";
 
 export default function Sidebar() {
     const { sidebarOpen, toggleSidebar, activePath } = useSidebar();
+    const [lastUpdated, setLastUpdated] = useState("");
 
     const activeClass = (path: string) => {
         return activePath === path ? 'bg-[#333]' : "";
     };
+
+    useEffect(() => {
+        fetch("/data/changelog.json")
+            .then(response => response.json())
+            .then(data => {
+                setLastUpdated(data.updated);
+            })
+            .catch(error => console.error("Error fetching data:", error));
+    }, []);
 
     return (
         <>
@@ -33,13 +44,10 @@ export default function Sidebar() {
                                 <img src={menu} alt="Sidebar menu icon" className="w-7 h-7" />
                             </button>
                         </div>
-                        <div className="flex items-center text-white">
+                        <div className="flex items-center text-md text-right text-white">
                             <div>
                                 <p className="text-white text-md">Last updated:</p>
-                                <span className="inline-flex items-center mx-auto mt-2">
-                                    <span className="flex w-2 h-2 mr-2 bg-indigo-300 rounded-full animate-pulse"></span>
-                                </span>
-                                -
+                                {lastUpdated}
                             </div>
                         </div>
                     </div>
