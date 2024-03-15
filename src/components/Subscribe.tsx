@@ -1,7 +1,7 @@
 import arrow from "/assets/icons/arrow-right.svg";
 
 export default function Subscribe() {
-    const accessKey = import.meta.env.VITE_ACCESS_KEY || '';
+    const accessKey = import.meta.env.VITE_ACCESS_KEY;
 
     return (
         <form method="POST" action="https://api.web3forms.com/submit">

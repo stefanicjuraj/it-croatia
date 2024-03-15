@@ -3,7 +3,7 @@ import mail from "/assets/icons/mail.svg";
 import user from "/assets/icons/user.svg";
 
 export default function Form() {
-    const accessKey = import.meta.env.VITE_ACCESS_KEY || '';
+    const accessKey = import.meta.env.VITE_ACCESS_KEY;
 
     return (
         <div className="max-w-screen-md mx-auto mt-16 mb-4 sm:p-12 p-8 bg-[#222] rounded-xl">
