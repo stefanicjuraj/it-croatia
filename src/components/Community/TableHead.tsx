@@ -6,9 +6,6 @@ export default function TableHead() {
                     Community
                 </th>
                 <th scope="col" className="py-8 px-7">
-                    Description
-                </th>
-                <th scope="col" className="py-8 px-7">
                     Topics
                 </th>
                 <th scope="col" className="py-8 px-7">
