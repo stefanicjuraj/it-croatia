@@ -13,6 +13,7 @@ export default function Subscribe() {
                 <input className="bg-[#333] border border-indigo-300 text-white text-md rounded-lg focus:ring-1 focus:outline-none focus:ring-indigo-300 block w-80 p-3"
                     type="email"
                     id="email"
+                    name="email"
                     placeholder="Enter your email address"
                     maxLength={50}
                     required />
