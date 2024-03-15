@@ -12,7 +12,7 @@ export const TableBody = ({ communities }: { communities: Array<object> }) => {
                     <td className="px-7 py-7 text-md w-1/3">
                         {(community as { Description: string }).Description}
                     </td>
-                    <td className="text-xs text-white px-7 py-7 whitespace-nowrap">
+                    <td className="text-sm text-white px-7 py-7 whitespace-nowrap">
                         {(community as { Topic: Array<string> }).Topic.map((topic, index) => (
                             <span key={index} className="px-3 py-2 mr-1 bg-indigo-500 rounded-full">
                                 {topic}
