@@ -9,6 +9,7 @@ import education from "/assets/icons/education.svg";
 import certificate from "/assets/icons/certificate.svg";
 import podcast from "/assets/icons/podcast.svg";
 import community from "/assets/icons/community.svg";
+import contribute from "/assets/icons/contribute.svg";
 
 export default function Sidebar() {
     const { sidebarOpen, toggleSidebar, activePath } = useSidebar();
@@ -94,6 +95,12 @@ export default function Sidebar() {
                             <Link to="/internships" className={`flex items-center p-3 rounded-xl group hover:bg-[#333] ${activeClass("/internships")}`}>
                                 <img src={internship} alt="Home icon" className="w-6 h-6" />
                                 <h1 className="flex-1 ms-3 whitespace-nowrap">Internships</h1>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/contribute" className={`flex items-center p-3 rounded-xl group hover:bg-[#333] ${activeClass("/contribute")}`}>
+                                <img src={contribute} alt="Contributing icon" className="w-6 h-6" />
+                                <h1 className="flex-1 ms-3 whitespace-nowrap">Contribute</h1>
                             </Link>
                         </li>
                     </ul>
