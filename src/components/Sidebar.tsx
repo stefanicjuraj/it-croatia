@@ -45,7 +45,7 @@ export default function Sidebar() {
 
             <aside
                 id="sidebar"
-                className={`transition-transform duration-300 ease-in-out left-0 top-0 fixed top-0 left-0 z-40 w-72 h-screen pt-40
+                className={`transition-transform duration-300 ease-in-out left-0 top-0 fixed top-0 left-0 z-40 w-72 h-screen pt-32
                 ${sidebarOpen ? "md:translate-x-0" : "md:-translate-x-full"} bg-[#111] shadow
                 ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}`}>
                 <div className="h-full px-3 pb-4 overflow-y-auto bg-[#111]">
