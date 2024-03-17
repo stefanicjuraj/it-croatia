@@ -4,7 +4,7 @@
 
 ### Added:
 
-- [x] **Companies:** CROBA, Greenovation Strategy, troido, Renteon, synvert, Mihha-Vision, t-matix engineering, REDAI app, Spotsie
+- [x] **Companies:** CROBA, Greenovation Strategy, troido, Renteon, synvert, Mihha-Vision, t-matix engineering, REDAI app, Spotsie, Studion, CADENAS, jt digital, Genius Host, Helioz Technologies
 
 ## 16/03/2024
 
