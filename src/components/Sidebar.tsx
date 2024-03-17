@@ -47,7 +47,9 @@ export default function Sidebar() {
                         <div className="flex items-center text-md text-right text-white">
                             <div>
                                 <p className="text-white text-md">Last updated:</p>
-                                {lastUpdated}
+                                <a href="https://github.com/stefanicjuraj/it-croatia/blob/main/CHANGELOG.md" className="hover:underline" target="_blank" rel="noopener noreferrer">
+                                    {lastUpdated}
+                                </a>
                             </div>
                         </div>
                     </div>
