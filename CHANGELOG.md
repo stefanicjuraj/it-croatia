@@ -4,26 +4,16 @@
 
 ### Added:
 
-- [x] CROBA
-- [x] Greenovation Strategy
-- [x] troido
-- [x] Renteon
-- [x] synvert
-- [x] Mihha-Vision
-- [x] t-matix engineering
-- [x] REDAI app
-- [x] Spotsie
+- [x] **Companies:** CROBA, Greenovation Strategy, troido, Renteon, synvert, Mihha-Vision, t-matix engineering, REDAI app, Spotsie
 
 ## 16/03/2024
 
 ### Added:
 
-- [x] Treblle
+- [x] **Companies:** Treblle
 
 ## 15/03/2024
 
 ### Added:
 
-- [x] A1
-- [x] Hrvatski Telekom
-- [x] FUNCTOR
+- [x] **Companies:** A1, Hrvatski Telekom, FUNCTOR
