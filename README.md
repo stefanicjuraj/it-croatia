@@ -2,7 +2,7 @@
 
 Collection of IT companies, conferences, education, certificates, communities, podcasts, and internships in Croatia — within the industry departments of information technology, software development, IT services, and IT consulting.
 
-# Features
+## Features
 
 - [x] **500+ Companies** conducting business operations, providing services, or offering consultancy in Croatia.
 - [x] **20+ Conferences** to attend with industry knowledge professionals and enthusiasts.
