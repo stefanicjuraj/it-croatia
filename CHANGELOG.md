@@ -10,6 +10,8 @@
 
 - [x] **Communities:** Sistemci Hrvatska, Sistemci Relaxed
 
+- [x] **Education:** Electrical Engineering & IT, Computer Science, Communication & Information Technology
+
 ## 17/03/2024
 
 ### Added:
