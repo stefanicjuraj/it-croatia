@@ -1,5 +1,15 @@
 # Changelog
 
+## 18/03/2024
+
+### Added:
+
+- [x] **Companies:** ByteHeron
+
+- [x] **Conferences:** AI2FUTURE
+
+- [x] **Communities:** Sistemci Hrvatska, Sistemci Relaxed
+
 ## 17/03/2024
 
 ### Added:
