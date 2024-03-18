@@ -34,7 +34,7 @@ export const useConference = () => {
     const difference = start.getTime() - now.getTime();
     const daysLeft = Math.ceil(difference / (1000 * 3600 * 24));
 
-    return daysLeft > 0 ? `in ${daysLeft} days` : "ENDED";
+    return daysLeft > 0 ? `in ${daysLeft} days` : "";
   };
 
   return {
