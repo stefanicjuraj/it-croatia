@@ -10,7 +10,7 @@ export default function Form() {
             <form method="POST" action="https://api.web3forms.com/submit">
                 <input type="hidden" name="access_key" value={accessKey} />
                 <input type="hidden" name="redirect" value=""></input>
-                <input type="hidden" name="from_name" value=""></input>
+                <input type="hidden" name="from_name" value="IT Croatia"></input>
                 <input type="hidden" name="subject" value="New Contribution"></input>
                 <div className="grid md:grid-cols-2 md:gap-6">
                     <div className="relative z-0 w-full mt-4 group">
