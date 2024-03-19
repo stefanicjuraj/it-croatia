@@ -4,6 +4,8 @@ Collection of IT companies, conferences, education, certificates, communities, p
 
 To ensure accuracy and relevancy, regular updates are conducted on a monthly basis. This involves the addition of newly established entities while removing inactive or defunct entities from the collection. By maintaining this approach, the focus is to offer a reliable and up-to-date resource for seeking information about IT in Croatia.
 
+&rarr; [**CHANGELOG**](https://github.com/stefanicjuraj/datalog/blob/main/CONTRIBUTING.md)
+
 ## Features
 
 - [x] **600+ Companies** conducting business operations, providing services, or offering consultancy in Croatia.
