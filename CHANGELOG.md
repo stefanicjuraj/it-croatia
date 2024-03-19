@@ -2,6 +2,8 @@
 
 ## 19/03/2024
 
+### Added:
+
 - [x] **Conferences:** DSC Adria
 
 ## 18/03/2024
