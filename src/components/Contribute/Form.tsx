@@ -30,7 +30,7 @@ export default function Form() {
                                 placeholder="John Doe"
                             />
                         </div>
-                        <p className="mt-2 text-sm text-[#555]">
+                        <p className="mt-2 text-sm text-[#999]">
                             Optional - if you want a mention in contributions.
                         </p>
                     </div>
@@ -52,7 +52,7 @@ export default function Form() {
 
                             />
                         </div>
-                        <p className="mt-2 text-sm text-[#555]">
+                        <p className="mt-2 text-sm text-[#999]">
                             Optional - if you want a receive a reply.
                         </p>
                     </div>
