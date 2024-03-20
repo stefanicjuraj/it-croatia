@@ -1,5 +1,13 @@
 # Changelog
 
+## 20/03/2024
+
+### Added:
+
+- [x] **Companies:** OG Consultancy Services
+
+- [x] **Conferences:** Open Gates 2024
+
 ## 19/03/2024
 
 ### Added:
