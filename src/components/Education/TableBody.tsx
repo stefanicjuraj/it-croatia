@@ -17,12 +17,7 @@ export const TableBody = ({ education }: { education: Array<object> }) => {
                         ))}
                     </td>
                     <td className="px-7 py-7 text-md">
-                        <a className="hover:underline"
-                            href={(education as { Organizer: string })?.Organizer}
-                            target="_blank" rel="noopener noreferrer"
-                        >
-                            {(education as { Organizer: string })?.Organizer}
-                        </a>
+                        {(education as { Organizer: string })?.Organizer}
                     </td>
                     <td className="px-7 py-7 text-md">
                         {(education as { Type: string })?.Type}

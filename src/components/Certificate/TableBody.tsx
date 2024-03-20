@@ -18,11 +18,7 @@ export const TableBody = ({ certificate }: { certificate: Array<object> }) => {
                         ))}
                     </td>
                     <td className="px-7 py-7 text-md">
-                        <a className="hover:underline"
-                            href={(certificate as { Organizer: string })["Organizer"]}
-                        >
-                            {(certificate as { Organizer: string })["Organizer"]}
-                        </a>
+                        {(certificate as { Organizer: string })["Organizer"]}
                     </td>
                     <td className="px-10 text-lg py-7">
                         <a href={(certificate as { Enroll: string })["Enroll"]} className="inline-flex items-center hover:shadow hover:ring-indigo-500 focus:ring-2 focus:outline-none focus:ring-gray-200 rounded-xl" target="_blank" rel="noopener noreferrer"

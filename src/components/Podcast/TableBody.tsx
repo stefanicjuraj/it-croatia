@@ -18,11 +18,7 @@ export const TableBody = ({ podcasts }: { podcasts: Array<object> }) => {
                         ))}
                     </td>
                     <td className="px-7 py-7 text-md">
-                        <a className="hover:underline"
-                            href={(podcast as { Organizer: string })["Organizer"]}
-                        >
-                            {(podcast as { Organizer: string })["Organizer"]}
-                        </a>
+                        {(podcast as { Organizer: string })["Organizer"]}
                     </td>
                     <td className="px-9 text-lg py-7">
                         <a className="inline-flex items-center hover:shadow hover:ring-indigo-500 focus:ring-2 focus:outline-none focus:ring-gray-200 rounded-xl"

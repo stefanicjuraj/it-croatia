@@ -18,9 +18,7 @@ export const TableBody = ({ internships }: { internships: Array<object> }) => {
                         ))}
                     </td>
                     <td className="px-7 py-7 text-md">
-                        <a href={(internship as { Company: string })?.Company} className="underline">
-                            {(internship as { Company: string })?.Company}
-                        </a>
+                        {(internship as { Company: string })?.Company}
                     </td>
                     <td className="px-10 text-lg py-7">
                         <a className="inline-flex items-center hover:shadow hover:ring-indigo-500 focus:ring-2 focus:outline-none focus:ring-gray-200 rounded-xl"
