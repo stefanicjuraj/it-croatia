@@ -1,10 +1,18 @@
 # IT Croatia
 
-<div align="left">
+<div align="center">
     <img src="./public/assets/icons/it-croatia.png" width="70%" />
 </div>
 
 <br />
+
+<div align="center">
+<br />
+
+**[it-croatia.com](https://it-croatia.com)**
+
+<br />
+</div>
 
 Collection of IT companies, conferences, education, certificates, communities, podcasts, and internships in Croatia — within the industry departments of information technology, software development, IT services, and IT consulting.
 
