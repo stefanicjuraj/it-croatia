@@ -1,5 +1,13 @@
 # Changelog
 
+## 23/03/2024
+
+### Added:
+
+- [x] **Companies:** Visage Technologies
+
+- [x] **Internships:** OG-CS Academy
+
 ## 20/03/2024
 
 ### Added:
