@@ -1,6 +1,6 @@
 # IT Croatia
 
-<div align="center">
+<div align="left">
     <img src="./public/assets/icons/it-croatia.png" width="70%" />
 </div>
 
