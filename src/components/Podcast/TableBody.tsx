@@ -20,7 +20,7 @@ export const TableBody = ({ podcasts }: { podcasts: Array<object> }) => {
                     <td className="px-7 py-7 text-md">
                         {(podcast as { Organizer: string })["Organizer"]}
                     </td>
-                    <td className="px-9 text-lg py-7">
+                    <td className="text-lg px-9 py-7">
                         <a className="inline-flex items-center hover:shadow hover:ring-indigo-500 focus:ring-2 focus:outline-none focus:ring-gray-200 rounded-xl"
                             href={(podcast as { Listen: string })["Listen"]}
                             target="_blank" rel="noopener noreferrer"

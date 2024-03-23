@@ -1,15 +1,15 @@
 export default function Loading() {
     return (
         <>
-            <section className="max-w-screen-xl px-4 mx-auto sm:px-0">
+            <section className="px-4 mx-auto max-w-screen-xl sm:px-0">
                 <form className="flex items-center mb-8 animation glow delay-1">
                     <div className="relative">
                         <div className="h-14 w-96 bg-[#333] rounded-xl"></div>
                     </div>
                 </form>
             </section>
-            <section className="max-w-screen-xl px-0 mx-auto mb-40 xl:max-w-screen-2xl">
-                <div className="relative max-w-screen-xl mx-auto overflow-x-auto rounded-t-xl rounded-b-xl">
+            <section className="px-0 mx-auto mb-40 max-w-screen-xl xl:max-w-screen-2xl">
+                <div className="relative mx-auto overflow-x-auto max-w-screen-xl rounded-t-xl rounded-b-xl">
                     <table className="w-full">
                         <thead className="bg-[#222] border-b border-[#222]">
                             <tr>

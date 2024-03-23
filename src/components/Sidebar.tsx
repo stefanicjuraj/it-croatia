@@ -44,7 +44,7 @@ export default function Sidebar() {
                                 <img src={menu} alt="Sidebar menu icon" className="w-7 h-7" />
                             </button>
                         </div>
-                        <div className="flex items-center text-md text-right text-white">
+                        <div className="flex items-center text-right text-white text-md">
                             <div>
                                 <p className="text-white text-md">Last updated:</p>
                                 <a href="https://github.com/stefanicjuraj/it-croatia/blob/main/CHANGELOG.md" className="hover:underline" target="_blank" rel="noopener noreferrer">
@@ -62,7 +62,7 @@ export default function Sidebar() {
                 ${sidebarOpen ? "md:translate-x-0" : "md:-translate-x-full"} bg-[#111] shadow
                 ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}`}>
                 <div className="h-full px-3 pb-4 overflow-y-auto bg-[#111]">
-                    <ul className="space-y-2 text-lg font-normal text-white">
+                    <ul className="text-lg font-normal text-white space-y-2">
                         <li>
                             <Link to="/" className={`flex items-center p-3 rounded-xl group hover:bg-[#333] ${activeClass("/")}`}>
                                 <h1 className="ms-3">Home</h1>

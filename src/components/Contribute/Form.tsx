@@ -14,12 +14,12 @@ export default function Form() {
                 <input type="hidden" name="subject" value="New Contribution"></input>
                 <div className="grid md:grid-cols-2 md:gap-6">
                     <div className="relative z-0 w-full mt-4 group">
-                        <label htmlFor="name" className="block mb-2 text-md text-white">
+                        <label htmlFor="name" className="block mb-2 text-white text-md">
                             Name / Alias
                         </label>
                         <div className="flex">
                             <span className="inline-flex items-center px-3 border border-r-0 border-[#999] rounded-l-md">
-                                <img src={user} className="h-5 w-5" alt="User icon" />
+                                <img src={user} className="w-5 h-5" alt="User icon" />
                             </span>
                             <input className="rounded-none rounded-r-lg bg-[#333] border border-[#999] text-white focus:ring-[#6875F5] focus:ring-1 focus:border-[#6875F5] block flex-1 min-w-0 w-full text-sm p-3"
                                 type="text"
@@ -35,12 +35,12 @@ export default function Form() {
                         </p>
                     </div>
                     <div className="relative z-0 w-full mt-4 group">
-                        <label htmlFor="email" className="block mb-2 text-md text-white">
+                        <label htmlFor="email" className="block mb-2 text-white text-md">
                             Email
                         </label>
                         <div className="flex">
                             <span className="inline-flex items-center px-3 border border-r-0 border-[#999] rounded-l-md">
-                                <img src={mail} className="h-5 w-5" alt="Mail icon" />
+                                <img src={mail} className="w-5 h-5" alt="Mail icon" />
                             </span>
                             <input className="rounded-none rounded-r-lg bg-[#333] border border-[#999] text-white focus:ring-[#6875F5] focus:ring-1 focus:border-[#6875F5] block flex-1 min-w-0 w-full text-sm p-3"
                                 type="email"
@@ -57,7 +57,7 @@ export default function Form() {
                         </p>
                     </div>
                 </div>
-                <label htmlFor="message" className="block mt-4 mb-2 text-md font-medium text-white">
+                <label htmlFor="message" className="block mt-4 mb-2 font-medium text-white text-md">
                     Your contribution
                 </label>
                 <textarea className="block p-2.5 w-full text-sm text-white bg-[#333] rounded-lg border border-[#999] focus:ring-[#6875F5] focus:border-[#6875F5]"
@@ -70,7 +70,7 @@ export default function Form() {
                     required
                 >
                 </textarea>
-                <button type="submit" className="mt-8 inline-flex px-5 py-3 mx-auto font-normal text-center text-white bg-indigo-500 rounded-lg text-md hover:bg-indigo-500 focus:ring-1 focus:outline-none focus:ring-indigo-300">
+                <button type="submit" className="inline-flex px-5 py-3 mx-auto mt-8 font-normal text-center text-white bg-indigo-500 rounded-lg text-md hover:bg-indigo-500 focus:ring-1 focus:outline-none focus:ring-indigo-300">
                     Submit contribution
                     <img src={arrow} className="w-6 h-6 ms-2" alt="Arrow icon" />
                 </button>

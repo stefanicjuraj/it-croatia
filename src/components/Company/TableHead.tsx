@@ -13,9 +13,9 @@ export default function TableHead({ sortEmployees }: { sortEmployees: () => void
                 <th scope="col" className="py-8 px-7">
                     Location
                 </th>
-                <th scope="col" className="py-8 px-7 flex cursor-pointer" onClick={sortEmployees}>
+                <th scope="col" className="flex py-8 cursor-pointer px-7" onClick={sortEmployees}>
                     Employees
-                    <img src={chevron} className="h-5 w-5 mt-1 ml-2 transition-transform" />
+                    <img src={chevron} className="w-5 h-5 mt-1 ml-2 transition-transform" />
                 </th>
                 <th scope="col" className="py-8 px-7">
                     LinkedIn

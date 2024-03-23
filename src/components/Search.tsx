@@ -11,7 +11,7 @@ export const Search = ({ placeholder, onSearchChange }: { placeholder: string, o
     };
 
     return (
-        <form className="flex items-center relative sm:w-96 w-80 mr-4">
+        <form className="relative flex items-center mr-4 sm:w-96 w-80">
             <div className="relative w-96">
                 <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
                     <img src={searchicon} className="w-5 h-5" alt="Search icon" />

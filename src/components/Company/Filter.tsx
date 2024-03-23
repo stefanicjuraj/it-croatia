@@ -26,13 +26,13 @@ export const Filter = ({ industryTags, tags, mapTags, checkboxInput }: {
                 </button>
                 {dropdownOpen && (
                     <div id="checkbox" className="absolute z-10 w-42 bg-[#222] border border-[#333] divide-y divide-gray-100 rounded-lg shadow mt-2 overflow-y-auto max-h-80">
-                        <ul className="p-2 space-y-1 text-md text-white"
+                        <ul className="p-2 text-white space-y-1 text-md"
                             aria-labelledby="checkbox"
                         >
                             {industryTags.map((tag, index) => (
                                 <li key={index}>
                                     <div className="flex items-center p-3 rounded-lg hover:bg-[#333]">
-                                        <input className="w-5 h-5 text-indigo-500 rounded border-indigo-300 focus:ring-indigo-500 focus:ring-1"
+                                        <input className="w-5 h-5 text-indigo-500 border-indigo-300 rounded focus:ring-indigo-500 focus:ring-1"
                                             type="checkbox"
                                             id={`filter-checkbox-${index}`}
                                             value={tag} checked={tags.includes(tag)}
