@@ -1,5 +1,11 @@
 # IT Croatia
 
+<div align="center">
+    <img src="./public/assets/icons/it-croatia.png" width="50%" />
+</div>
+
+<br />
+
 Collection of IT companies, conferences, education, certificates, communities, podcasts, and internships in Croatia — within the industry departments of information technology, software development, IT services, and IT consulting.
 
 To ensure accuracy and relevancy, regular updates are conducted on a monthly basis. This involves the addition of newly established entities while removing inactive or defunct entities from the collection. By maintaining this approach, the focus is to offer a reliable and up-to-date resource for seeking information about IT in Croatia.
