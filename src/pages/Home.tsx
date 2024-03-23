@@ -15,8 +15,8 @@ import image from "/assets/icons/cro-it.png";
 export default function Home() {
     return (
         <>
-            <section className="max-w-screen-xl mx-auto mt-40 text-white" >
-                <div className="px-4 py-4 mt-40 mb-24 animation glow delay-1 text-center">
+            <section className="mx-auto mt-40 text-white max-w-screen-xl" >
+                <div className="px-4 py-4 mt-40 mb-24 text-center animation glow delay-1">
                     <h1 className="mb-8 font-bold text-center text-indigo-300 text-7xl">
                         IT Croatia
                     </h1>

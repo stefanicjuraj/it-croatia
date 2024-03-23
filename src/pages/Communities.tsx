@@ -29,9 +29,9 @@ export default function Communities() {
                 <Loading />
             ) : (
                 <>
-                    <section className="max-w-screen-xl px-4 mx-auto sm:px-0 relative animation glow delay-1">
-                        <div className="flex items-center mb-8 flex-wrap sm:flex-nowrap">
-                            <div className="mr-4 relative sm:w-96 w-80 text-white">
+                    <section className="relative px-4 mx-auto max-w-screen-xl sm:px-0 animation glow delay-1">
+                        <div className="flex flex-wrap items-center mb-8 sm:flex-nowrap">
+                            <div className="relative mr-4 text-white sm:w-96 w-80">
                                 <Search
                                     onSearchChange={setCommunitySearch}
                                     placeholder="Search communities"
@@ -43,7 +43,7 @@ export default function Communities() {
                         </div>
                     </section>
                     <section className="px-4 mx-auto mb-40">
-                        <div className="max-w-screen-xl mx-auto overflow-x-auto rounded-t-xl rounded-b-xl">
+                        <div className="mx-auto overflow-x-auto max-w-screen-xl rounded-t-xl rounded-b-xl">
                             <table className="w-full text-left text-white">
                                 <TableHead />
                                 <TableBody communities={searchCommunity} />

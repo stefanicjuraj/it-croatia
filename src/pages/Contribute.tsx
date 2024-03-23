@@ -6,7 +6,7 @@ export default function Contribute() {
         <>
             <Header />
             <section className="px-4 mx-auto mb-40">
-                <div className="max-w-screen-xl mx-auto overflow-x-auto rounded-t-xl rounded-b-xl">
+                <div className="mx-auto overflow-x-auto max-w-screen-xl rounded-t-xl rounded-b-xl">
                     <Form />
                 </div>
             </section>
