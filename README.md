@@ -29,3 +29,13 @@ Collection of IT companies, conferences, education, certificates, communities, p
 To ensure accuracy and relevancy, regular updates are conducted on a monthly basis. This involves the addition of newly established entities while removing inactive or defunct entities from the collection. By maintaining this approach, the focus is to offer a reliable and up-to-date resource for seeking information about IT in Croatia.
 
 &rarr; [**CHANGELOG**](https://github.com/stefanicjuraj/it-croatia/blob/main/CHANGELOG.md)
+
+## Tech Stack
+
+![node.js][node.js]
+![react][react]
+![typescript][typescript]
+
+[node.js]: https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=node.js&logoColor=white
+[react]: https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black
+[typescript]: https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white
