@@ -35,7 +35,9 @@ To ensure accuracy and relevancy, regular updates are conducted on a monthly bas
 ![node.js][node.js]
 ![react][react]
 ![typescript][typescript]
+![tailwind][tailwind]
 
 [node.js]: https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=node.js&logoColor=white
 [react]: https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black
 [typescript]: https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white
+[tailwind]: https://img.shields.io/badge/tailwindcss-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white
