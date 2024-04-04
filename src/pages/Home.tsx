@@ -11,6 +11,7 @@ import podcast from "/assets/icons/podcast.svg";
 import arrow from "/assets/icons/arrow.svg";
 import community from "/assets/icons/community.svg";
 import image from "/assets/icons/cro-it.png";
+import Footer from "../components/Footer";
 
 export default function Home() {
     return (
@@ -137,6 +138,8 @@ export default function Home() {
                     <Subscribe />
                 </div>
             </section>
+
+            <Footer />
         </>
     )
 }
