@@ -1,5 +1,13 @@
 # Changelog
 
+## 06/04/2024
+
+### Added:
+
+- [x] **Conferences Location Filter** &rarr; dropdown menu to filter conferences by location.
+
+- [x] **Education Organizer Filter** &rarr; dropdown menu to filter education by organizer.
+
 ## 23/03/2024
 
 ### Added:
