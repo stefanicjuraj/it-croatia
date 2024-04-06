@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 // Hooks
 import { useConference } from '../hooks/useConference';
 // Components
@@ -7,16 +7,26 @@ import { Search } from '../components/Search';
 import Header from '../components/Conference/Header';
 import TableHead from '../components/Conference/TableHead';
 import { TableBody } from '../components/Conference/TableBody';
+import { Location } from '../components/Conference/Location';
 
 export default function Conferences() {
     const { conferences, loading, error, countdown } = useConference();
     const [conferenceSearch, setConferenceSearch] = useState("");
+    const [selectLocations, setselectLocations] = useState<string[]>([]);
+    const [locations, setLocations] = useState<string[]>([]);
     const [sortOrder, setSortOrder] = useState('');
+
+    useEffect(() => {
+        const locations = [...new Set(conferences.map(conferences => conferences.Location))]
+            .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+        setLocations(locations);
+    }, [conferences]);
 
     const searchConference = conferences.filter((conferences) => {
         const conferenceName = conferences.Conference.toLowerCase();
+        const conferenceLocation = selectLocations.length === 0 || selectLocations.includes(conferences.Location);
         const search = conferenceSearch.toLowerCase();
-        return conferenceName.includes(search);
+        return conferenceName.includes(search) && conferenceLocation;
     });
 
     const toggleSortDates = () => {
@@ -30,21 +40,32 @@ export default function Conferences() {
     };
 
     const sortConferences = useMemo(() => {
-        return conferences.filter(conference => {
-            const conferenceName = conference.Conference.toLowerCase();
-            const search = conferenceSearch.toLowerCase();
-            return conferenceName.includes(search);
-        }).sort((a, b) => {
-            const daysLeftA = getDaysLeft(a.startDate);
-            const daysLeftB = getDaysLeft(b.startDate);
-            if (sortOrder === 'asc') {
-                return daysLeftA - daysLeftB;
-            } else if (sortOrder === 'desc') {
-                return daysLeftB - daysLeftA;
-            }
-            return 0;
-        });
-    }, [conferences, conferenceSearch, sortOrder]); // eslint-disable-line
+        return conferences
+            .filter(conference => {
+                const conferenceName = conference.Conference.toLowerCase();
+                const conferenceLocation = selectLocations.length === 0 || selectLocations.includes(conference.Location);
+                const search = conferenceSearch.toLowerCase();
+                return conferenceName.includes(search) && conferenceLocation;
+            })
+            .sort((a, b) => {
+                const daysLeftA = getDaysLeft(a.startDate);
+                const daysLeftB = getDaysLeft(b.startDate);
+                if (sortOrder === 'asc') {
+                    return daysLeftA - daysLeftB;
+                } else if (sortOrder === 'desc') {
+                    return daysLeftB - daysLeftA;
+                }
+                return 0;
+            });
+    }, [conferences, conferenceSearch, sortOrder, selectLocations]); // eslint-disable-line
+
+    const handleLocationCheckboxInput = (location: string) => {
+        setselectLocations(prevLocations =>
+            prevLocations.includes(location)
+                ? prevLocations.filter(l => l !== location)
+                : [...prevLocations, location]
+        );
+    };
 
     if (error) {
         return <div>Error</div>;
@@ -67,6 +88,11 @@ export default function Conferences() {
                                     {searchConference.length} results
                                 </p>
                             </div>
+                            <Location
+                                locations={locations}
+                                selectLocations={selectLocations}
+                                checkboxInput={handleLocationCheckboxInput}
+                            />
                         </div>
                     </section>
                     <section className="px-4 mx-auto mb-40">
