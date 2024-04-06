@@ -8,6 +8,8 @@
 
 - [x] **Education Organizer Filter** &rarr; dropdown menu to filter education by organizer.
 
+- [x] **Certificates Organizer Filter** &rarr; dropdown menu to filter certificates by organizer.
+
 ## 23/03/2024
 
 ### Added:
