@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 // Hooks
 import { useEducation } from '../hooks/useEducation';
 // Components
@@ -7,16 +7,34 @@ import Header from '../components/Education/Header';
 import { Search } from '../components/Search';
 import TableHead from '../components/Education/TableHead';
 import { TableBody } from '../components/Education/TableBody';
+import { Organizer } from '../components/Education/Organizer';
 
 export default function Education() {
     const { education, loading, error } = useEducation();
     const [educationSearch, setEducationSearch] = useState("");
+    const [selectOrganizer, setselectOrganizer] = useState<string[]>([]);
+    const [organizer, setOrganizer] = useState<string[]>([]);
+
+    useEffect(() => {
+        const organizer = [...new Set(education.map(education => education.Organizer))]
+            .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+        setOrganizer(organizer);
+    }, [education]);
 
     const searchEducation = education.filter((education) => {
         const educationName = education.Course.toLowerCase();
+        const educationOrganizer = selectOrganizer.length === 0 || selectOrganizer.includes(education.Organizer);
         const search = educationSearch.toLowerCase();
-        return educationName.includes(search);
+        return educationName.includes(search) && educationOrganizer;
     });
+
+    const handleOrganizerCheckboxInput = (organizer: string) => {
+        setselectOrganizer(prevOrganizer =>
+            prevOrganizer.includes(organizer)
+                ? prevOrganizer.filter(l => l !== organizer)
+                : [...prevOrganizer, organizer]
+        );
+    };
 
     if (error) {
         return <div>Error</div>;
@@ -40,6 +58,11 @@ export default function Education() {
                                     {searchEducation.length} results
                                 </p>
                             </div>
+                            <Organizer
+                                organizer={organizer}
+                                selectOrganizer={selectOrganizer}
+                                checkboxInput={handleOrganizerCheckboxInput}
+                            />
                         </div>
                     </section>
                     <section className="px-4 mx-auto mb-40">
