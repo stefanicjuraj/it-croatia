@@ -5,7 +5,11 @@
 ### Added:
 
 - **Company Glassdoor Reviews** &rarr; search Glassdoor reviews about companies.
+
 - **Company Reddit Posts** &rarr; search subreddit r/CroIT's posts about companies.
+
+- **Back to Top Button** &rarr; button navigating to the top of the page.
+
 
 ## 06/04/2024
 
