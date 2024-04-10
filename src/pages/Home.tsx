@@ -11,6 +11,7 @@ import podcast from "/assets/icons/podcast.svg";
 import arrow from "/assets/icons/arrow.svg";
 import community from "/assets/icons/community.svg";
 import image from "/assets/icons/cro-it.png";
+import redditImage from "/assets/icons/reddit-image.png";
 import Footer from "../components/Footer";
 
 export default function Home() {
@@ -134,9 +135,17 @@ export default function Home() {
                 <div className="px-4 py-4 mt-24 mb-24 text-center text-indigo-300 animation glow delay-8" >
                     <h2 className="mb-4 text-5xl font-bold">By popular demand</h2>
                     <h3 className="text-2xl italic font-normal">You asked. We answered.</h3>
-                    <img src={image} className="w-full mx-auto mt-16 mb-16 sm:w-2/3"></img>
+                    <img src={image} className="w-full mx-auto mt-16 mb-32 sm:w-2/3"></img>
+                    <h2 className="mb-4 text-5xl font-bold">The launch</h2>
+                    <h3 className="text-2xl italic font-normal">View the launch post and join the discussion!</h3>
+                    <a href="https://www.reddit.com/r/CroIT/comments/1bfba43/kolekcija_it_kompanija_konferencija_edukacija/" target="_blank" rel="noopener noreferrer">
+                        <img src={redditImage} className="w-full mx-auto mt-16 mb-32 sm:w-1/3 rounded-xl hover:border-2 hover:border-indigo-500"></img>
+                    </a>
+                    <h2 className="mb-4 text-5xl font-bold">Monthly updates</h2>
+                    <h3 className="max-w-screen-sm mx-auto text-xl italic font-normal">Receive monthly updates of the additions of newly established entities and removals of inactive or defunct entities from the collection.</h3>
                     <Subscribe />
                 </div>
+                <hr className="border-[#333] mb-16" />
             </section>
 
             <Footer />
