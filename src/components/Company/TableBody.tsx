@@ -1,4 +1,7 @@
+// Icons
 import linkedin from '/assets/icons/linkedin.svg';
+import reddit from '/assets/icons/reddit.svg';
+import glassdoor from '/assets/icons/glassdoor.svg';
 
 export const TableBody = ({ companies }: { companies: Array<object> }) => {
 
@@ -16,7 +19,7 @@ export const TableBody = ({ companies }: { companies: Array<object> }) => {
                             {(company as { Website: string })["Website"]}
                         </a>
                     </td>
-                    <td className="text-sm text-white px-7 py-7 whitespace-nowrap">
+                    <td className="text-xs text-white px-5 py-7 whitespace-nowrap">
                         {(company as { Industry: string[] }).Industry.map((industry, index) => (
                             <span className="px-3 py-2 mr-1 bg-indigo-500 rounded-full"
                                 key={index}
@@ -37,6 +40,22 @@ export const TableBody = ({ companies }: { companies: Array<object> }) => {
                             target="_blank" rel="noopener noreferrer"
                         >
                             <img src={linkedin} className="w-10 h-10" alt="LinkedIn icon" />
+                        </a>
+                    </td>
+                    <td className="px-10 py-7">
+                        <a className="inline-flex items-center hover:shadow hover:ring-indigo-500 focus:ring-2 focus:outline-none focus:ring-gray-200 rounded"
+                            href={(company as { Glassdoor: string })["Glassdoor"]}
+                            target="_blank" rel="noopener noreferrer"
+                        >
+                            <img src={glassdoor} className="w-7 h-7" alt="Glassdoor icon" />
+                        </a>
+                    </td>
+                    <td className="px-10 py-7">
+                        <a className="inline-flex items-center hover:shadow hover:ring-indigo-500 focus:ring-2 focus:outline-none focus:ring-gray-200 rounded-full"
+                            href={(company as { Reddit: string })["Reddit"]}
+                            target="_blank" rel="noopener noreferrer"
+                        >
+                            <img src={reddit} className="w-8 h-8" alt="Reddit icon" />
                         </a>
                     </td>
                 </tr>
