@@ -10,6 +10,7 @@ import { Filter } from '../components/Company/Filter';
 import TableHead from '../components/Company/TableHead';
 import { TableBody } from '../components/Company/TableBody';
 import { Location } from '../components/Company/Location';
+import { ScrollToTopComponent } from '../components/ScrollToTop';
 
 export default function Companies() {
     const { companies, loading, error, industryTags, checkboxInput, tags, mapTags } = useCompany();
@@ -100,6 +101,7 @@ export default function Companies() {
                     </section>
                 </>
             )}
+            <ScrollToTopComponent />
         </>
     )
 }
