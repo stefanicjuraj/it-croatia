@@ -18,7 +18,7 @@ export const ScrollToTopComponent: React.FC = () => {
     }
 
     return (
-        <button className="w-13 h-13 mr-3 mb-3 bg-[#222] hover:bg-[#333] border border-indigo-500 rounded-lg flex justify-center items-center fixed bottom-0 right-0 z-10"
+        <button className="w-12 h-12 mr-3 mb-3 bg-[#222] hover:bg-[#333] border border-indigo-500 rounded-lg flex justify-center items-center fixed bottom-0 right-0 z-10"
             aria-label="Back to top"
             onClick={scrollToTop}
         >
