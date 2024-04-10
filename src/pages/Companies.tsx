@@ -26,7 +26,7 @@ export default function Companies() {
 
     const searchCompany = companies.filter((company) => {
         const companyName = company.Company.toLowerCase();
-        const companyIndustry = company.Industry.some((industry) => tags.includes(industry));
+        const companyIndustry = Array.isArray(company.Industry) ? company.Industry.some((industry) => tags.includes(industry)) : false;
         const companyLocation = selectLocations.length === 0 || selectLocations.includes(company.Location);
         const search = companySearch.toLowerCase();
         return companyName.includes(search) && (tags.length === 0 || companyIndustry) && companyLocation;
