@@ -5,4 +5,6 @@ export default interface Company {
   LinkedIn: string;
   Employees: string;
   Location: string;
+  Reddit: string;
+  Glassdoor: string;
 }
