@@ -8,6 +8,7 @@ import Header from '../components/Conference/Header';
 import TableHead from '../components/Conference/TableHead';
 import { TableBody } from '../components/Conference/TableBody';
 import { Location } from '../components/Conference/Location';
+import { ScrollToTopComponent } from '../components/ScrollToTop';
 
 export default function Conferences() {
     const { conferences, loading, error, countdown } = useConference();
@@ -105,6 +106,7 @@ export default function Conferences() {
                     </section>
                 </>
             )}
+            <ScrollToTopComponent />
         </>
     )
 }
