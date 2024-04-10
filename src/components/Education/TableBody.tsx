@@ -9,7 +9,7 @@ export const TableBody = ({ education }: { education: Array<object> }) => {
                     <td className="text-lg px-7 py-7 whitespace-nowrap">
                         {(education as { Course: string })?.Course}
                     </td>
-                    <td className="text-sm text-white px-7 py-7 whitespace-nowrap">
+                    <td className="text-xs text-white px-7 py-7 whitespace-nowrap">
                         {(education as { Topic: string[] })?.Topic.map((topic, index) => (
                             <span key={index} className="px-3 py-2 mr-1 bg-indigo-500 rounded-full">
                                 {topic}
