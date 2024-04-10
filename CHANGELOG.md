@@ -11,11 +11,11 @@
 
 ### Added:
 
-- [x] **Conferences Location Filter** &rarr; dropdown menu to filter conferences by location.
+- **Conferences Location Filter** &rarr; dropdown menu to filter conferences by location.
 
-- [x] **Education Organizer Filter** &rarr; dropdown menu to filter education by organizer.
+- **Education Organizer Filter** &rarr; dropdown menu to filter education by organizer.
 
-- [x] **Certificates Organizer Filter** &rarr; dropdown menu to filter certificates by organizer.
+- **Certificates Organizer Filter** &rarr; dropdown menu to filter certificates by organizer.
 
 ## 23/03/2024
 
