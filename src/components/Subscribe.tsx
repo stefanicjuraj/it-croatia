@@ -9,7 +9,7 @@ export default function Subscribe() {
             <input type="hidden" name="redirect" value=""></input>
             <input type="hidden" name="from_name" value="IT Croatia"></input>
             <input type="hidden" name="subject" value="New Subscription"></input>
-            <div className="relative z-0 mx-auto mt-32 mb-4 w-80 group">
+            <div className="relative z-0 mx-auto mt-24 mb-4 w-80 group">
                 <input className="bg-[#333] border border-indigo-300 text-white text-md rounded-lg focus:ring-1 focus:outline-none focus:ring-indigo-300 block w-80 p-3"
                     type="email"
                     id="email"
