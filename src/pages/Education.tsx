@@ -8,6 +8,7 @@ import { Search } from '../components/Search';
 import TableHead from '../components/Education/TableHead';
 import { TableBody } from '../components/Education/TableBody';
 import { Organizer } from '../components/Education/Organizer';
+import { ScrollToTopComponent } from '../components/ScrollToTop';
 
 export default function Education() {
     const { education, loading, error } = useEducation();
@@ -75,6 +76,7 @@ export default function Education() {
                     </section>
                 </>
             )}
+            <ScrollToTopComponent />
         </>
     )
 }
