@@ -1,5 +1,12 @@
 # Changelog
 
+## 10/04/2024
+
+### Added:
+
+- **Company Glassdoor Reviews** &rarr; search Glassdoor reviews about companies.
+- **Company Reddit Posts** &rarr; search subreddit r/CroIT's posts about companies.
+
 ## 06/04/2024
 
 ### Added:
