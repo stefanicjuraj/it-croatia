@@ -110,6 +110,7 @@ export default function Sidebar() {
                                 <h1 className="flex-1 ms-3 whitespace-nowrap">Internships</h1>
                             </Link>
                         </li>
+                        <hr className="border-[#333]" />
                         <li>
                             <Link to="/contribute" className={`flex items-center p-3 rounded-xl group hover:bg-[#333] ${activeClass("/contribute")}`}>
                                 <img src={contribute} alt="Contributing icon" className="w-6 h-6" />
