@@ -20,6 +20,13 @@ export const TableBody = ({ podcasts }: { podcasts: Array<object> }) => {
                     <td className="px-7 py-7 text-md">
                         {(podcast as { Organizer: string })["Organizer"]}
                     </td>
+                    <td className="text-md text-white px-7 py-7 whitespace-nowrap">
+                        {(podcast as { Platforms: string[] })?.Platforms.map((platforms, index) => (
+                            <span key={index}>
+                                {platforms}
+                            </span>
+                        ))}
+                    </td>
                     <td className="text-lg px-9 py-7">
                         <a className="inline-flex items-center hover:shadow hover:ring-indigo-500 focus:ring-2 focus:outline-none focus:ring-gray-200 rounded-xl"
                             href={(podcast as { Listen: string })["Listen"]}
