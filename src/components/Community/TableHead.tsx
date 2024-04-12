@@ -9,6 +9,9 @@ export default function TableHead() {
                     Topics
                 </th>
                 <th scope="col" className="py-8 px-7">
+                    Platform
+                </th>
+                <th scope="col" className="py-8 px-7">
                     Join
                 </th>
             </tr>
