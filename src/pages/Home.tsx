@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 // Components
 import Subscribe from "../components/Subscribe";
+import Footer from "../components/Footer";
 // Icons
 import company from "/assets/icons/company.svg";
 import conference from "/assets/icons/conference.svg";
@@ -10,9 +11,9 @@ import certificate from "/assets/icons/certificate.svg";
 import podcast from "/assets/icons/podcast.svg";
 import arrow from "/assets/icons/arrow.svg";
 import community from "/assets/icons/community.svg";
-import image from "/assets/icons/cro-it.png";
-import redditImage from "/assets/icons/reddit-image.png";
-import Footer from "../components/Footer";
+// Images
+import image from "/assets/images/cro-it.png";
+import redditImage from "/assets/images/reddit-image.png";
 
 export default function Home() {
     return (
