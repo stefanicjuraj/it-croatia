@@ -19,8 +19,8 @@ Collection of IT companies, conferences, education, certificates, communities, p
 ## Features
 
 - [x] **600+ Companies** conducting business operations, providing services, or offering consultancy in Croatia.
-- [x] **20+ Conferences** to attend with industry knowledge professionals and enthusiasts.
-- [x] **40+ Education** opportunities to enroll into colleges, courses, lectures, and classes.
+- [x] **15+ Conferences** to attend with industry knowledge professionals and enthusiasts.
+- [x] **60+ Education** opportunities to enroll into colleges, courses, lectures, and classes.
 - [x] **60+ Certificates** to master and demonstrate your professional knowledge and skills.
 - [x] **10+ Communities** to connect and network with other IT professionals and enthusiasts.
 - [x] **5+ Podcasts** related topics with industry professionals and enthusiasts.
