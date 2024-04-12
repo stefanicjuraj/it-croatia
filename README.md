@@ -1,7 +1,7 @@
 # IT Croatia
 
 <div align="center">
-    <img src="./public/assets/icons/it-croatia.png" width="70%" />
+    <img src="./public/assets/images/it-croatia.png" width="70%" />
 </div>
 
 <br />
