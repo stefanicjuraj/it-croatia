@@ -1,10 +1,14 @@
 # Changelog
 
-## 10/04/2024
+## 13/04/2024
 
 ### Added:
 
 - [x] **Education:** Algebra's Bachelor's and Master's degrees education programs.
+
+### Improved:
+
+- **Topic/Department Tags Styling** &rarr; smaller text size & removed rounded borders.
 
 ## 10/04/2024
 
