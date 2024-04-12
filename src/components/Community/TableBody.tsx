@@ -16,6 +16,9 @@ export const TableBody = ({ communities }: { communities: Array<object> }) => {
                             </span>
                         ))}
                     </td>
+                    <td className="text-md px-7 py-7 whitespace-nowrap">
+                        {(community as { Platform: string }).Platform}
+                    </td>
                     <td className="px-10 text-lg py-7">
                         <a className="inline-flex items-center hover:shadow hover:ring-indigo-500 focus:ring-2 focus:outline-none focus:ring-gray-200 rounded-xl"
                             href={(community as { Join: string })["Join"]}
