@@ -11,7 +11,7 @@ export const TableBody = ({ education }: { education: Array<object> }) => {
                     </td>
                     <td className="text-xs text-white px-7 py-7 whitespace-nowrap">
                         {(education as { Topic: string[] })?.Topic.map((topic, index) => (
-                            <span key={index} className="px-3 py-2 mr-1 bg-indigo-500 rounded-full">
+                            <span key={index} className="px-3 py-2 mr-1 bg-indigo-500 rounded-lg">
                                 {topic}
                             </span>
                         ))}
