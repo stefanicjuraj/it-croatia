@@ -146,7 +146,6 @@ export default function Home() {
                     <h3 className="max-w-screen-sm mx-auto text-xl italic font-normal">Receive monthly updates of the additions of newly established entities and removals of inactive or defunct entities from the collection.</h3>
                     <Subscribe />
                 </div>
-                <hr className="border-[#333] mb-16" />
             </section>
 
             <Footer />
