@@ -10,6 +10,7 @@ import { Filter } from '../components/Company/Filter';
 import TableHead from '../components/Company/TableHead';
 import { TableBody } from '../components/Company/TableBody';
 import { Location } from '../components/Company/Location';
+import Footer from '../components/Footer';
 import { ScrollToTopComponent } from '../components/ScrollToTop';
 
 export default function Companies() {
@@ -101,6 +102,9 @@ export default function Companies() {
                     </section>
                 </>
             )}
+
+            <Footer />
+
             <ScrollToTopComponent />
         </>
     )

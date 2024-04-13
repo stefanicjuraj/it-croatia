@@ -7,6 +7,7 @@ import Header from '../components/Internship/Header';
 import { Search } from '../components/Search';
 import TableHead from '../components/Internship/TableHead';
 import { TableBody } from '../components/Internship/TableBody';
+import Footer from '../components/Footer';
 
 export default function Internships() {
     const { internship, loading, error } = useInternship();
@@ -52,6 +53,9 @@ export default function Internships() {
                     </section>
                 </>
             )}
+
+            <Footer />
+
         </>
     )
 }

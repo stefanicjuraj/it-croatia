@@ -7,6 +7,7 @@ import Header from '../components/Podcast/Header';
 import { Search } from '../components/Search';
 import TableHead from '../components/Podcast/TableHead';
 import { TableBody } from '../components/Podcast/TableBody';
+import Footer from '../components/Footer';
 
 export default function Podcasts() {
     const { podcast, loading, error } = usePodcast();
@@ -52,6 +53,9 @@ export default function Podcasts() {
                     </section>
                 </>
             )}
+
+            <Footer />
+
         </>
     )
 }

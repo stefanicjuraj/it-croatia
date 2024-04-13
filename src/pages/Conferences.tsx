@@ -8,6 +8,7 @@ import Header from '../components/Conference/Header';
 import TableHead from '../components/Conference/TableHead';
 import { TableBody } from '../components/Conference/TableBody';
 import { Location } from '../components/Conference/Location';
+import Footer from '../components/Footer';
 import { ScrollToTopComponent } from '../components/ScrollToTop';
 
 export default function Conferences() {
@@ -106,6 +107,9 @@ export default function Conferences() {
                     </section>
                 </>
             )}
+
+            <Footer />
+
             <ScrollToTopComponent />
         </>
     )

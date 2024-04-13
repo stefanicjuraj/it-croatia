@@ -8,6 +8,7 @@ import { Search } from '../components/Search';
 import { Organizer } from '../components/Education/Organizer';
 import TableHead from '../components/Certificate/TableHead';
 import { TableBody } from '../components/Certificate/TableBody';
+import Footer from '../components/Footer';
 import { ScrollToTopComponent } from '../components/ScrollToTop';
 
 export default function Certificates() {
@@ -77,6 +78,9 @@ export default function Certificates() {
                     </section>
                 </>
             )}
+
+            <Footer />
+
             <ScrollToTopComponent />
         </>
     )
