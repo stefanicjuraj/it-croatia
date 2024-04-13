@@ -6,6 +6,8 @@
 
 - [x] **Education:** Algebra's Bachelor's and Master's degrees education programs.
 
+- **Footer Component** &rarr; displayed at the bottom of each page - links to GitHub & LinkedIn.
+
 ### Improved:
 
 - **Topic/Department Tags Styling** &rarr; smaller text size & removed rounded borders.
