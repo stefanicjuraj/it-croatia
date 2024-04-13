@@ -7,6 +7,7 @@ import Header from '../components/Community/Header';
 import { Search } from '../components/Search';
 import TableHead from '../components/Community/TableHead';
 import { TableBody } from '../components/Community/TableBody';
+import Footer from '../components/Footer';
 
 export default function Communities() {
     const { community, loading, error } = useCommunity();
@@ -52,6 +53,8 @@ export default function Communities() {
                     </section>
                 </>
             )}
+
+            <Footer />
         </>
     )
 }
