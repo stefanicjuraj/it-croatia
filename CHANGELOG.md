@@ -1,5 +1,11 @@
 # Changelog
 
+## 14/04/2024
+
+### Added:
+
+- **Contributing** &rarr; created & added contributing guide.
+
 ## 13/04/2024
 
 ### Added:
