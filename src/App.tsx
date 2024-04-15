@@ -10,13 +10,12 @@ import Conferences from './pages/Conferences';
 import Education from './pages/Education';
 import Certificates from './pages/Certificates';
 import Communities from './pages/Communities';
+import Workplace from './pages/Workplaces';
 import Podcasts from './pages/Podcasts';
 import Internships from './pages/Internships';
 import Contribute from './pages/Contribute';
 // Utils
 import ScrollToTop from './utils/scrollToTop';
-import Data from './pages/Data';
-import Workplace from './pages/Workplaces';
 
 export default function App() {
   return (
@@ -36,7 +35,6 @@ export default function App() {
           <Route path="/podcasts" element={<Podcasts />} />
           <Route path="/internships" element={<Internships />} />
           <Route path="/contribute" element={<Contribute />} />
-          <Route path="/data" element={<Data />} />
           <Route path="/places-to-work" element={<Workplace />} />
         </Routes>
       </Router>
