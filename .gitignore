@@ -1,3 +1,6 @@
+# Data
+/public/data/
+
 # Logs
 logs
 *.log
@@ -34,3 +37,4 @@ firebase.json
 *.njsproj
 *.sln
 *.sw?
+.vercel

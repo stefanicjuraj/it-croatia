@@ -11,6 +11,7 @@ import certificate from "/assets/icons/certificate.svg";
 import podcast from "/assets/icons/podcast.svg";
 import arrow from "/assets/icons/arrow.svg";
 import community from "/assets/icons/community.svg";
+import placesToWork from "/assets/icons/places-to-work.svg";
 // Images
 import image from "/assets/images/cro-it.png";
 import redditImage from "/assets/images/reddit-image.png";
@@ -98,6 +99,20 @@ export default function Home() {
                             <h1 className="mb-2 text-2xl font-bold">Communities</h1>
                             <p className="text-gray-300">
                                 Find communities and groups to connect and network with other IT professionals and enthusiasts.
+                            </p>
+                            <div className="flex flex-row-reverse px-1 py-1">
+                                <img src={arrow} className="w-8 h-8" alt="arrow" />
+                            </div>
+                        </div>
+                    </Link>
+                    <Link to="/places-to-work">
+                        <div className="bg-[#222] sm:mb-0 mb-8 px-6 py-6 rounded-xl hover:ring-1 hover:ring-indigo-300 animation glow delay-5">
+                            <div className="flex justify-center items-center mb-4 w-16 h-16 rounded-full bg-[#111]">
+                                <img src={placesToWork} alt="Places to Work icon" className="w-8 h-8" />
+                            </div>
+                            <h1 className="mb-2 text-2xl font-bold">Places to Work</h1>
+                            <p className="text-gray-300">
+                                A collection of places to visit and work in the best coffee shops, bars, and co-working places in Croatia.
                             </p>
                             <div className="flex flex-row-reverse px-1 py-1">
                                 <img src={arrow} className="w-8 h-8" alt="arrow" />

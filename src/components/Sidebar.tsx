@@ -11,6 +11,7 @@ import certificate from "/assets/icons/certificate.svg";
 import podcast from "/assets/icons/podcast.svg";
 import community from "/assets/icons/community.svg";
 import contribute from "/assets/icons/contribute.svg";
+import placesToWork from "/assets/icons/places-to-work.svg";
 
 export default function Sidebar() {
     const { sidebarOpen, toggleSidebar, activePath } = useSidebar();
@@ -96,6 +97,12 @@ export default function Sidebar() {
                             <Link to="/communities" className={`flex items-center p-3 rounded-xl group hover:bg-[#333] ${activeClass("/communities")}`}>
                                 <img src={community} alt="Home icon" className="w-6 h-6" />
                                 <h1 className="flex-1 ms-3 whitespace-nowrap">Communities</h1>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/places-to-work" className={`flex items-center p-3 rounded-xl group hover:bg-[#333] ${activeClass("/places-to-work")}`}>
+                                <img src={placesToWork} alt="Home icon" className="w-6 h-6" />
+                                <h1 className="flex-1 ms-3 whitespace-nowrap">Places to Work</h1>
                             </Link>
                         </li>
                         <li>
