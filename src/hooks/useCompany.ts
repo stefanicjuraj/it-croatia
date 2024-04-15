@@ -46,6 +46,7 @@ export const useCompany = () => {
   const tagInput = (tags: string[]) => {
     setTags(tags);
   };
+
   const checkboxInput = (tag: string) => {
     if (tags.includes(tag)) {
       setTags(tags.filter((t) => t !== tag));

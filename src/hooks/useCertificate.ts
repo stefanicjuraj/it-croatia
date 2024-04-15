@@ -25,6 +25,7 @@ export const useCertificate = () => {
 
     fetchCertificates();
   }, []);
+
   return {
     certificates,
     loading,
