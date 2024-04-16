@@ -1,3 +1,5 @@
+import location from "/assets/icons/location.svg";
+
 export const TableBody = ({ workplaces }: { workplaces: Array<object> }) => {
 
     return (
@@ -30,6 +32,14 @@ export const TableBody = ({ workplaces }: { workplaces: Array<object> }) => {
                                 {neighbourhood}
                             </span>
                         ))}
+                    </td>
+                    <td className="px-10 py-7">
+                        <a className="inline-flex items-center hover:shadow hover:ring-indigo-500 focus:ring-2 focus:outline-none focus:ring-gray-200 rounded-full"
+                            href={(workplace as { Location: string })["Location"]}
+                            target="_blank" rel="noopener noreferrer"
+                        >
+                            <img src={location} className="w-8 h-8" alt="Reddit icon" />
+                        </a>
                     </td>
                 </tr>
             ))}
