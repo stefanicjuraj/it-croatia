@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import chevron from '/assets/icons/chevron.svg';
 
-export const Organizer = ({ organizer, selectOrganizer, checkboxInput }: {
-    organizer: string[];
-    selectOrganizer: string[];
-    checkboxInput: (location: string) => void;
+export const FilterIndustry = ({ industryTags, tags, mapTags, checkboxInput }: {
+    industryTags: string[];
+    tags: string[];
+    mapTags: Record<string, string>;
+    checkboxInput: (tag: string) => void;
 }) => {
 
     const [dropdownOpen, isDropdownOpen] = useState(false);
@@ -17,29 +18,29 @@ export const Organizer = ({ organizer, selectOrganizer, checkboxInput }: {
                     type="button"
                     onClick={toggle}
                 >
-                    Organizer
+                    Industry
                     <span className="ml-2 text-sm text-white rounded-full bg-[#333] px-2.5 py-1">
-                        {selectOrganizer.length}
+                        {tags.length}
                     </span>
                     <img src={chevron} className={`h-5 w-5 ml-2 transition-transform ${dropdownOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {dropdownOpen && (
-                    <div id="checkbox" className="absolute z-10 w-48 bg-[#222] border border-[#333] divide-y divide-gray-100 rounded-lg shadow mt-2 overflow-y-auto max-h-80">
-                        <ul className="p-3 text-white space-y-1 text-md"
+                    <div id="checkbox" className="absolute z-10 w-42 bg-[#222] border border-[#333] divide-y divide-gray-100 rounded-lg shadow mt-2 overflow-y-auto max-h-80">
+                        <ul className="p-2 text-white space-y-1 text-md"
                             aria-labelledby="checkbox"
                         >
-                            {organizer.map((organizer, index) => (
+                            {industryTags.map((tag, index) => (
                                 <li key={index}>
                                     <div className="flex items-center p-3 rounded-lg hover:bg-[#333]">
                                         <input className="w-5 h-5 text-indigo-500 border-indigo-300 rounded focus:ring-indigo-500 focus:ring-1"
                                             type="checkbox"
-                                            id={`organizer-checkbox-${index}`}
-                                            value={organizer} checked={selectOrganizer.includes(organizer)}
-                                            onChange={() => checkboxInput(organizer)}
+                                            id={`filter-checkbox-${index}`}
+                                            value={tag} checked={tags.includes(tag)}
+                                            onChange={() => checkboxInput(tag)}
                                         />
                                         <label className="ml-3 text-sm text-white rounded"
                                             htmlFor={`filter-checkbox-${index}`}>
-                                            {organizer}
+                                            {mapTags[tag] || tag}
                                         </label>
                                     </div>
                                 </li>

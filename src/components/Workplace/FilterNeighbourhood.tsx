@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import chevron from '/assets/icons/chevron.svg';
 
-export const Platform = ({ platform, selectPlatforms, checkboxInput }: {
-    platform: string[];
-    selectPlatforms: string[];
+export const FilterNeighbourhood = ({ neighbourhood, selectNeighbourhood, checkboxInput }: {
+    neighbourhood: string[];
+    selectNeighbourhood: string[];
     checkboxInput: (location: string) => void;
 }) => {
 
@@ -17,9 +17,9 @@ export const Platform = ({ platform, selectPlatforms, checkboxInput }: {
                     type="button"
                     onClick={toggle}
                 >
-                    Platform
+                    Neighbourhood
                     <span className="ml-2 text-sm text-white rounded-full bg-[#333] px-2.5 py-1">
-                        {selectPlatforms.length}
+                        {selectNeighbourhood.length}
                     </span>
                     <img src={chevron} className={`h-5 w-5 ml-2 transition-transform ${dropdownOpen ? 'rotate-180' : ''}`} />
                 </button>
@@ -28,18 +28,18 @@ export const Platform = ({ platform, selectPlatforms, checkboxInput }: {
                         <ul className="p-3 text-white space-y-1 text-md"
                             aria-labelledby="checkbox"
                         >
-                            {platform.map((platforms, index) => (
+                            {neighbourhood.map((neighbourhood, index) => (
                                 <li key={index}>
                                     <div className="flex items-center p-3 rounded-lg hover:bg-[#333]">
                                         <input className="w-5 h-5 text-indigo-500 border-indigo-300 rounded focus:ring-indigo-500 focus:ring-1"
                                             type="checkbox"
                                             id={`location-checkbox-${index}`}
-                                            value={platform} checked={selectPlatforms.includes(platforms)}
-                                            onChange={() => checkboxInput(platforms)}
+                                            value={neighbourhood} checked={selectNeighbourhood.includes(neighbourhood)}
+                                            onChange={() => checkboxInput(neighbourhood)}
                                         />
                                         <label className="ml-3 text-sm text-white rounded"
                                             htmlFor={`filter-checkbox-${index}`}>
-                                            {platforms}
+                                            {neighbourhood}
                                         </label>
                                     </div>
                                 </li>

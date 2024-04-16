@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import chevron from '/assets/icons/chevron.svg';
 
-export const Location = ({ locations, selectLocations, checkboxInput }: {
+export const FilterLocation = ({ locations, selectLocations, checkboxInput }: {
     locations: string[];
     selectLocations: string[];
     checkboxInput: (location: string) => void;
