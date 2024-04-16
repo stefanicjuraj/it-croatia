@@ -17,7 +17,7 @@ export const Neighbourhood = ({ neighbourhood, selectNeighbourhood, checkboxInpu
                     type="button"
                     onClick={toggle}
                 >
-                    Location
+                    Neighbourhood
                     <span className="ml-2 text-sm text-white rounded-full bg-[#333] px-2.5 py-1">
                         {selectNeighbourhood.length}
                     </span>
