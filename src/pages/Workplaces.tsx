@@ -7,7 +7,8 @@ import Header from '../components/Workplace/Header';
 import { Search } from '../components/Search';
 import TableHead from '../components/Workplace/TableHead';
 import { TableBody } from '../components/Workplace/TableBody';
-import { Location } from '../components/Company/Location';
+import { City } from '../components/Workplace/City';
+import { Neighbourhood } from '../components/Workplace/Neighbourhood';
 import Footer from '../components/Footer';
 import { ScrollToTopComponent } from '../components/ScrollToTop';
 
@@ -15,26 +16,42 @@ export default function Workplaces() {
     const { workplace, loading, error } = useWorkplace();
     const [workplaceSearch, setWorkplaceSearch] = useState("");
     const [selectLocations, setselectLocations] = useState<string[]>([]);
+    const [selectNeighbourhood, setSelectNeighbourhood] = useState<string[]>([]);
     const [locations, setLocations] = useState<string[]>([]);
+    const [neighbourhood, setNeighbourhood] = useState<string[]>([]);
 
     useEffect(() => {
-        const locations = [...new Set(workplace.map(workplace => workplace.City))]
+        const uniqueLocations = [...new Set(workplace.map(w => w.City))]
             .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
-        setLocations(locations);
-    }, [locations]);
+        setLocations(uniqueLocations);
+
+        const uniqueNeighbourhoods = [...new Set(workplace.flatMap(w => w.Neighbourhood))]
+            .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+            setNeighbourhood(uniqueNeighbourhoods);
+    }, [workplace]);
 
     const searchPodcast = workplace.filter((workplace) => {
         const workplaceName = workplace.Workplace.toLowerCase();
-        const workplaceLocation = selectLocations.length === 0 || selectLocations.includes(workplace.City);
-        const search = workplaceSearch.toLowerCase();
-        return workplaceName.includes(search) && workplaceLocation;
+        const matchesLocation = selectLocations.length === 0 || selectLocations.includes(workplace.City);
+        const matchesNeighbourhood = selectNeighbourhood.length === 0 ||
+            selectNeighbourhood.some(n => (workplace.Neighbourhood || []).includes(n));
+        const matchesSearch = workplaceName.includes(workplaceSearch.toLowerCase());
+        return matchesLocation && matchesNeighbourhood && matchesSearch;
     });
 
-    const handleLocationCheckboxInput = (location: string) => {
+    const handleLocationCheckboxInput = (location: any) => {
         setselectLocations(prevLocations =>
             prevLocations.includes(location)
                 ? prevLocations.filter(l => l !== location)
                 : [...prevLocations, location]
+        );
+    };
+
+    const handleNeighbourhoodCheckboxInput = (neighbourhood: string) => {
+        setSelectNeighbourhood(prevNeighbourhood =>
+            prevNeighbourhood.includes(neighbourhood)
+                ? prevNeighbourhood.filter(n => n !== neighbourhood)
+                : [...prevNeighbourhood, neighbourhood]
         );
     };
 
@@ -60,10 +77,15 @@ export default function Workplaces() {
                                     {searchPodcast.length} results
                                 </p>
                             </div>
-                            <Location
+                            <City
                                 locations={locations}
                                 selectLocations={selectLocations}
                                 checkboxInput={handleLocationCheckboxInput}
+                            />
+                            <Neighbourhood
+                                neighbourhood={neighbourhood}
+                                selectNeighbourhood={selectNeighbourhood}
+                                checkboxInput={handleNeighbourhoodCheckboxInput}
                             />
                         </div>
                     </section>
