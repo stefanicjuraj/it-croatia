@@ -9,10 +9,13 @@ export default function TableHead() {
                     Amenities
                 </th>
                 <th scope="col" className="py-8 px-7">
-                    Location
+                    City
                 </th>
                 <th scope="col" className="py-8 px-7">
                     Neighbourhood
+                </th>
+                <th scope="col" className="py-8 px-7">
+                    Location
                 </th>
             </tr>
         </thead>
