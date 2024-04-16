@@ -3,11 +3,11 @@ import { useEffect, useMemo, useState } from 'react';
 import { useConference } from '../hooks/useConference';
 // Components
 import Loading from '../components/Loading';
-import { Search } from '../components/Search';
 import Header from '../components/Conference/Header';
+import { Search } from '../components/Search';
+import { FilterLocation } from '../components/Conference/FilterLocation';
 import TableHead from '../components/Conference/TableHead';
 import { TableBody } from '../components/Conference/TableBody';
-import { Location } from '../components/Conference/Location';
 import Footer from '../components/Footer';
 import { ScrollToTopComponent } from '../components/ScrollToTop';
 
@@ -59,7 +59,7 @@ export default function Conferences() {
                 }
                 return 0;
             });
-    }, [conferences, conferenceSearch, sortOrder, selectLocations]); // eslint-disable-line
+    }, [conferences, conferenceSearch, sortOrder, selectLocations]);
 
     const handleLocationCheckboxInput = (location: string) => {
         setselectLocations(prevLocations =>
@@ -90,7 +90,7 @@ export default function Conferences() {
                                     {searchConference.length} results
                                 </p>
                             </div>
-                            <Location
+                            <FilterLocation
                                 locations={locations}
                                 selectLocations={selectLocations}
                                 checkboxInput={handleLocationCheckboxInput}

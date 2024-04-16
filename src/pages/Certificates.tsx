@@ -5,7 +5,7 @@ import { useCertificate } from '../hooks/useCertificate';
 import Loading from '../components/Loading';
 import Header from '../components/Certificate/Header';
 import { Search } from '../components/Search';
-import { Organizer } from '../components/Education/Organizer';
+import { FilterOrganizer } from '../components/Education/FilterOrganizer';
 import TableHead from '../components/Certificate/TableHead';
 import { TableBody } from '../components/Certificate/TableBody';
 import Footer from '../components/Footer';
@@ -61,7 +61,7 @@ export default function Certificates() {
                                     {searchCertificate.length} results
                                 </p>
                             </div>
-                            <Organizer
+                            <FilterOrganizer
                                 organizer={organizer}
                                 selectOrganizer={selectOrganizer}
                                 checkboxInput={handleOrganizerCheckboxInput}

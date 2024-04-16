@@ -5,9 +5,9 @@ import { useCommunity } from '../hooks/useCommunity';
 import Loading from '../components/Loading';
 import Header from '../components/Community/Header';
 import { Search } from '../components/Search';
+import { FilterPlatform } from '../components/Community/FilterPlatform';
 import TableHead from '../components/Community/TableHead';
 import { TableBody } from '../components/Community/TableBody';
-import { Platform } from '../components/Community/Platform';
 import Footer from '../components/Footer';
 
 export default function Communities() {
@@ -59,7 +59,7 @@ export default function Communities() {
                                     {searchCommunity.length} results
                                 </p>
                             </div>
-                            <Platform
+                            <FilterPlatform
                                 platform={platforms}
                                 selectPlatforms={selectPlatforms}
                                 checkboxInput={handlePlatformCheckboxInput}

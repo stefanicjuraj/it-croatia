@@ -5,10 +5,10 @@ import { useWorkplace } from '../hooks/useWorkplace';
 import Loading from '../components/Loading';
 import Header from '../components/Workplace/Header';
 import { Search } from '../components/Search';
+import { FilterCity } from '../components/Workplace/FilterCity';
+import { FilterNeighbourhood } from '../components/Workplace/FilterNeighbourhood';
 import TableHead from '../components/Workplace/TableHead';
 import { TableBody } from '../components/Workplace/TableBody';
-import { City } from '../components/Workplace/City';
-import { Neighbourhood } from '../components/Workplace/Neighbourhood';
 import Footer from '../components/Footer';
 import { ScrollToTopComponent } from '../components/ScrollToTop';
 
@@ -77,12 +77,12 @@ export default function Workplaces() {
                                     {searchPodcast.length} results
                                 </p>
                             </div>
-                            <City
+                            <FilterCity
                                 locations={locations}
                                 selectLocations={selectLocations}
                                 checkboxInput={handleLocationCheckboxInput}
                             />
-                            <Neighbourhood
+                            <FilterNeighbourhood
                                 neighbourhood={neighbourhood}
                                 selectNeighbourhood={selectNeighbourhood}
                                 checkboxInput={handleNeighbourhoodCheckboxInput}

@@ -5,9 +5,9 @@ import { useEducation } from '../hooks/useEducation';
 import Loading from '../components/Loading';
 import Header from '../components/Education/Header';
 import { Search } from '../components/Search';
+import { FilterOrganizer } from '../components/Education/FilterOrganizer';
 import TableHead from '../components/Education/TableHead';
 import { TableBody } from '../components/Education/TableBody';
-import { Organizer } from '../components/Education/Organizer';
 import Footer from '../components/Footer';
 import { ScrollToTopComponent } from '../components/ScrollToTop';
 
@@ -60,7 +60,7 @@ export default function Education() {
                                     {searchEducation.length} results
                                 </p>
                             </div>
-                            <Organizer
+                            <FilterOrganizer
                                 organizer={organizer}
                                 selectOrganizer={selectOrganizer}
                                 checkboxInput={handleOrganizerCheckboxInput}

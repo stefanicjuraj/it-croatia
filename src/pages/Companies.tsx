@@ -6,10 +6,10 @@ import { useCompany } from '../hooks/useCompany';
 import Loading from '../components/Loading';
 import Header from '../components/Company/Header';
 import { Search } from '../components/Search';
-import { Filter } from '../components/Company/Filter';
+import { FilterIndustry } from '../components/Company/FilterIndustry';
+import { FilterLocation } from '../components/Company/FilterLocation';
 import TableHead from '../components/Company/TableHead';
 import { TableBody } from '../components/Company/TableBody';
-import { Location } from '../components/Company/Location';
 import Footer from '../components/Footer';
 import { ScrollToTopComponent } from '../components/ScrollToTop';
 
@@ -79,13 +79,13 @@ export default function Companies() {
                                     {searchCompany.length} results
                                 </p>
                             </div>
-                            <Filter
+                            <FilterIndustry
                                 industryTags={industryTags}
                                 tags={tags}
                                 mapTags={mapTags}
                                 checkboxInput={checkboxInput}
                             />
-                            <Location
+                            <FilterLocation
                                 locations={locations}
                                 selectLocations={selectLocations}
                                 checkboxInput={handleLocationCheckboxInput}
