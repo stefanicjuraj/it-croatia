@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 // Hooks
 import { useCommunity } from '../hooks/useCommunity';
 // Components
@@ -7,17 +7,35 @@ import Header from '../components/Community/Header';
 import { Search } from '../components/Search';
 import TableHead from '../components/Community/TableHead';
 import { TableBody } from '../components/Community/TableBody';
+import { Platform } from '../components/Community/Platform';
 import Footer from '../components/Footer';
 
 export default function Communities() {
     const { community, loading, error } = useCommunity();
     const [communitySearch, setCommunitySearch] = useState("");
+    const [selectPlatforms, setSelectPlatforms] = useState<string[]>([]);
+    const [platforms, setPlatforms] = useState<string[]>([]);
+
+    useEffect(() => {
+        const platforms = [...new Set(community.map(community => community.Platform))]
+            .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+        setPlatforms(platforms);
+    }, [community]);
 
     const searchCommunity = community.filter((community) => {
         const communityName = community.Community.toLowerCase();
+        const communityPlatform = selectPlatforms.length === 0 || selectPlatforms.includes(community.Platform);
         const search = communitySearch.toLowerCase();
-        return communityName.includes(search);
+        return communityName.includes(search) && communityPlatform;
     });
+
+    const handlePlatformCheckboxInput = (location: string) => {
+        setSelectPlatforms(prevPlatforms =>
+            prevPlatforms.includes(location)
+                ? prevPlatforms.filter(l => l !== location)
+                : [...prevPlatforms, location]
+        );
+    };
 
     if (error) {
         return <div>Error</div>;
@@ -41,6 +59,11 @@ export default function Communities() {
                                     {searchCommunity.length} results
                                 </p>
                             </div>
+                            <Platform
+                                platform={platforms}
+                                selectPlatforms={selectPlatforms}
+                                checkboxInput={handlePlatformCheckboxInput}
+                            />
                         </div>
                     </section>
                     <section className="px-4 mx-auto mb-40">
