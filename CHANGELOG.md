@@ -10,6 +10,8 @@
 
 ### Improved:
 
+- **Data** &rarr; modified data structure and format for readability and maintainability purposes.
+
 - **Sidebar Text Size Styling** &rarr; smaller text size on small screens.
 
 ## 14/04/2024
