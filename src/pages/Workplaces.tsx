@@ -49,11 +49,11 @@ export default function Workplaces() {
         );
     };
 
-    const handleNeighbourhoodCheckboxInput = (neighbourhood: string) => {
+    const handleNeighbourhoodCheckboxInput = (area: string) => {
         setSelectArea(prevNeighbourhood =>
-            prevNeighbourhood.includes(neighbourhood)
-                ? prevNeighbourhood.filter(n => n !== neighbourhood)
-                : [...prevNeighbourhood, neighbourhood]
+            prevNeighbourhood.includes(area)
+                ? prevNeighbourhood.filter(n => n !== area)
+                : [...prevNeighbourhood, area]
         );
     };
 
