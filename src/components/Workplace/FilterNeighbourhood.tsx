@@ -12,7 +12,7 @@ export const FilterNeighbourhood = ({ neighbourhood, selectNeighbourhood, checkb
 
     return (
         <>
-            <div className="relative mt-4 ml-4 sm:mt-0">
+            <div className="relative mt-4 ml-0 sm:ml-4 sm:mt-0">
                 <button className="w-full flex items-center justify-center py-4 px-5 text-white bg-[#222] border border-[#333] rounded-xl hover:border-indigo-400"
                     type="button"
                     onClick={toggle}
