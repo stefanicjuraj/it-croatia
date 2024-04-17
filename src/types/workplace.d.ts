@@ -4,6 +4,6 @@ export default interface Workplace {
   Address: string;
   Amenity: string[];
   City: string;
-  Neighbourhood: string[];
+  Area: string[];
   Location: string;
 }
