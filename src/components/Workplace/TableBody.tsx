@@ -27,9 +27,9 @@ export const TableBody = ({ workplaces }: { workplaces: Array<object> }) => {
                         {(workplace as { City: string })["City"]}
                     </td>
                     <td className="text-md text-white px-7 py-7 whitespace-nowrap">
-                        {(workplace as { Neighbourhood: string[] })?.Neighbourhood.map((neighbourhood, index) => (
+                        {(workplace as { Area: string[] })?.Area.map((area, index) => (
                             <span key={index}>
-                                {neighbourhood}
+                                {area}
                             </span>
                         ))}
                     </td>
