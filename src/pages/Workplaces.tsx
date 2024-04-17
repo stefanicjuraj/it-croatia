@@ -6,7 +6,7 @@ import Loading from '../components/Loading';
 import Header from '../components/Workplace/Header';
 import { Search } from '../components/Search';
 import { FilterCity } from '../components/Workplace/FilterCity';
-import { FilterNeighbourhood } from '../components/Workplace/FilterNeighbourhood';
+import { FilterArea } from '../components/Workplace/FilterArea';
 import TableHead from '../components/Workplace/TableHead';
 import { TableBody } from '../components/Workplace/TableBody';
 import Footer from '../components/Footer';
@@ -18,25 +18,25 @@ export default function Workplaces() {
     const { workplace, loading, error } = useWorkplace();
     const [workplaceSearch, setWorkplaceSearch] = useState("");
     const [selectLocations, setselectLocations] = useState<string[]>([]);
-    const [selectNeighbourhood, setSelectNeighbourhood] = useState<string[]>([]);
+    const [selectArea, setSelectArea] = useState<string[]>([]);
     const [locations, setLocations] = useState<string[]>([]);
-    const [neighbourhood, setNeighbourhood] = useState<string[]>([]);
+    const [area, setArea] = useState<string[]>([]);
 
     useEffect(() => {
         const uniqueLocations = [...new Set(workplace.map(w => w.City))]
             .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
         setLocations(uniqueLocations);
 
-        const uniqueNeighbourhoods = [...new Set(workplace.flatMap(w => w.Neighbourhood))]
+        const uniqueNeighbourhoods = [...new Set(workplace.flatMap(w => w.Area))]
             .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
-        setNeighbourhood(uniqueNeighbourhoods);
+        setArea(uniqueNeighbourhoods);
     }, [workplace]);
 
     const searchPodcast = workplace.filter((workplace) => {
         const workplaceName = workplace.Workplace.toLowerCase();
         const matchesLocation = selectLocations.length === 0 || selectLocations.includes(workplace.City);
-        const matchesNeighbourhood = selectNeighbourhood.length === 0 ||
-            selectNeighbourhood.some(n => (workplace.Neighbourhood || []).includes(n));
+        const matchesNeighbourhood = selectArea.length === 0 ||
+            selectArea.some(n => (workplace.Area || []).includes(n));
         const matchesSearch = workplaceName.includes(workplaceSearch.toLowerCase());
         return matchesLocation && matchesNeighbourhood && matchesSearch;
     });
@@ -50,7 +50,7 @@ export default function Workplaces() {
     };
 
     const handleNeighbourhoodCheckboxInput = (neighbourhood: string) => {
-        setSelectNeighbourhood(prevNeighbourhood =>
+        setSelectArea(prevNeighbourhood =>
             prevNeighbourhood.includes(neighbourhood)
                 ? prevNeighbourhood.filter(n => n !== neighbourhood)
                 : [...prevNeighbourhood, neighbourhood]
@@ -73,7 +73,7 @@ export default function Workplaces() {
                             <div className="relative mr-4 text-white sm:w-96 w-80">
                                 <Search
                                     onSearchChange={setWorkplaceSearch}
-                                    placeholder="Search places to work"
+                                    placeholder="Search work places"
                                 />
                                 <p className="absolute right-2 bottom-2 bg-[#333] rounded-full px-5 py-2">
                                     {searchPodcast.length} results
@@ -84,9 +84,9 @@ export default function Workplaces() {
                                 selectLocations={selectLocations}
                                 checkboxInput={handleLocationCheckboxInput}
                             />
-                            <FilterNeighbourhood
-                                neighbourhood={neighbourhood}
-                                selectNeighbourhood={selectNeighbourhood}
+                            <FilterArea
+                                area={area}
+                                selectArea={selectArea}
                                 checkboxInput={handleNeighbourhoodCheckboxInput}
                             />
                             <a href="#map" className="mt-4 sm:mt-0 sm:ml-3 ml-0 flex items-center justify-center py-4 px-5 text-white bg-[#222] border border-[#333] rounded-xl hover:border-indigo-400"
