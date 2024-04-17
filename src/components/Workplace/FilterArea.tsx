@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import chevron from '/assets/icons/chevron.svg';
 
-export const FilterNeighbourhood = ({ neighbourhood, selectNeighbourhood, checkboxInput }: {
-    neighbourhood: string[];
-    selectNeighbourhood: string[];
+export const FilterArea = ({ area, selectArea, checkboxInput }: {
+    area: string[];
+    selectArea: string[];
     checkboxInput: (location: string) => void;
 }) => {
 
@@ -12,14 +12,14 @@ export const FilterNeighbourhood = ({ neighbourhood, selectNeighbourhood, checkb
 
     return (
         <>
-            <div className="relative mt-4 ml-0 sm:ml-4 sm:mt-0">
+            <div className="relative mt-4 ml-4 sm:mt-0">
                 <button className="w-full flex items-center justify-center py-4 px-5 text-white bg-[#222] border border-[#333] rounded-xl hover:border-indigo-400"
                     type="button"
                     onClick={toggle}
                 >
-                    Neighbourhood
+                    Area
                     <span className="ml-2 text-sm text-white rounded-full bg-[#333] px-2.5 py-1">
-                        {selectNeighbourhood.length}
+                        {selectArea.length}
                     </span>
                     <img src={chevron} className={`h-5 w-5 ml-2 transition-transform ${dropdownOpen ? 'rotate-180' : ''}`} />
                 </button>
@@ -28,18 +28,18 @@ export const FilterNeighbourhood = ({ neighbourhood, selectNeighbourhood, checkb
                         <ul className="p-3 text-white space-y-1 text-md"
                             aria-labelledby="checkbox"
                         >
-                            {neighbourhood.map((neighbourhood, index) => (
+                            {area.map((area, index) => (
                                 <li key={index}>
                                     <div className="flex items-center p-3 rounded-lg hover:bg-[#333]">
                                         <input className="w-5 h-5 text-indigo-500 border-indigo-300 rounded focus:ring-indigo-500 focus:ring-1"
                                             type="checkbox"
                                             id={`location-checkbox-${index}`}
-                                            value={neighbourhood} checked={selectNeighbourhood.includes(neighbourhood)}
-                                            onChange={() => checkboxInput(neighbourhood)}
+                                            value={area} checked={selectArea.includes(area)}
+                                            onChange={() => checkboxInput(area)}
                                         />
                                         <label className="ml-3 text-sm text-white rounded"
                                             htmlFor={`filter-checkbox-${index}`}>
-                                            {neighbourhood}
+                                            {area}
                                         </label>
                                     </div>
                                 </li>

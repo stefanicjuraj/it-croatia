@@ -12,7 +12,7 @@ export default function TableHead() {
                     City
                 </th>
                 <th scope="col" className="py-8 px-7">
-                    Neighbourhood
+                    Area
                 </th>
                 <th scope="col" className="py-8 px-7">
                     Location
