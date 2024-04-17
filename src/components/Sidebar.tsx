@@ -12,7 +12,6 @@ import podcast from "/assets/icons/podcast.svg";
 import community from "/assets/icons/community.svg";
 import contribute from "/assets/icons/contribute.svg";
 import placesToWork from "/assets/icons/places-to-work.svg";
-import blog from "/assets/icons/blog.svg";
 import chevronRight from "/assets/icons/chevron-right.svg";
 import home from "/assets/icons/home.svg";
 
@@ -145,15 +144,6 @@ export default function Sidebar() {
                             </Link>
                         </li>
                         <hr className="border-[#333]" />
-                        <li>
-                            <Link to="/blog" className={`flex items-center p-3 rounded-xl group hover:bg-[#333] ${activeClass("/blog")}`}>
-                                <img src={blog} alt="Contributing icon" className="w-6 h-6" />
-                                <h1 className="flex-1 ms-3 whitespace-nowrap">Blog</h1>
-                                <span className="inline-flex items-center justify-center">
-                                    <img src={chevronRight} alt="Arrow right icon" className="w-5 h-5" />
-                                </span>
-                            </Link>
-                        </li>
                         <li>
                             <Link to="/contribute" className={`flex items-center p-3 rounded-xl group hover:bg-[#333] ${activeClass("/contribute")}`}>
                                 <img src={contribute} alt="Contributing icon" className="w-6 h-6" />
