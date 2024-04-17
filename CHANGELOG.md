@@ -1,5 +1,17 @@
 # Changelog
 
+## 17/04/2024
+
+### Added:
+
+- **Places to Work** &rarr; added a collection of places to visit and work in the best coffee shops, bars, and co-working places in Croatia.
+
+- **404 Not Found** &rarr; added a 404 Not Found page render when the URL input is incorrect.
+
+### Improved:
+
+- **Sidebar Text Size Styling** &rarr; smaller text size on small screens.
+
 ## 14/04/2024
 
 ### Added:
