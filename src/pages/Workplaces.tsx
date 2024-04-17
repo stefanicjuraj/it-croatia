@@ -11,6 +11,8 @@ import TableHead from '../components/Workplace/TableHead';
 import { TableBody } from '../components/Workplace/TableBody';
 import Footer from '../components/Footer';
 import { ScrollToTopComponent } from '../components/ScrollToTop';
+// Icons
+import location from '/assets/icons/location.svg';
 
 export default function Workplaces() {
     const { workplace, loading, error } = useWorkplace();
@@ -27,7 +29,7 @@ export default function Workplaces() {
 
         const uniqueNeighbourhoods = [...new Set(workplace.flatMap(w => w.Neighbourhood))]
             .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
-            setNeighbourhood(uniqueNeighbourhoods);
+        setNeighbourhood(uniqueNeighbourhoods);
     }, [workplace]);
 
     const searchPodcast = workplace.filter((workplace) => {
@@ -87,9 +89,14 @@ export default function Workplaces() {
                                 selectNeighbourhood={selectNeighbourhood}
                                 checkboxInput={handleNeighbourhoodCheckboxInput}
                             />
+                            <a href="#map" className="mt-4 sm:mt-0 sm:ml-3 ml-0 flex items-center justify-center py-4 px-5 text-white bg-[#222] border border-[#333] rounded-xl hover:border-indigo-400"
+                            >
+                                <img src={location} className="mr-1"></img>
+                                View on Map
+                            </a>
                         </div>
                     </section>
-                    <section className="px-4 mx-auto mb-40">
+                    <section className="px-4 mx-auto mb-32">
                         <div className="mx-auto overflow-x-auto max-w-screen-xl rounded-t-xl rounded-b-xl">
                             <table className="w-full text-left text-white">
                                 <TableHead />
@@ -97,6 +104,10 @@ export default function Workplaces() {
                             </table>
                         </div>
                     </section>
+
+
+                    <iframe id="map" className="mx-auto mb-40 p-4 sm:w-1/2 h-screen w-screen" src="https://www.google.com/maps/d/embed?mid=1PW03rTtZLnVjmuEoMqnctLVU3TrYZpQ&hl=en&ehbc=2E312F" width="720" height="560"></iframe>
+
                 </>
             )}
 
