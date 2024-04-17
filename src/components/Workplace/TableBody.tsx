@@ -10,10 +10,10 @@ export const TableBody = ({ workplaces }: { workplaces: Array<object> }) => {
                         {(workplace as { Workplace: string }).Workplace}
                         <br />
                         <a className="text-sm text-[#999] hover:underline"
-                            href={(workplace as { Website: string })["Website"]}
+                            href={(workplace as { Location: string })["Location"]}
                             target="_blank" rel="noopener noreferrer"
                         >
-                            {(workplace as { Website: string })["Website"]}
+                            {(workplace as { Address: string })["Address"]}
                         </a>
                     </td>
                     <td className="text-xs text-white px-7 py-7 whitespace-nowrap">
