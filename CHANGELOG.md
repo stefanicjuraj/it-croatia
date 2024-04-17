@@ -4,7 +4,7 @@
 
 ### Added:
 
-- **Places to Work Data** &rarr; added a collection of places to visit and work in the best coffee shops, bars, and co-working places in Croatia.
+- **Places to Work Data & Page** &rarr; added a collection of places to visit and work in the best coffee shops, bars, and co-working places in Croatia.
 
 - **404 Not Found** &rarr; added a 404 Not Found page render when the URL input is incorrect.
 
