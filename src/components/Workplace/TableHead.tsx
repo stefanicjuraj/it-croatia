@@ -3,7 +3,7 @@ export default function TableHead() {
         <thead className="text-lg text-white bg-[#222] border-b border-[#222]">
             <tr>
                 <th scope="col" className="py-8 px-7">
-                    Workplace
+                    Place to Work
                 </th>
                 <th scope="col" className="py-8 px-7">
                     Amenities
