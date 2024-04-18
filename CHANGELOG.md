@@ -1,5 +1,11 @@
 # Changelog
 
+## 18/04/2024
+
+### Added:
+
+- **Google Maps to Places to Work Page** &rarr; added a display of google maps with places to visit and work.
+
 ## 17/04/2024
 
 ### Added:
