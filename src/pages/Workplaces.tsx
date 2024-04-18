@@ -92,7 +92,7 @@ export default function Workplaces() {
                             <a href="#map" className="mt-4 sm:mt-0 sm:ml-3 ml-0 flex items-center justify-center py-4 px-5 text-white bg-[#222] border border-[#333] rounded-xl hover:border-indigo-400"
                             >
                                 <img src={location} className="mr-1"></img>
-                                View on Map
+                                <span className="mr-3">View on Maps</span>
                             </a>
                         </div>
                     </section>
@@ -106,7 +106,11 @@ export default function Workplaces() {
                     </section>
 
 
-                    <iframe id="map" className="mx-auto mb-40 p-4 sm:w-1/2 h-screen w-screen" src="https://www.google.com/maps/d/embed?mid=1PW03rTtZLnVjmuEoMqnctLVU3TrYZpQ&hl=en&ehbc=2E312F" width="720" height="560"></iframe>
+                    <iframe id="map" className="mx-auto mb-24 p-4 sm:w-1/2 h-screen w-screen" src="https://www.google.com/maps/d/embed?mid=1PW03rTtZLnVjmuEoMqnctLVU3TrYZpQ&hl=en&ehbc=2E312F" width="720" height="560"></iframe>
+
+                    <hr className="border-[#333] max-w-screen-xl mx-auto" />
+
+                    <iframe className="mx-auto mt-24 p-4 sm:w-1/2 h-screen w-screen" src="https://www.google.com/maps/d/embed?mid=1uIsPAY4AMFlQ5kE4cI7VMW4yky0&ehbc=2E312F" width="720" height="560"></iframe>
 
                 </>
             )}
