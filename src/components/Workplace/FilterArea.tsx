@@ -31,7 +31,7 @@ export const FilterArea = ({ area, selectArea, checkboxInput }: {
                             {area.map((area, index) => (
                                 <li key={index}>
                                     <div className="flex items-center p-3 rounded-lg hover:bg-[#333]">
-                                        <input className="w-5 h-5 text-indigo-500 border-indigo-300 rounded focus:ring-indigo-500 focus:ring-1"
+                                        <input className="w-5 h-5 text-indigo-500 border-indigo-300 bg-[#111] rounded focus:ring-indigo-500 focus:ring-1"
                                             type="checkbox"
                                             id={`location-checkbox-${index}`}
                                             value={area} checked={selectArea.includes(area)}
