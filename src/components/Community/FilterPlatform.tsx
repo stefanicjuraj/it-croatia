@@ -12,7 +12,7 @@ export const FilterPlatform = ({ platform, selectPlatforms, checkboxInput }: {
 
     return (
         <>
-            <div className="relative mt-4 ml-4 sm:mt-0">
+            <div className="relative mt-4 sm:ml-4 ml-0 sm:mt-0">
                 <button className="w-full flex items-center justify-center py-4 px-5 text-white bg-[#222] border border-[#333] rounded-xl hover:border-indigo-400"
                     type="button"
                     onClick={toggle}
@@ -24,7 +24,7 @@ export const FilterPlatform = ({ platform, selectPlatforms, checkboxInput }: {
                     <img src={chevron} className={`h-5 w-5 ml-2 transition-transform ${dropdownOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {dropdownOpen && (
-                    <div id="checkbox" className="absolute z-10 w-42 bg-[#222] border border-[#333] divide-y divide-gray-100 rounded-lg shadow mt-2 overflow-y-auto max-h-80">
+                    <div id="checkbox" className="absolute z-10 w-42 bg-[#222] border border-[#333] bg-[#111] divide-y divide-gray-100 rounded-lg shadow mt-2 overflow-y-auto max-h-80">
                         <ul className="p-3 text-white space-y-1 text-md"
                             aria-labelledby="checkbox"
                         >
