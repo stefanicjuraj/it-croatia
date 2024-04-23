@@ -1,5 +1,6 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { SpeedInsights } from "@vercel/speed-insights/react"
+import { Analytics } from "@vercel/analytics/react"
 // Components
 import Sidebar from './components/Sidebar';
 // Pages
@@ -22,6 +23,7 @@ export default function App() {
   return (
     <>
       <Router>
+        <Analytics />
         <SpeedInsights />
         <Sidebar />
         <ScrollToTop />
