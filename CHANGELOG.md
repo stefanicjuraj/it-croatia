@@ -1,5 +1,15 @@
 # Changelog
 
+## 24/04/2024
+
+### Added:
+
+- [x] **Companies:** DIV3R, Curly Code
+
+### Improved:
+
+- **Checkbox Input Styling** &rarr; dark mode checkbox input.
+
 ## 18/04/2024
 
 ### Added:
