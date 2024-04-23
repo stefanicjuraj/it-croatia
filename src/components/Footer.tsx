@@ -10,7 +10,7 @@ export default function Footer() {
                 <a href="https://github.com/stefanicjuraj/it-croatia" target="_blank" rel="noopener noreferrer">
                     <img src={github} alt="GitHub icon" className="w-8 h-8 mx-2" />
                 </a>
-                <a href="https://www.linkedin.com/in/jurajstefanic/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/posts/jurajstefanic_from-the-croit-community-on-reddit-activity-7174729313961795584-hFgt?utm_source=share&utm_medium=member_desktop" target="_blank" rel="noopener noreferrer">
                     <img src={linkedin} alt="LinkedIn icon" className="w-8 h-8 mx-2" />
                 </a>
             </div>
