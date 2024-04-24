@@ -4,7 +4,13 @@
 
 ### Added:
 
-- [x] **Companies:** DIV3R, Curly Code
+- [x] **Companies:** DIV3R, Curly Code, Brodbot, Deck99, Debug IT, Telemach Hrvatska, Iskon
+
+- [x] **Conferences:** .debug
+
+- [x] **Internships:** Orbico Internship
+
+- [x] **Places to Work:** Cogito Coffee / Urania, Sherlock Bar, Lemon Market, Dežman Bar, Regular.Bar, Très Chic café, Hub Cooltura Pub
 
 ### Improved:
 
