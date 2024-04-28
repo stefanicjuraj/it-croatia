@@ -1,6 +1,11 @@
+import { useTheme } from "../../utils/Theme";
+
 export default function TableHead() {
+    const { theme, themeClasses } = useTheme();
+    const style = themeClasses(theme);
+
     return (
-        <thead className="text-lg text-white bg-[#222] border-b border-[#222]">
+        <thead className={`text-lg ${style.textTableHead} ${style.background} ${style.border}`}>
             <tr>
                 <th scope="col" className="py-8 px-7">
                     Place to Work

@@ -1,8 +1,14 @@
+// Utils
+import { useTheme } from '../../utils/Theme';
+// Icons
 import chevron from '/assets/icons/sort.svg';
 
 export default function TableHead({ sortEmployees }: { sortEmployees: () => void }) {
+    const { theme, themeClasses } = useTheme();
+    const style = themeClasses(theme);
+
     return (
-        <thead className="text-lg text-white bg-[#222] border-b border-[#222]">
+        <thead className={`text-lg ${style.textTableHead} ${style.background} ${style.border}`}>
             <tr>
                 <th scope="col" className="py-8 px-7">
                     Company

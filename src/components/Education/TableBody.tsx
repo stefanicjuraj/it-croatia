@@ -1,29 +1,34 @@
+// Utils
+import { useTheme } from '../../utils/Theme';
+// Icons
 import apply from '/assets/icons/apply.svg';
 
 export const TableBody = ({ education }: { education: Array<object> }) => {
+    const { theme, themeClasses } = useTheme();
+    const style = themeClasses(theme);
 
     return (
         <tbody>
             {education.map((education, index) => (
-                <tr key={index} className="bg-[#222] border-t border-[#555] text-md">
-                    <td className="text-lg px-7 py-7 whitespace-nowrap">
+                <tr key={index} className={`${style.background} ${style.border}`}>
+                    <td className={`text-lg px-7 py-7 whitespace-nowrap ${style.textTableBody}`}>
                         {(education as { Course: string })?.Course}
                     </td>
-                    <td className="text-xs text-white px-7 py-7 whitespace-nowrap">
+                    <td className={`text-xs ${style.textTableBody} px-5 py-7 whitespace-nowrap`}>
                         {(education as { Topic: string[] })?.Topic.map((topic, index) => (
-                            <span key={index} className="px-3 py-2 mr-1 bg-indigo-500 rounded-lg">
+                            <span key={index} className={`px-3 py-2 mr-1 ${style.backgroundIndustry} ${style.industryText} rounded-lg`}>
                                 {topic}
                             </span>
                         ))}
                     </td>
-                    <td className="px-7 py-7 text-md">
+                    <td className={`px-7 py-7 text-md ${style.textTableBody}`}>
                         {(education as { Organizer: string })?.Organizer}
                     </td>
-                    <td className="px-7 py-7 text-md">
+                    <td className={`px-7 py-7 text-md ${style.textTableBody}`}>
                         {(education as { Type: string })?.Type}
                     </td>
-                    <td className="px-10 py-7">
-                        <a className="inline-flex items-center hover:shadow hover:ring-indigo-500 focus:ring-2 focus:outline-none focus:ring-gray-200 rounded-xl"
+                    <td className={`px-10 py-7 ${style.iconHover}`}>
+                        <a className="inline-flex items-center hover:ring-indigo-500 focus:ring-2 focus:outline-none focus:ring-gray-200 rounded-xl"
                             href={(education as { Enroll: string })?.Enroll}
                             target="_blank" rel="noopener noreferrer"
                         >

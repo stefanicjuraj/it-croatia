@@ -1,12 +1,18 @@
+// Utils
+import { useTheme } from "../../utils/Theme";
+// Icons
 import arrow from "/assets/icons/arrow-right.svg";
 import mail from "/assets/icons/mail.svg";
 import user from "/assets/icons/user.svg";
 
 export default function Form() {
+    const { theme, themeClasses } = useTheme();
+    const style = themeClasses(theme);
+
     const accessKey = import.meta.env.VITE_ACCESS_KEY;
 
     return (
-        <div className="max-w-screen-md mx-auto mt-16 mb-4 sm:p-12 p-8 bg-[#222] rounded-xl">
+        <div className={`max-w-screen-md mx-auto mt-16 mb-40 sm:p-12 p-8 ${style.background} rounded-xl`}>
             <form method="POST" action="https://api.web3forms.com/submit">
                 <input type="hidden" name="access_key" value={accessKey} />
                 <input type="hidden" name="redirect" value=""></input>
@@ -14,14 +20,14 @@ export default function Form() {
                 <input type="hidden" name="subject" value="New Contribution"></input>
                 <div className="grid md:grid-cols-2 md:gap-6">
                     <div className="relative z-0 w-full mt-4 group">
-                        <label htmlFor="name" className="block mb-2 text-white text-md">
+                        <label htmlFor="name" className={`block mb-2 ${style.text} text-md`}>
                             Name / Alias
                         </label>
                         <div className="flex">
                             <span className="inline-flex items-center px-3 border border-r-0 border-[#999] rounded-l-md">
                                 <img src={user} className="w-5 h-5" alt="User icon" />
                             </span>
-                            <input className="rounded-none rounded-r-lg bg-[#333] border border-[#999] text-white focus:ring-[#6875F5] focus:ring-1 focus:border-[#6875F5] block flex-1 min-w-0 w-full text-sm p-3"
+                            <input className={`rounded-none rounded-r-lg ${style.background} border border-[#999] ${style.text} focus:ring-[#6875F5] focus:ring-1 focus:border-[#6875F5] block flex-1 min-w-0 w-full text-sm p-3`}
                                 type="text"
                                 name="name"
                                 id="name"
@@ -35,14 +41,14 @@ export default function Form() {
                         </p>
                     </div>
                     <div className="relative z-0 w-full mt-4 group">
-                        <label htmlFor="email" className="block mb-2 text-white text-md">
+                    <label htmlFor="name" className={`block mb-2 ${style.text} text-md`}>
                             Email
                         </label>
                         <div className="flex">
                             <span className="inline-flex items-center px-3 border border-r-0 border-[#999] rounded-l-md">
                                 <img src={mail} className="w-5 h-5" alt="Mail icon" />
                             </span>
-                            <input className="rounded-none rounded-r-lg bg-[#333] border border-[#999] text-white focus:ring-[#6875F5] focus:ring-1 focus:border-[#6875F5] block flex-1 min-w-0 w-full text-sm p-3"
+                            <input className={`rounded-none rounded-r-lg ${style.background} border border-[#999] ${style.text} focus:ring-[#6875F5] focus:ring-1 focus:border-[#6875F5] block flex-1 min-w-0 w-full text-sm p-3`}
                                 type="email"
                                 name="email"
                                 id="email"
@@ -57,10 +63,10 @@ export default function Form() {
                         </p>
                     </div>
                 </div>
-                <label htmlFor="message" className="block mt-4 mb-2 font-medium text-white text-md">
+                <label htmlFor="message" className={`block mt-4 mb-2 font-medium ${style.text} text-md`}>
                     Your contribution
                 </label>
-                <textarea className="block p-2.5 w-full text-sm text-white bg-[#333] rounded-lg border border-[#999] focus:ring-[#6875F5] focus:border-[#6875F5]"
+                <textarea className={`block p-2.5 w-full text-sm ${style.text} ${style.background} rounded-lg border border-[#999] focus:ring-[#6875F5] focus:border-[#6875F5]`}
                     name="message"
                     id="message"
                     rows={5}

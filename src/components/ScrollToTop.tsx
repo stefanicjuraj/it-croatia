@@ -1,9 +1,14 @@
 // Hooks
 import { useShowScrollToTop } from '../hooks/useScrollToTop';
+// Utils
+import { useTheme } from '../utils/Theme';
 // Icons
 import arrow from '/assets/icons/arrow-up.svg';
 
 export const ScrollToTopComponent: React.FC = () => {
+    const { theme, themeClasses } = useTheme();
+    const style = themeClasses(theme);
+
     const isShown = useShowScrollToTop();
 
     const scrollToTop = () => {
@@ -18,7 +23,7 @@ export const ScrollToTopComponent: React.FC = () => {
     }
 
     return (
-        <button className="w-12 h-12 mr-3 mb-3 bg-[#222] hover:bg-[#333] border border-indigo-500 rounded-lg flex justify-center items-center fixed bottom-0 right-0 z-10"
+        <button className={`w-12 h-12 mr-3 mb-3 ${style.background} border border-indigo-400 rounded-lg flex justify-center items-center fixed bottom-0 right-0 z-10`}
             aria-label="Back to top"
             onClick={scrollToTop}
         >

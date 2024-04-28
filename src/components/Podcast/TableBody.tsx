@@ -1,26 +1,31 @@
+// Utils
+import { useTheme } from '../../utils/Theme';
+// Icons
 import listen from '/assets/icons/headphones.svg';
 
 export const TableBody = ({ podcasts }: { podcasts: Array<object> }) => {
+    const { theme, themeClasses } = useTheme();
+    const style = themeClasses(theme);
 
     return (
         <tbody>
             {podcasts.map((podcast, index) => (
-                <tr key={index} className="bg-[#222] border-t border-[#555] text-md">
-                    <td className="text-lg px-7 py-7 whitespace-nowrap">
+                <tr key={index} className={`${style.background} ${style.border}`}>
+                    <td className={`text-lg px-7 py-7 whitespace-nowrap ${style.textTableBody}`}>
                         {(podcast as { Podcast: string }).Podcast}
                         <br />
                     </td>
-                    <td className="text-xs text-white px-7 py-7 whitespace-nowrap">
+                    <td className={`text-xs px-7 py-7 whitespace-nowrap ${style.textTableBody}`}>
                         {(podcast as { Topic: string[] })?.Topic.map((topic, index) => (
-                            <span key={index} className="px-3 py-2 mr-1 bg-indigo-500 rounded-lg">
+                            <span key={index} className={`px-3 py-2 mr-1 ${style.backgroundIndustry} ${style.industryText} rounded-lg`}>
                                 {topic}
                             </span>
                         ))}
                     </td>
-                    <td className="px-7 py-7 text-md">
+                    <td className={`px-7 py-7 text-md ${style.textTableBody}`}>
                         {(podcast as { Organizer: string })["Organizer"]}
                     </td>
-                    <td className="text-md text-white px-7 py-7 whitespace-nowrap">
+                    <td className={`px-7 py-7 text-md whitespace-nowrap ${style.textTableBody}`}>
                         {(podcast as { Platforms: string[] })?.Platforms.map((platforms, index) => (
                             <span key={index}>
                                 {platforms}
@@ -36,8 +41,9 @@ export const TableBody = ({ podcasts }: { podcasts: Array<object> }) => {
                         </a>
                     </td>
                 </tr>
-            ))}
-        </tbody>
+            ))
+            }
+        </tbody >
     )
 
 }

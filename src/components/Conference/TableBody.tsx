@@ -1,36 +1,40 @@
 // Hooks
 import { useConference } from '../../hooks/useConference';
+// Utils
+import { useTheme } from '../../utils/Theme';
 // Icons
 import ticket from '/assets/icons/ticket.svg';
 
 export const TableBody = ({ conferences }: { conferences: Array<object> }) => {
     const { countdown } = useConference();
+    const { theme, themeClasses } = useTheme();
+    const style = themeClasses(theme);
 
     return (
         <tbody>
             {conferences.map((conference, index) => (
-                <tr key={index} className="bg-[#222] border-t border-[#555] text-md">
-                    <td className="text-lg px-7 py-7 whitespace-nowrap">
+                <tr key={index} className={`${style.background} ${style.border}`}>
+                    <td className={`text-lg px-7 py-7 whitespace-nowrap ${style.textTableBody}`}>
                         {(conference as { Conference: string, Website: string }).Conference}
                         <br />
-                        <a href={(conference as { Website: string })["Website"]} className="text-sm text-[#999] hover:underline" target="_blank" rel="noopener noreferrer">
+                        <a href={(conference as { Website: string })["Website"]} className={`text-sm ${style.linkText} hover:underline`} target="_blank" rel="noopener noreferrer">
                             {(conference as { Website: string })["Website"]}
                         </a>
                     </td>
-                    <td className="text-xs text-white px-7 py-7 whitespace-nowrap">
+                    <td className={`text-xs ${style.textTableBody} px-5 py-7 whitespace-nowrap`}>
                         {(conference as { Topic: Array<string> }).Topic.map((topic, index) => (
-                            <span key={index} className="px-3 py-2 mr-1 bg-indigo-500 rounded-lg">
+                            <span key={index} className={`px-3 py-2 mr-1 ${style.backgroundIndustry} ${style.industryText} rounded-lg`}>
                                 {topic}
                             </span>
                         ))}
                     </td>
-                    <td className="px-7 py-7 text-md">
+                    <td className={`px-7 py-7 text-md ${style.textTableBody}`}>
                         {(conference as { Organizer: string })["Organizer"]}
                     </td>
-                    <td className="px-7 py-7 text-md">
+                    <td className={`px-7 py-7 text-md ${style.textTableBody}`}>
                         {(conference as { Location: string }).Location}
                     </td>
-                    <td className="px-7 py-7 text-md whitespace-nowrap">
+                    <td className={`px-7 py-7 text-md whitespace-nowrap ${style.textTableBody}`}>
                         {(conference as { startDate: string, endDate: string }).startDate}
                         <br />
                         {(conference as { endDate: string }).endDate}
@@ -39,8 +43,8 @@ export const TableBody = ({ conferences }: { conferences: Array<object> }) => {
                             {countdown((conference as { startDate: string }).startDate)}
                         </p>
                     </td>
-                    <td className="px-10 text-lg py-7">
-                        <a className="inline-flex items-center hover:shadow hover:ring-indigo-500 focus:ring-2 focus:outline-none focus:ring-gray-200 rounded-xl"
+                    <td className={`px-10 py-7 ${style.iconHover}`}>
+                        <a className="inline-flex items-center hover:ring-indigo-500 focus:ring-2 focus:outline-none focus:ring-gray-200 rounded-xl"
                             href={(conference as { Ticket: string })["Ticket"]}
                             target="_blank" rel="noopener noreferrer"
                         >

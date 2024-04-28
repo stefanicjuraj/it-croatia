@@ -1,27 +1,32 @@
+// Utils
+import { useTheme } from '../../utils/Theme';
+// Icons
 import apply from '/assets/icons/apply.svg';
 
 export const TableBody = ({ internships }: { internships: Array<object> }) => {
+    const { theme, themeClasses } = useTheme();
+    const style = themeClasses(theme);
 
     return (
         <tbody>
             {internships.map((internship, index) => (
-                <tr key={index} className="bg-[#222] border-t border-[#555] text-md">
-                    <td className="text-lg px-7 py-7 whitespace-nowrap">
+                <tr key={index} className={`${style.background} ${style.border}`}>
+                    <td className={`text-lg px-7 py-7 whitespace-nowrap ${style.textTableBody}`}>
                         {(internship as { Internship: string }).Internship}
                         <br />
                     </td>
-                    <td className="text-xs text-white px-7 py-7 whitespace-nowrap">
+                    <td className={`text-xs px-7 py-7 whitespace-nowrap ${style.textTableBody}`}>
                         {(internship as { Department: string[] }).Department.map((topic, index) => (
-                            <span key={index} className="px-3 py-2 mr-1 bg-indigo-500 rounded-lg">
+                            <span key={index} className={`px-3 py-2 mr-1 ${style.backgroundIndustry} ${style.industryText} rounded-lg`}>
                                 {topic}
                             </span>
                         ))}
                     </td>
-                    <td className="px-7 py-7 text-md">
+                    <td className={`px-7 py-7 text-md ${style.textTableBody}`}>
                         {(internship as { Company: string })?.Company}
                     </td>
                     <td className="px-10 text-lg py-7">
-                        <a className="inline-flex items-center hover:shadow hover:ring-indigo-500 focus:ring-2 focus:outline-none focus:ring-gray-200 rounded-xl"
+                        <a className="inline-flex items-center hover:ring-indigo-500 focus:ring-2 focus:outline-none focus:ring-gray-200 rounded-xl"
                             href={(internship as { Apply: string })["Apply"]}
                             target="_blank" rel="noopener noreferrer"
                         >
@@ -29,8 +34,9 @@ export const TableBody = ({ internships }: { internships: Array<object> }) => {
                         </a>
                     </td>
                 </tr>
-            ))}
-        </tbody>
+            ))
+            }
+        </tbody >
     )
 
 }
