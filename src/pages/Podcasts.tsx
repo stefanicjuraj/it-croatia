@@ -8,10 +8,14 @@ import { Search } from '../components/Search';
 import TableHead from '../components/Podcast/TableHead';
 import { TableBody } from '../components/Podcast/TableBody';
 import Footer from '../components/Footer';
+// Utils
+import { useTheme } from '../utils/Theme';
 
 export default function Podcasts() {
     const { podcast, loading, error } = usePodcast();
     const [podcastSearch, setPodcastSearch] = useState("");
+    const { theme, themeClasses } = useTheme();
+    const style = themeClasses(theme);
 
     const searchPodcast = podcast?.filter((podcast) => {
         const podcastName = podcast?.Podcast?.toLowerCase();
@@ -24,20 +28,22 @@ export default function Podcasts() {
     }
 
     return (
-        <>
-            <Header />
+        <div className={`${style.backgroundBody}`}>
+            <div className="pt-40">
+                <Header />
+            </div>
             {loading ? (
                 <Loading />
             ) : (
-                <>
+                <div className={`${style.backgroundBody}`}>
                     <section className="relative px-4 mx-auto max-w-screen-xl sm:px-0 animation glow delay-1">
                         <div className="flex flex-wrap items-center mb-8 sm:flex-nowrap">
-                            <div className="relative mr-4 text-white sm:w-96 w-80">
+                            <div className={`relative mr-4 ${style.text} sm:w-96 w-80`}>
                                 <Search
                                     onSearchChange={setPodcastSearch}
                                     placeholder="Search podcasts"
                                 />
-                                <p className="absolute right-2 bottom-2 bg-[#333] rounded-full px-5 py-2">
+                                <p className={`absolute right-2 bottom-2 ${style.backgroundFilters} rounded-full px-5 py-2`}>
                                     {searchPodcast.length} results
                                 </p>
                             </div>
@@ -51,11 +57,11 @@ export default function Podcasts() {
                             </table>
                         </div>
                     </section>
-                </>
+                </div>
             )}
 
             <Footer />
 
-        </>
+        </div>
     )
 }
