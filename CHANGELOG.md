@@ -1,5 +1,13 @@
 # Changelog
 
+## 28/04/2024
+
+### Added:
+
+- **Light Mode / Dark Mode** &rarr; toggle between the light mode or dark mode theme.
+
+### Added:
+
 ## 24/04/2024
 
 ### Added:
