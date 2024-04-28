@@ -2,7 +2,6 @@
 
 body {
   font-family: "Inter", sans-serif;
-  background-color: #111;
   scroll-behavior: smooth;
   /* disable user select */
   user-select: none;
@@ -62,4 +61,7 @@ body {
 }
 .delay-8 {
   animation-delay: 1s;
+}
+.delay-9 {
+  animation-delay: 1.1s;
 }
