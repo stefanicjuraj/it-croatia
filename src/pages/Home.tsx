@@ -17,10 +17,22 @@ import placesToWork from "/assets/icons/places-to-work.svg";
 // Images
 import image from "/assets/images/cro-it.png";
 import redditImage from "/assets/images/reddit-image.png";
+import { useEffect, useState } from "react";
 
 export default function Home() {
     const { theme, themeClasses } = useTheme();
     const style = themeClasses(theme);
+    const [currentItem, setCurrentItem] = useState(0);
+
+    const items = ["companies", "conferences", "education", "certificates", "communities", "places to work", "podcasts", "internships"];
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentItem(prevItem => (prevItem + 1) % items.length);
+        }, 900);
+
+        return () => clearInterval(timer);
+    }, []);
 
     return (
         <div className={`${style.backgroundBody}`}>
@@ -35,8 +47,10 @@ export default function Home() {
                         </span>
                         In development
                     </p>
-                    <p className="w-full mx-auto text-xl text-center sm:w-4/5 sm:text-2xl">
-                        Explore a collection of IT companies, conferences, education, certificates, communities, podcasts, and internships in Croatia
+                    <p className="w-full mx-auto text-2xl text-center sm:w-4/5 sm:text-2xl">
+                        Explore a collection of IT
+                        <span className={`${style.headingH1}`}>{items[currentItem]}</span>
+                        in Croatia
                     </p>
                 </div>
                 <section className="px-8 py-8 space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-16 md:space-y-0" >
@@ -156,11 +170,11 @@ export default function Home() {
                 <div className={`px-4 py-4 mt-24 mb-24 text-center ${style.headingH1} animation glow delay-8`} >
                     <h2 className="mb-4 text-5xl font-bold">By popular demand</h2>
                     <h3 className="text-2xl italic font-normal">You asked. We answered.</h3>
-                    <img src={image} className="w-full mx-auto mt-16 mb-32 sm:w-2/3 shadow-sm rounded-xl"></img>
+                    <img src={image} className="w-full mx-auto mt-16 mb-32 shadow-sm sm:w-2/3 rounded-xl"></img>
                     <h2 className="mb-4 text-5xl font-bold">The launch</h2>
                     <h3 className="text-2xl italic font-normal">View the launch post and join the discussion!</h3>
                     <a href="https://www.reddit.com/r/CroIT/comments/1bfba43/kolekcija_it_kompanija_konferencija_edukacija/" target="_blank" rel="noopener noreferrer">
-                        <img src={redditImage} className="w-full mx-auto mt-16 mb-32 sm:w-1/3 rounded-xl hover:border-2 hover:border-indigo-500 shadow-md"></img>
+                        <img src={redditImage} className="w-full mx-auto mt-16 mb-32 shadow-md sm:w-1/3 rounded-xl hover:border-2 hover:border-indigo-500"></img>
                     </a>
                     <h2 className="mb-4 text-5xl font-bold">Monthly updates</h2>
                     <h3 className="max-w-screen-sm mx-auto text-xl italic font-normal">Receive monthly updates of the additions of newly established entities and removals of inactive or defunct entities from the collection.</h3>
