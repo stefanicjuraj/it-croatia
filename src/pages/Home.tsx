@@ -49,7 +49,7 @@ export default function Home() {
                     </p>
                     <p className="w-full mx-auto text-2xl text-center sm:w-4/5 sm:text-2xl">
                         Explore a collection of IT
-                        <span className={`${style.headingH1}`}>{items[currentItem]}</span>
+                        <span className={`${style.headingH1} mx-2`}>{items[currentItem]}</span>
                         in Croatia
                     </p>
                 </div>
