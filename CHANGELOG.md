@@ -1,5 +1,11 @@
 # Changelog
 
+## 03/05/2024
+
+- **Conferences View Toggle** &rarr; toggle between the table and card Conferences views.
+
+### Added:
+
 ## 28/04/2024
 
 ### Added:
