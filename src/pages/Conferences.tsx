@@ -6,10 +6,11 @@ import Loading from '../components/Loading';
 import Header from '../components/Conference/Header';
 import { Search } from '../components/Search';
 import { FilterLocation } from '../components/Conference/FilterLocation';
+import { TableBodyCard } from '../components/Conference/TableBodyCard';
 import TableHead from '../components/Conference/TableHead';
 import { TableBody } from '../components/Conference/TableBody';
-import Footer from '../components/Footer';
 import { ScrollToTopComponent } from '../components/ScrollToTop';
+import Footer from '../components/Footer';
 // Utils
 import { useTheme } from '../utils/Theme';
 
@@ -21,6 +22,11 @@ export default function Conferences() {
     const [sortOrder, setSortOrder] = useState('');
     const { theme, themeClasses } = useTheme();
     const style = themeClasses(theme);
+    const [viewMode, setViewMode] = useState('card');
+
+    const toggleViewMode = () => {
+        setViewMode(prevMode => prevMode === 'card' ? 'table' : 'card');
+    };
 
     useEffect(() => {
         const locations = [...new Set(conferences.map(conferences => conferences.Location))]
@@ -86,7 +92,7 @@ export default function Conferences() {
                 <Loading />
             ) : (
                 <div className={`${style.backgroundBody}`}>
-                    <section className="relative px-4 mx-auto max-w-screen-xl sm:px-0 animation glow delay-1">
+                    <section className="relative max-w-screen-xl px-4 mx-auto sm:px-0 animation glow delay-1">
                         <div className="flex flex-wrap items-center mb-8 sm:flex-nowrap">
                             <div className={`relative mr-4 ${style.text} sm:w-96 w-80`}>
                                 <Search
@@ -101,16 +107,26 @@ export default function Conferences() {
                                 selectLocations={selectLocations}
                                 checkboxInput={handleLocationCheckboxInput}
                             />
+                            <button onClick={toggleViewMode} className={`mt-4 sm:mt-0 sm:ml-3 ml-3 flex items-center justify-center py-4 px-5 ${style.text} ${style.backgroundHeader} ${style.borderSearch} rounded-xl hover:border-indigo-400`}
+                            >
+                                Toggle view
+                            </button>
                         </div>
                     </section>
-                    <section className="px-4 mx-auto mb-40">
-                        <div className="mx-auto overflow-x-auto max-w-screen-xl rounded-t-xl rounded-b-xl">
-                            <table className="w-full text-left text-white">
-                                <TableHead sortDates={toggleSortDates} />
-                                <TableBody conferences={sortConferences} />
-                            </table>
-                        </div>
-                    </section>
+                    {
+                        viewMode === 'card' ? (
+                            <section className="px-4 mx-auto mb-40">
+                                <div className="max-w-screen-xl mx-auto overflow-x-auto rounded-t-xl rounded-b-xl">
+                                    <table className="w-full text-left text-white">
+                                        <TableHead sortDates={toggleSortDates} />
+                                        <TableBody conferences={sortConferences} />
+                                    </table>
+                                </div>
+                            </section>
+                        ) : (
+                            <TableBodyCard conferences={sortConferences} />
+                        )
+                    }
                 </div>
             )}
             <Footer />
