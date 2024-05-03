@@ -6,6 +6,8 @@
 
 - [x] **Conferences:** Engineering Meetup, EU Sparks Hackathon
 
+- [x] **Education:** Health Innovation
+
 ### Added:
 
 ## 28/04/2024
