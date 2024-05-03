@@ -4,6 +4,8 @@
 
 - **Conferences View Toggle** &rarr; toggle between the table and card Conferences views.
 
+- [x] **Conferences:** Engineering Meetup, EU Sparks Hackathon
+
 ### Added:
 
 ## 28/04/2024
