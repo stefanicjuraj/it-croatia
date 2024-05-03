@@ -18,14 +18,14 @@ Collection of IT companies, conferences, education, certificates, communities, p
 
 ## Features
 
-- [x] **600+ Companies** conducting business operations, providing services, or offering consultancy in Croatia.
-- [x] **15+ Conferences** to attend with industry knowledge professionals and enthusiasts.
-- [x] **60+ Education** opportunities to enroll into colleges, courses, lectures, and classes.
-- [x] **60+ Certificates** to master and demonstrate your professional knowledge and skills.
-- [x] **10+ Communities** to connect and network with other IT professionals and enthusiasts.
-- [x] **15+ Places to Work** in the best coffee shops, bars, and co-working places in Croatia.
-- [x] **5+ Podcasts** related topics with industry professionals and enthusiasts.
-- [x] **5+ Internships** to start your career and enhance your professional experience.
+&rarr; **600+ Companies** conducting business operations, providing services, or offering consultancy in Croatia.
+&rarr; **15+ Conferences** to attend with industry knowledge professionals and enthusiasts.
+&rarr; **60+ Education** opportunities to enroll into colleges, courses, lectures, and classes.
+&rarr; **60+ Certificates** to master and demonstrate your professional knowledge and skills.
+&rarr; **10+ Communities** to connect and network with other IT professionals and enthusiasts.
+&rarr; **15+ Places to Work** in the best coffee shops, bars, and co-working places in Croatia.
+&rarr; **5+ Podcasts** related topics with industry professionals and enthusiasts.
+&rarr; **5+ Internships** to start your career and enhance your professional experience.
 
 All data collected is sourced from the publicly available information and sources on the internet, whilst not being affiliated with any of the listed entities.
 
