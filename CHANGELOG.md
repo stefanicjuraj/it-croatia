@@ -1,5 +1,9 @@
 # Changelog
 
+## 08/05/2024
+
+- [x] **Conferences:** Unlock Rab 2024
+
 ## 03/05/2024
 
 - **Conferences View Toggle** &rarr; toggle between the table and card Conferences views.
