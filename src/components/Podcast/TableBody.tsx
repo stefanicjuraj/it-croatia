@@ -11,17 +11,18 @@ export const TableBody = ({ podcasts }: { podcasts: Array<object> }) => {
         <tbody>
             {podcasts.map((podcast, index) => (
                 <tr key={index} className={`${style.background} ${style.border}`}>
-                    <td className={`text-lg px-7 py-7 whitespace-nowrap ${style.textTableBody}`}>
-                        {(podcast as { Podcast: string }).Podcast}
-                        <br />
-                    </td>
-                    <td className={`text-xs px-7 py-7 whitespace-nowrap ${style.textTableBody}`}>
-                        {(podcast as { Topic: string[] })?.Topic.map((topic, index) => (
-                            <span key={index} className={`px-3 py-2 mr-1 ${style.backgroundIndustry} ${style.industryText} rounded-lg`}>
-                                {topic}
-                            </span>
-                        ))}
-                    </td>
+                    <a href={(podcast as { Listen: string })["Listen"]} target="_blank" rel="noopener noreferrer">
+                        <td className={`text-lg px-7 py-7 whitespace-nowrap ${style.textTableBody}`}>
+                            {(podcast as { Podcast: string }).Podcast}
+                            <p className="mt-4">
+                                {(podcast as { Topic: string[] })?.Topic.map((topic, index) => (
+                                    <span key={index} className={`text-xs px-3 py-2 mr-1 ${style.backgroundIndustry} ${style.industryText} rounded-lg`}>
+                                        {topic}
+                                    </span>
+                                ))}
+                            </p>
+                        </td>
+                    </a>
                     <td className={`px-7 py-7 text-md ${style.textTableBody}`}>
                         {(podcast as { Organizer: string })["Organizer"]}
                     </td>

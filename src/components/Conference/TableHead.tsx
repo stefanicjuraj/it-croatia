@@ -14,9 +14,6 @@ export default function TableHead({ sortDates }: { sortDates: () => void }) {
                     Conference
                 </th>
                 <th scope="col" className="py-8 px-7">
-                    Topics
-                </th>
-                <th scope="col" className="py-8 px-7">
                     Organizer
                 </th>
                 <th scope="col" className="py-8 px-7">
@@ -24,7 +21,7 @@ export default function TableHead({ sortDates }: { sortDates: () => void }) {
                 </th>
                 <th scope="col" className="flex py-8 cursor-pointer px-7" onClick={sortDates}>
                     Dates
-                    <img src={chevron} className="w-5 h-5 mt-1 ml-2 transition-transform" />
+                    <img src={chevron} className="w-5 h-5 mt-1 ml-2" />
                 </th>
                 <th scope="col" className="py-8 px-7">
                     Ticket

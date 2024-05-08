@@ -11,16 +11,18 @@ export const TableBody = ({ education }: { education: Array<object> }) => {
         <tbody>
             {education.map((education, index) => (
                 <tr key={index} className={`${style.background} ${style.border}`}>
-                    <td className={`text-lg px-7 py-7 whitespace-nowrap ${style.textTableBody}`}>
-                        {(education as { Course: string })?.Course}
-                    </td>
-                    <td className={`text-xs ${style.textTableBody} px-5 py-7 whitespace-nowrap`}>
-                        {(education as { Topic: string[] })?.Topic.map((topic, index) => (
-                            <span key={index} className={`px-3 py-2 mr-1 ${style.backgroundIndustry} ${style.industryText} rounded-lg`}>
-                                {topic}
-                            </span>
-                        ))}
-                    </td>
+                    <a href={(education as { Enroll: string })?.Enroll} target="_blank" rel="noopener noreferrer">
+                        <td className={`text-lg px-7 py-7 whitespace-nowrap ${style.textTableBody}`}>
+                            {(education as { Course: string })?.Course}
+                            <p className="mt-4">
+                                {(education as { Topic: string[] })?.Topic.map((topic, index) => (
+                                    <span key={index} className={`text-xs px-3 py-2 mr-1 ${style.backgroundIndustry} ${style.industryText} rounded-lg`}>
+                                        {topic}
+                                    </span>
+                                ))}
+                            </p>
+                        </td>
+                    </a>
                     <td className={`px-7 py-7 text-md ${style.textTableBody}`}>
                         {(education as { Organizer: string })?.Organizer}
                     </td>

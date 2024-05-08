@@ -11,16 +11,19 @@ export const TableBody = ({ workplaces }: { workplaces: Array<object> }) => {
         <tbody>
             {workplaces.map((workplace, index) => (
                 <tr key={index} className={`${style.background} ${style.border}`}>
-                    <td className={`text-lg px-7 py-7 whitespace-nowrap ${style.textTableBody}`}>
-                        {(workplace as { Workplace: string }).Workplace}
-                        <br />
-                        <a className="text-sm text-[#999] hover:underline"
-                            href={(workplace as { Location: string })["Location"]}
-                            target="_blank" rel="noopener noreferrer"
-                        >
-                            {(workplace as { Address: string })["Address"]}
-                        </a>
-                    </td>
+                    <a href={(workplace as { Location: string })["Location"]}
+                        target="_blank" rel="noopener noreferrer">
+                        <td className={`text-lg px-7 py-7 whitespace-nowrap ${style.textTableBody}`}>
+                            {(workplace as { Workplace: string }).Workplace}
+                            <br />
+                            <a className="text-sm text-[#999] hover:underline"
+                                href={(workplace as { Location: string })["Location"]}
+                                target="_blank" rel="noopener noreferrer"
+                            >
+                                {(workplace as { Address: string })["Address"]}
+                            </a>
+                        </td>
+                    </a>
                     <td className={`text-xs px-7 py-7 whitespace-nowrap ${style.textTableBody}`}>
                         {(workplace as { Amenity: string[] })?.Amenity.map((amenity, index) => (
                             <span key={index} className={`px-3 py-2 mr-1 ${style.backgroundIndustry} ${style.industryText} rounded-lg`}>

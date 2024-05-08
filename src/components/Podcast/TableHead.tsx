@@ -11,9 +11,6 @@ export default function TableHead() {
                     Podcast
                 </th>
                 <th scope="col" className="py-8 px-7">
-                    Topics
-                </th>
-                <th scope="col" className="py-8 px-7">
                     Organizer
                 </th>
                 <th scope="col" className="py-8 px-7">

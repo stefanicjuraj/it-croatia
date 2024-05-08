@@ -14,20 +14,18 @@ export const TableBody = ({ conferences }: { conferences: Array<object> }) => {
         <tbody>
             {conferences.map((conference, index) => (
                 <tr key={index} className={`${style.background} ${style.border}`}>
-                    <td className={`text-lg px-7 py-7 whitespace-nowrap ${style.textTableBody}`}>
-                        {(conference as { Conference: string, Website: string }).Conference}
-                        <br />
-                        <a href={(conference as { Website: string })["Website"]} className={`text-sm ${style.linkText} hover:underline`} target="_blank" rel="noopener noreferrer">
-                            {(conference as { Website: string })["Website"]}
-                        </a>
-                    </td>
-                    <td className={`text-xs ${style.textTableBody} px-5 py-7 whitespace-nowrap`}>
-                        {(conference as { Topic: Array<string> }).Topic.map((topic, index) => (
-                            <span key={index} className={`px-3 py-2 mr-1 ${style.backgroundIndustry} ${style.industryText} rounded-lg`}>
-                                {topic}
-                            </span>
-                        ))}
-                    </td>
+                    <a href={(conference as { Website: string })["Website"]} target="_blank" rel="noopener noreferrer">
+                        <td className={`text-lg px-7 py-7 whitespace-nowrap ${style.textTableBody}`}>
+                            {(conference as { Conference: string, Website: string }).Conference}
+                            <p className="mt-4">
+                                {(conference as { Topic: Array<string> }).Topic.map((topic, index) => (
+                                    <span key={index} className={`text-xs px-3 py-2 mr-1 ${style.backgroundIndustry} ${style.industryText} rounded-lg`}>
+                                        {topic}
+                                    </span>
+                                ))}
+                            </p>
+                        </td>
+                    </a>
                     <td className={`px-7 py-7 text-md ${style.textTableBody}`}>
                         {(conference as { Organizer: string })["Organizer"]}
                     </td>

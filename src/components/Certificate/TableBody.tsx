@@ -11,17 +11,18 @@ export const TableBody = ({ certificate }: { certificate: Array<object> }) => {
         <tbody>
             {certificate.map((certificate, index) => (
                 <tr key={index} className={`${style.background} ${style.border}`}>
-                    <td className={`text-lg px-7 py-7 whitespace-nowrap ${style.textTableBody}`}>
-                        {(certificate as { Certificate: string }).Certificate}
-                        <br />
-                    </td>
-                    <td className={`text-xs px-7 py-7 whitespace-nowrap ${style.textTableBody}`}>
-                        {(certificate as { Topic: string[] }).Topic.map((topic, index) => (
-                            <span key={index} className={`px-3 py-2 mr-1 ${style.backgroundIndustry} ${style.industryText} rounded-lg`}>
-                                {topic}
-                            </span>
-                        ))}
-                    </td>
+                    <a href={(certificate as { Enroll: string })["Enroll"]} target="_blank" rel="noopener noreferrer">
+                        <td className={`text-lg px-7 py-7 whitespace-nowrap ${style.textTableBody}`}>
+                            {(certificate as { Certificate: string }).Certificate}
+                            <p className="mt-4">
+                                {(certificate as { Topic: string[] }).Topic.map((topic, index) => (
+                                    <span key={index} className={`text-xs px-3 py-2 mr-1 ${style.backgroundIndustry} ${style.industryText} rounded-lg`}>
+                                        {topic}
+                                    </span>
+                                ))}
+                            </p>
+                        </td>
+                    </a>
                     <td className={`px-7 py-7 text-md ${style.textTableBody}`}>
                         {(certificate as { Organizer: string })["Organizer"]}
                     </td>
