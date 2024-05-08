@@ -13,16 +13,18 @@ export const TableBody = ({ companies }: { companies: Array<object> }) => {
         <tbody>
             {companies.map((company, index) => (
                 <tr key={index} className={`${style.background} ${style.border}`}>
-                    <td className={`text-lg px-7 py-7 whitespace-nowrap ${style.textTableBody}`}>
-                        {(company as { Company: string }).Company}
-                        <br />
-                        <a className={`text-sm ${style.linkText} hover:underline`}
-                            href={(company as { Website: string })["Website"]}
-                            target="_blank" rel="noopener noreferrer"
-                        >
-                            {(company as { Website: string })["Website"]}
-                        </a>
-                    </td>
+                    <a href={(company as { Website: string })["Website"]} target="_blank" rel="noopener noreferrer">
+                        <td className={`text-lg px-7 py-7 whitespace-nowrap ${style.textTableBody}`}>
+                            {(company as { Company: string }).Company}
+                            <br />
+                            <a className={`text-sm ${style.linkText} hover:underline`}
+                                href={(company as { Website: string })["Website"]}
+                                target="_blank" rel="noopener noreferrer"
+                            >
+                                {(company as { Website: string })["Website"]}
+                            </a>
+                        </td>
+                    </a>
                     <td className={`text-xs ${style.textTableBody} px-5 py-7 whitespace-nowrap`}>
                         {(company as { Industry?: string[] }).Industry?.map((industry, index) => (
                             <span className={`px-3 py-2 mr-1 ${style.backgroundIndustry} ${style.industryText} rounded-lg`}
