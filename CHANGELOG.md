@@ -2,9 +2,15 @@
 
 ## 08/05/2024
 
+### Added:
+
+- **Clickable Table Row** &rarr; table rows are clickable and reference their corresponding anchor links.
+
 - [x] **Conferences:** Unlock Rab 2024
 
 ## 03/05/2024
+
+### Added:
 
 - **Conferences View Toggle** &rarr; toggle between the table and card Conferences views.
 
