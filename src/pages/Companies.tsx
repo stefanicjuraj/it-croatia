@@ -25,15 +25,14 @@ export default function Companies() {
     const style = themeClasses(theme);
 
     useEffect(() => {
-        const locations = [...new Set(companies.map(company => company.Location))]
-            .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+        const locations = [...new Set(companies.flatMap(company => company.Location))].sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
         setLocations(locations);
     }, [companies]);
 
     const searchCompany = companies.filter((company) => {
         const companyName = company.Company.toLowerCase();
-        const companyIndustry = Array.isArray(company.Industry) ? company.Industry.some((industry) => tags.includes(industry)) : false;
-        const companyLocation = selectLocations.length === 0 || selectLocations.includes(company.Location);
+        const companyIndustry = Array.isArray(company.Industry) ? company.Industry.some(industry => tags.includes(industry)) : false;
+        const companyLocation = selectLocations.length === 0 || company.Location.some(location => selectLocations.includes(location));
         const search = companySearch.toLowerCase();
         return companyName.includes(search) && (tags.length === 0 || companyIndustry) && companyLocation;
     });
