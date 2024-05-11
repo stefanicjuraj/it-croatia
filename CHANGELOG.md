@@ -1,5 +1,15 @@
 # Changelog
 
+## 11/05/2024
+
+### Added:
+
+- **Company Remote Location** &rarr; search remote-friendly companies by applying the remote location filter.
+
+- **Company Industry: Financial Services** &rarr; added companies in financial services industry.
+
+- [x] **Companies:** ELEKS, Axians Hrvatska, Autodesk, veniture, Erste Bank, Raiffeisenbank Hrvatska, Privredna banka Zagreb
+
 ## 08/05/2024
 
 ### Added:
