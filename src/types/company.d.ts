@@ -4,7 +4,7 @@ export default interface Company {
   Industry: string[];
   LinkedIn: string;
   Employees: string;
-  Location: string;
+  Location: string[];
   Reddit: string;
   Glassdoor: string;
 }
