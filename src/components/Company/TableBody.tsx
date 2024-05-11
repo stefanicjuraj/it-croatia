@@ -35,7 +35,7 @@ export const TableBody = ({ companies }: { companies: Array<object> }) => {
                         ))}
                     </td>
                     <td className={`px-7 py-7 text-md ${style.textTableBody}`}>
-                        {(company as { Location: string }).Location}
+                        {(company as { Location: string[] }).Location.join(' | ')}
                     </td>
                     <td className={`px-8 py-7 text-md ${style.textTableBody}`}>
                         {(company as { Employees: string }).Employees}
