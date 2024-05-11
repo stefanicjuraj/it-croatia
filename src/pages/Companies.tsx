@@ -25,8 +25,13 @@ export default function Companies() {
     const style = themeClasses(theme);
 
     useEffect(() => {
-        const locations = [...new Set(companies.flatMap(company => company.Location))].sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
-        setLocations(locations);
+        const sortLocations = [...new Set(companies.flatMap(company => company.Location))]
+            .sort((a, b) => {
+                if (a === "Remote") return -1;
+                if (b === "Remote") return 1;
+                return a.toLowerCase().localeCompare(b.toLowerCase());
+            });
+        setLocations(sortLocations);
     }, [companies]);
 
     const searchCompany = companies.filter((company) => {
