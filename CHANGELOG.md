@@ -8,7 +8,7 @@
 
 - **Company Industry: Financial Services** &rarr; added companies in financial services industry.
 
-- [x] **Companies:** ELEKS, Axians Hrvatska, Autodesk, veniture, Erste Bank, Raiffeisenbank Hrvatska, Privredna banka Zagreb
+- [x] **Companies:** ELEKS, Axians Hrvatska, Autodesk, veniture, Repsly, ABOUT YOU, Erste Bank, Raiffeisenbank Hrvatska, Privredna banka Zagreb
 
 ## 08/05/2024
 
