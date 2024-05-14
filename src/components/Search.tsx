@@ -10,7 +10,7 @@ export const Search = ({ placeholder, onSearchChange }: { placeholder: string, o
     const style = themeClasses(theme);
 
     const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const searchValue = event.target.value.replace(/[^a-zA-Z0-9 ]/g, '');
+        const searchValue = event.target.value.replace(/[^a-zA-Z0-9šŠčČćĆđĐžŽ ]/g, '');
         setSearch(searchValue);
         onSearchChange(searchValue);
     };
