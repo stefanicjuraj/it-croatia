@@ -1,5 +1,11 @@
 # Changelog
 
+## 14/05/2024
+
+### Fixed:
+
+- [x] Croatian letters not working in search bar.
+
 ## 11/05/2024
 
 ### Added:
