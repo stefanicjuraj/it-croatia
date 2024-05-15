@@ -21,7 +21,7 @@ export const TableBody = ({ companies }: { companies: Array<object> }) => {
                                 href={(company as { Website: string })["Website"]}
                                 target="_blank" rel="noopener noreferrer"
                             >
-                                {(company as { Website: string })["Website"]}
+                                {(company as { Link: string })["Link"]}
                             </a>
                         </td>
                     </a>
