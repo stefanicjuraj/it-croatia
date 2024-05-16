@@ -11,13 +11,13 @@ export const useCompany = () => {
   const industryTags = [
     "Information Technology",
     "Software Development",
-    "Game Development",
     "IT Services",
     "Cybersecurity",
+    "Telecommunications",
+    "Game Development",
     "Design Services",
     "Marketing Services",
     "Media Technology",
-    "Telecommunications",
     "Financial Services",
     "Blockchain Services"
   ];
