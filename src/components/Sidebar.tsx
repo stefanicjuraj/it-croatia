@@ -18,6 +18,7 @@ import chevronRight from "/assets/icons/chevron-right.svg";
 import home from "/assets/icons/home.svg";
 import light from "/assets/icons/light.svg";
 import dark from "/assets/icons/dark.svg";
+import Notification from "./Notification";
 
 export default function Sidebar() {
     const { theme, toggleTheme, themeClasses } = useTheme();
@@ -60,6 +61,7 @@ export default function Sidebar() {
                             </Link>
                         </div>
                         <div className={`flex items-center ${style.text} text-white text-md`}>
+                            <Notification />
                             <button
                                 className={`py-2 px-2 ${style.background} rounded-full sm:mr-7 mr-4`}
                                 onClick={toggleTheme}
