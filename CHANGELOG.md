@@ -1,10 +1,16 @@
 # Changelog
 
+## 17/05/2024
+
+- **What's New Notifications** &rarr; added notification icon with dropdown displaying latest additions.
+
+- **Company Industry: Blockchain Services** &rarr; added companies in blockchain services industry.
+
 ## 16/05/2024
 
 ### Added:
 
-- [x] **Companies:** Neuralab, Axiros, COPA-DATA, Varyence, Forsight, COMMEND, CroatiaTech, Agilcon, ZIRA, Adacta, Shift, Shoutem, Porsche Digital Croatia, Space Inch, i-new, influence.vision, Devōt, Markit, SENLA, MMK Booking Manager, Surgeworks, Cellusys, MRS Group, Paldesk, UMBOSS, Spona, BB Agency, CLICO, Cryt, Simtec, IntechOpen, INFIGO IS, CETITEC, PROMATIS, ENSESO, Linxpot, SQA Consulting, Dworkin, Umanova, Giboo, Tacta, Hoteza, CMT Europe, IPS, STORM Grupa, BLOCK Software Solutions, DataBox, Njuškalo, MICRO-LINK, Martian & Machine
+- [x] **Companies:** Neuralab, Axiros, COPA-DATA, Varyence, Forsight, COMMEND, CroatiaTech, Agilcon, ZIRA, Adacta, Shift, Shoutem, Porsche Digital Croatia, Space Inch, i-new, influence.vision, Devōt, Markit, SENLA, MMK Booking Manager, Surgeworks, Cellusys, MRS Group, Paldesk, UMBOSS, Spona, BB Agency, CLICO, Cryt, Simtec, IntechOpen, INFIGO IS, CETITEC, PROMATIS, ENSESO, Linxpot, SQA Consulting, Dworkin, Umanova, Giboo, Tacta, Hoteza, CMT Europe, IPS, STORM Grupa, BLOCK Software Solutions, DataBox, Njuškalo, MICRO-LINK, Martian & Machine, ALTA, Alice in Blockchains, Superteam Balkan, Gamio.GG, Cardano Talent, SecureBlock Audits, Dev3, BerryBlock, digitalqa, Pathfinder, Klaster, InnoCognita, Project Dara
 
 ## 14/05/2024
 
