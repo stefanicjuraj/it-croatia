@@ -57,11 +57,10 @@ export default function Sidebar() {
                                 <img src={menu} alt="Sidebar menu icon" className="w-7 h-7" />
                             </button>
                             <Link to="/">
-                                <img src={home} alt="Sidebar menu icon" className="w-7 h-7 ml-3" />
+                                <img src={home} alt="Sidebar menu icon" className="ml-3 w-7 h-7" />
                             </Link>
                         </div>
                         <div className={`flex items-center ${style.text} text-white text-md`}>
-                            <Notification />
                             <button
                                 className={`py-2 px-2 ${style.background} rounded-full sm:mr-7 mr-4`}
                                 onClick={toggleTheme}
@@ -72,6 +71,7 @@ export default function Sidebar() {
                                     <img src={light} alt="Light mode icon" className="w-5 h-5" />
                                 )}
                             </button>
+                            <Notification />
                             <div>
                                 <p className={`${style.text} text-md`}>Last updated:</p>
                                 <a href="https://github.com/stefanicjuraj/it-croatia/blob/main/CHANGELOG.md" className={`${style.text} hover:underline`} target="_blank" rel="noopener noreferrer">
