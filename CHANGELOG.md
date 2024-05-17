@@ -1,16 +1,10 @@
 # Changelog
 
-## 17/05/2024
+## 18/05/2024
 
 - **What's New Notifications** &rarr; added notification icon with dropdown displaying latest additions.
 
 - **Company Industry: Blockchain Services** &rarr; added companies in blockchain services industry.
-
-## 16/05/2024
-
-### Added:
-
-- [x] **Companies:** Neuralab, Axiros, COPA-DATA, Varyence, Forsight, COMMEND, CroatiaTech, Agilcon, ZIRA, Adacta, Shift, Shoutem, Porsche Digital Croatia, Space Inch, i-new, influence.vision, Devōt, Markit, SENLA, MMK Booking Manager, Surgeworks, Cellusys, MRS Group, Paldesk, UMBOSS, Spona, BB Agency, CLICO, Cryt, Simtec, IntechOpen, INFIGO IS, CETITEC, PROMATIS, ENSESO, Linxpot, SQA Consulting, Dworkin, Umanova, Giboo, Tacta, Hoteza, CMT Europe, IPS, STORM Grupa, BLOCK Software Solutions, DataBox, Njuškalo, MICRO-LINK, Martian & Machine, ALTA, Alice in Blockchains, Superteam Balkan, Gamio.GG, Cardano Talent, SecureBlock Audits, Dev3, BerryBlock, digitalqa, Pathfinder, Klaster, InnoCognita, Project Dara, Netokracija, Logista, 5x9 Networks, lynes, SoftNET, B.net, Metronet telekomunikacije, MAGIC NET, Markoja, FiberWeek, Media One, Matison, DC North, Compliment, 4Tel, Intellico, CROATEL, OPTIX infrastructure, Mjerne tehnologije, AdriNet, Omonia, Cambium Networks, Aikom, GT-NET, comcross croatia, IDB Group, europhone, Terrakom, con4com usluge, Pro-Ping Telekom
 
 ## 14/05/2024
 
@@ -26,25 +20,17 @@
 
 - **Company Industry: Financial Services** &rarr; added companies in financial services industry.
 
-- [x] **Companies:** ELEKS, Axians Hrvatska, Autodesk, veniture, Repsly, ABOUT YOU, Erste Bank, Raiffeisenbank Hrvatska, Privredna banka Zagreb
-
 ## 08/05/2024
 
 ### Added:
 
 - **Clickable Table Row** &rarr; table rows are clickable and reference their corresponding anchor links.
 
-- [x] **Conferences:** Unlock Rab 2024
-
 ## 03/05/2024
 
 ### Added:
 
 - **Conferences View Toggle** &rarr; toggle between the table and card Conferences views.
-
-- [x] **Conferences:** Engineering Meetup, EU Sparks Hackathon
-
-- [x] **Education:** Health Innovation
 
 ### Added:
 
@@ -53,20 +39,6 @@
 ### Added:
 
 - **Light Mode / Dark Mode** &rarr; toggle between the light mode or dark mode theme.
-
-### Added:
-
-## 24/04/2024
-
-### Added:
-
-- [x] **Companies:** DIV3R, Curly Code, Brodbot, Deck99, Debug IT, Telemach Hrvatska, Iskon
-
-- [x] **Conferences:** .debug
-
-- [x] **Internships:** Orbico Internship
-
-- [x] **Places to Work:** Cogito Coffee / Urania, Sherlock Bar, Lemon Market, Dežman Bar, Regular.Bar, Très Chic café, Hub Cooltura Pub
 
 ### Improved:
 
@@ -102,8 +74,6 @@
 
 ### Added:
 
-- [x] **Education:** Algebra's Bachelor's and Master's degrees education programs.
-
 - **Footer Component** &rarr; displayed at the bottom of each page - links to GitHub & LinkedIn.
 
 - **Sitemap** &rarr; created & added a sitemap to project directory.
@@ -132,52 +102,4 @@
 
 - **Certificates Organizer Filter** &rarr; dropdown menu to filter certificates by organizer.
 
-## 23/03/2024
-
-### Added:
-
-- [x] **Companies:** Visage Technologies
-
-- [x] **Internships:** OG-CS Academy
-
-## 20/03/2024
-
-### Added:
-
-- [x] **Companies:** OG Consultancy Services
-
-- [x] **Conferences:** Open Gates 2024
-
-## 19/03/2024
-
-### Added:
-
-- [x] **Conferences:** DSC Adria
-
-## 18/03/2024
-
-### Added:
-
-- [x] **Companies:** ByteHeron
-- [x] **Conferences:** AI2FUTURE
-- [x] **Communities:** Sistemci Hrvatska, Sistemci Relaxed
-- [x] **Education:** Electrical Engineering & IT, Computer Science, Communication & Information Technology, Informatics, Data Science & Engineering
-
-## 17/03/2024
-
-### Added:
-
-- [x] **Companies:** CROBA, Greenovation Strategy, troido, Renteon, synvert, Mihha-Vision, t-matix engineering, REDAI app, Spotsie, Studion, CADENAS, jt digital, Genius Host, Helioz Technologies, Totohost
-- [x] **Conferences:** HrOUG
-
-## 16/03/2024
-
-### Added:
-
-- [x] **Companies:** Treblle
-
-## 15/03/2024
-
-### Added:
-
-- [x] **Companies:** A1, Hrvatski Telekom, FUNCTOR
+...
