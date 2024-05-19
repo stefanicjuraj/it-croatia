@@ -2,6 +2,8 @@
 
 ## 18/05/2024
 
+### Added:
+
 - **What's New Notifications** &rarr; added notification icon with dropdown displaying latest additions.
 
 - **Company Industry: Blockchain Services** &rarr; added companies in blockchain services industry.
