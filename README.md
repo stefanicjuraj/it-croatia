@@ -14,7 +14,7 @@
 <br />
 </div>
 
-Collection of IT companies, conferences, education, certificates, communities, podcasts, and internships in Croatia — within the industry departments of information technology, software development, IT services, and IT consulting.
+Collection of IT companies, conferences, education, certificates, communities, places to work, podcasts, and internships in Croatia — within the industry departments of information technology, software development, IT services, and IT consulting.
 
 ## Features
 
