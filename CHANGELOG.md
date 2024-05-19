@@ -1,5 +1,11 @@
 # Changelog
 
+## 19/05/2024
+
+### Added:
+
+- UTM parameter `utm_source` to website links.
+
 ## 18/05/2024
 
 ### Added:
