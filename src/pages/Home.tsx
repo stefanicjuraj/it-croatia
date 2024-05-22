@@ -38,15 +38,9 @@ export default function Home() {
         <div className={`${style.backgroundBody}`}>
             <section className={`mx-auto pt-40 ${style.text} max-w-screen-xl`}>
                 <div className="px-4 py-4 mb-24 text-center animation glow delay-1">
-                    <h1 className={`mb-8 font-bold text-center ${style.headingH1} text-7xl`}>
+                    <h1 className={`mb-12 font-bold text-center ${style.headingH1} text-7xl`}>
                         IT Croatia
                     </h1>
-                    <p className={`mx-auto mb-8 text-sm text-center inline-flex ${style.background} px-5 py-2 rounded-full`}>
-                        <span className="flex items-center mx-auto">
-                            <span className="flex w-2 h-2 mr-2 bg-indigo-300 rounded-full animate-pulse"></span>
-                        </span>
-                        In development
-                    </p>
                     <p className="w-full mx-auto text-2xl text-center sm:w-4/5 sm:text-2xl">
                         Explore a collection of IT
                         <span className={`${style.headingH1} mx-2`}>{items[currentItem]}</span>
@@ -59,7 +53,7 @@ export default function Home() {
                             <div className={`flex justify-center items-center mb-4 w-16 h-16 rounded-full ${style.backgroundBody}`}>
                                 <img src={company} alt="Company icon" className="w-8 h-8" />
                             </div>
-                            <h1 className="mb-4 text-2xl font-bold">Companies</h1>
+                            <h1 className="mb-2 text-2xl font-bold">Companies</h1>
                             <p className={`${style.text}`}>
                                 View companies conducting business operations, providing services, or offering consultancy in Croatia.
                             </p>
