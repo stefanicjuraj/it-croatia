@@ -18,7 +18,7 @@ Collection of IT companies, conferences, education, certificates, communities, p
 
 ## Features
 
-&rarr; **800+ Companies** conducting business operations, providing services, or offering consultancy in Croatia.
+&rarr; **1000+ Companies** conducting business operations, providing services, or offering consultancy in Croatia.
 
 &rarr; **20+ Conferences** to attend with industry knowledge professionals and enthusiasts.
 
