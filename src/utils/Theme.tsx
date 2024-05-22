@@ -20,6 +20,7 @@ interface ThemeType {
         // border
         border: string;
         borderSearch: string;
+        borderSearchDropdown: string;
         // text
         text: string;
         textTableHead: string;
@@ -52,6 +53,7 @@ const Theme = createContext<ThemeType>({
         // border
         border: "",
         borderSearch: "",
+        borderSearchDropdown: "",
         // text
         text: "",
         textTableHead: "",
@@ -94,6 +96,7 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
                 // border
                 border: "border-t border-[#333]",
                 borderSearch: "border border-[#222]",
+                borderSearchDropdown: "border border-[#333]",
                 // text
                 text: "text-white",
                 textTableHead: "text-white",
@@ -122,6 +125,7 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
                 // border
                 border: "border-b border-[#ccc]",
                 borderSearch: "border border-[#f5f5f5]",
+                borderSearchDropdown: "border border-[#ccc]",
                 // text
                 text: "text-[#111]",
                 textTableHead: "text-[#333]",
