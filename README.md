@@ -32,7 +32,7 @@ Collection of IT companies, conferences, education, certificates, communities, p
 
 &rarr; **5+ Podcasts** related topics with industry professionals and enthusiasts.
 
-&rarr; **5+ Internships** to start your career and enhance your professional experience.
+&rarr; **10+ Internships** to start your career and enhance your professional experience.
 
 All data collected is sourced from the publicly available information and sources on the internet, whilst not being affiliated with any of the listed entities.
 
