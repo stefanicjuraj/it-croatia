@@ -1,5 +1,11 @@
 # Changelog
 
+## 24/05/2024
+
+### Added
+
+- **Search Location** &rarr; added search bar to location filter dropdown.
+
 ## 19/05/2024
 
 ### Added:
