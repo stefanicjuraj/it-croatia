@@ -6,6 +6,10 @@
 
 - **Search Location** &rarr; added search bar to location filter dropdown.
 
+### Fixed
+
+- 404 Not Found page not being displayed properly due to styling properties.
+
 ## 19/05/2024
 
 ### Added:
