@@ -34,6 +34,8 @@ Collection of IT companies, conferences, education, certificates, communities, p
 
 &rarr; **10+ Internships** to start your career and enhance your professional experience.
 
+&rarr; **250+ Dictionary Words** translated from English to Croatian language.
+
 All data collected is sourced from the publicly available information and sources on the internet, whilst not being affiliated with any of the listed entities.
 
 To ensure accuracy and relevancy, regular updates are conducted on a monthly basis. This involves the addition of newly established entities while removing inactive or defunct entities from the collection. By maintaining this approach, the focus is to offer a reliable and up-to-date resource for seeking information about IT in Croatia.
