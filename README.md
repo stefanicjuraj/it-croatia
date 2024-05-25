@@ -34,7 +34,7 @@ Collection of IT companies, conferences, education, certificates, communities, p
 
 &rarr; **10+ Internships** to start your career and enhance your professional experience.
 
-&rarr; **250+ Dictionary Words** translated from English to Croatian language.
+&rarr; **500+ Dictionary** words, phrases, terms, and definitions translated from English to Croatian language.
 
 All data collected is sourced from the publicly available information and sources on the internet, whilst not being affiliated with any of the listed entities.
 
