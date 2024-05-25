@@ -15,7 +15,7 @@ export const TableBody = ({ dictionary }: { dictionary: Array<object> }) => {
                     <td className={`text-md ${style.textTableBody} px-5 py-7`}>
                         {(word as { Croatian: string }).Croatian}
                         <br />
-                        <span className="text-xs">
+                        <span className={`text-sm ${style.linkText}`}>
                             {(word as { Definition: string }).Definition}
                         </span>
                     </td>
