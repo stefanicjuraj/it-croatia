@@ -14,6 +14,7 @@ import podcast from "/assets/icons/podcast.svg";
 import arrow from "/assets/icons/arrow.svg";
 import community from "/assets/icons/community.svg";
 import placesToWork from "/assets/icons/places-to-work.svg";
+import dictionary from "/assets/icons/dictionary.svg";
 // Images
 import image from "/assets/images/cro-it.png";
 import redditImage from "/assets/images/reddit-image.png";
@@ -157,6 +158,20 @@ export default function Home() {
                             </p>
                             <div className="flex flex-row-reverse px-1 py-1">
                                 <img src={arrow} className="w-8 h-8" alt="arrow" />
+                            </div>
+                        </div>
+                    </Link>
+                    <Link to="/dictionary">
+                        <div className={`${style.background} sm:mb-0 mb-8 px-6 py-6 rounded-xl hover:ring-1 hover:ring-indigo-300 animation glow delay-9`}>
+                            <div className={`flex justify-center items-center mb-4 w-16 h-16 rounded-full ${style.backgroundBody}`}>
+                                <img src={dictionary} alt="Dictionary icon" className="w-8 h-8" />
+                            </div>
+                            <h1 className="mb-2 text-2xl font-bold">Dictionary</h1>
+                            <p className={`${style.text}`}>
+                                View a collection of IT words, terms, phrases, and definitions translated from English to Croatian language.
+                            </p>
+                            <div className="flex flex-row-reverse px-1 py-1">
+                                <img src={arrow} className="w-7 h-7" alt="arrow" />
                             </div>
                         </div>
                     </Link>
