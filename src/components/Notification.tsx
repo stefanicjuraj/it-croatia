@@ -1,4 +1,5 @@
 // Utils
+import { Link } from "react-router-dom";
 import { useTheme } from "../utils/Theme";
 // Icons
 import notification from "/assets/icons/notification.svg";
@@ -19,29 +20,35 @@ export default function Notification() {
                 <div className={`block px-4 py-3 text-center rounded-t-lg ${style.backgroundFilters}`}>
                     <p className={`text-lg ${style.headingH1}`}> What's new?</p>
                 </div>
-                <div className="px-4 py-4">
+                <div className="px-4 my-4">
+                    <p className="text-sm">
+                        • Browse IT related terms, phrases, and definitions in the dictionary.
+                    </p>
+                    <Link to="/dictionary">
+                        <p className={`text-sm text-center p-3 mx-2 my-2 ${style.backgroundFilters} rounded-lg`}>
+                            it-croatia.com/dictionary
+                        </p>
+                    </Link>
+                </div>
+                <div className="px-4 my-4">
                     <p className="text-sm">
                         • Search remote-friendly companies by applying the remote location filter.
                     </p>
-                    <p className={`text-sm p-3 mx-2 my-2 ${style.backgroundFilters} rounded-lg`}>
-                        /companies &rarr; Location &rarr; Remote
-                    </p>
+                    <Link to="/companies">
+                        <p className={`text-sm text-center p-3 mx-2 my-2 ${style.backgroundFilters} rounded-lg`}>
+                            /companies &rarr; Location &rarr; Remote
+                        </p>
+                    </Link>
                 </div>
-                <div className="px-4">
+                <div className="px-4 my-4">
                     <p className="text-sm">
                         • Toggle between the conferences table and card view modes.
                     </p>
-                    <p className={`text-sm p-3 mx-2 my-2 ${style.backgroundFilters} rounded-lg`}>
-                        /conferences &rarr; Toggle view
-                    </p>
-                </div>
-                <div className="px-4 py-4">
-                    <p className="text-sm">
-                        • Filter companies in blockchain services industry.
-                    </p>
-                    <p className={`text-sm p-3 mx-2 my-2 ${style.backgroundFilters} rounded-xl`}>
-                        /companies &rarr; Industry &rarr; Blockchain Services
-                    </p>
+                    <Link to="/conferences">
+                        <p className={`text-sm text-center p-3 mx-2 my-2 ${style.backgroundFilters} rounded-lg`}>
+                            /conferences &rarr; Toggle view
+                        </p>
+                    </Link>
                 </div>
             </div >
         </>
