@@ -4,7 +4,7 @@
 
 ### Added
 
-- **Dictionary** &rarr; added dictionary page & data to display IT-related words, phrases, and terminology translated from English to Croatian language.
+- **Dictionary** &rarr; added dictionary page & data to display IT-related words, phrases, terms, and definitions translated from English to Croatian language.
 
 ## 24/05/2024
 
