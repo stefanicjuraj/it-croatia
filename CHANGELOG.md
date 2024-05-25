@@ -1,5 +1,11 @@
 # Changelog
 
+## 25/05/2024
+
+### Added
+
+- **Dictionary** &rarr; added dictionary page & data to display IT-related words, phrases, and terminology translated from English to Croatian language.
+
 ## 24/05/2024
 
 ### Added
