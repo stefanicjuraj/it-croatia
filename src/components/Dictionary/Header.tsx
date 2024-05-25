@@ -18,9 +18,10 @@ export default function Header() {
             <p className={`w-full ${style.text} text-md sm:text-lg sm:w-3/4`}>
                 A collection of IT {" "}
                 <span className={`${style.backgroundHeaderText} px-1 py-0.3 rounded-lg`}>words</span>, {" "}
-                <span className={`${style.backgroundHeaderText} px-1 py-0.3 rounded-lg`}>terms</span>,{" "} and {" "}
-                <span className={`${style.backgroundHeaderText} px-1 py-0.3 rounded-lg`}>phrases</span> {" "}
-                translated from English to Croatian language
+                <span className={`${style.backgroundHeaderText} px-1 py-0.3 rounded-lg`}>terms</span>, {" "}
+                <span className={`${style.backgroundHeaderText} px-1 py-0.3 rounded-lg`}>phrases</span>, {" "} and {" "}
+                <span className={`${style.backgroundHeaderText} px-1 py-0.3 rounded-lg`}>definitions</span>
+                translated from English to Croatian language.
             </p>
         </header>
     )
