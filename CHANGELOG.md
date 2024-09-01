@@ -1,5 +1,11 @@
 # Changelog
 
+## 01/09/2024
+
+### Added
+
+- `og:image` meta property.
+
 ## 25/05/2024
 
 ### Added
