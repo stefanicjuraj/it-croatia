@@ -164,7 +164,7 @@ export default function Sidebar() {
                             </Link>
                         </li>
                         <li>
-                            <Link to="/dictionary" className={`flex items-center p-3 rounded-xl group ${style.backgroundFiltersHover} ${activeClass("/communities")}`}>
+                            <Link to="/dictionary" className={`flex items-center p-3 rounded-xl group ${style.backgroundFiltersHover} ${activeClass("/dictionary")}`}>
                                 <img src={dictionary} alt="Dictionary icon" className="w-6 h-6" />
                                 <h1 className="flex-1 ms-3 whitespace-nowrap">Dictionary</h1>
                                 <span className="inline-flex items-center justify-center">
