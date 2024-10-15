@@ -10,7 +10,7 @@ export const TableBody = ({ education }: { education: Array<object> }) => {
     return (
         <tbody>
             {education.map((education, index) => (
-                <tr key={index} className={`${style.background} ${style.border}`}>
+                <tr key={index} className={`${style.background} ${style.border} hover:shadow hover:shadow-indigo-300`}>
                     <a href={(education as { Enroll: string })?.Enroll} target="_blank" rel="noopener noreferrer">
                         <td className={`text-lg px-7 py-7 whitespace-nowrap ${style.textTableBody}`}>
                             {(education as { Course: string })?.Course}

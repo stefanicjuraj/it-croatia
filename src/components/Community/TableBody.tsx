@@ -10,7 +10,7 @@ export const TableBody = ({ communities }: { communities: Array<object> }) => {
     return (
         <tbody>
             {communities.map((community, index) => (
-                <tr key={index} className={`${style.background} ${style.border}`}>
+                <tr key={index} className={`${style.background} ${style.border} hover:shadow hover:shadow-indigo-300`}>
                     <a href={(community as { Join: string })["Join"]} target="_blank" rel="noopener noreferrer">
                         <td className={`text-lg px-7 py-7 whitespace-nowrap ${style.textTableBody}`}>
                             {(community as { Community: string }).Community}

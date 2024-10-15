@@ -13,7 +13,7 @@ export const TableBody = ({ conferences }: { conferences: Array<object> }) => {
     return (
         <tbody>
             {conferences.map((conference, index) => (
-                <tr key={index} className={`${style.background} ${style.border}`}>
+                <tr key={index} className={`${style.background} ${style.border} hover:shadow hover:shadow-indigo-300`}>
                     <a href={(conference as { Website: string })["Website"]} target="_blank" rel="noopener noreferrer">
                         <td className={`text-lg px-7 py-7 whitespace-nowrap ${style.textTableBody}`}>
                             {(conference as { Conference: string, Website: string }).Conference}

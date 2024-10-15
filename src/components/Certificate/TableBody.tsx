@@ -10,7 +10,7 @@ export const TableBody = ({ certificate }: { certificate: Array<object> }) => {
     return (
         <tbody>
             {certificate.map((certificate, index) => (
-                <tr key={index} className={`${style.background} ${style.border}`}>
+                <tr key={index} className={`${style.background} ${style.border} hover:shadow hover:shadow-indigo-300`}>
                     <a href={(certificate as { Enroll: string })["Enroll"]} target="_blank" rel="noopener noreferrer">
                         <td className={`text-lg px-7 py-7 whitespace-nowrap ${style.textTableBody}`}>
                             {(certificate as { Certificate: string }).Certificate}

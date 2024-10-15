@@ -10,7 +10,7 @@ export const TableBody = ({ internships }: { internships: Array<object> }) => {
     return (
         <tbody>
             {internships.map((internship, index) => (
-                <tr key={index} className={`${style.background} ${style.border}`}>
+                <tr key={index} className={`${style.background} ${style.border} hover:shadow hover:shadow-indigo-300`}>
                     <a href={(internship as { Apply: string })["Apply"]} target="_blank" rel="noopener noreferrer">
                         <td className={`text-lg px-7 py-7 whitespace-nowrap ${style.textTableBody}`}>
                             {(internship as { Internship: string }).Internship}

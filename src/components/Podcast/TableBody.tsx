@@ -10,7 +10,7 @@ export const TableBody = ({ podcasts }: { podcasts: Array<object> }) => {
     return (
         <tbody>
             {podcasts.map((podcast, index) => (
-                <tr key={index} className={`${style.background} ${style.border}`}>
+                <tr key={index} className={`${style.background} ${style.border} hover:shadow hover:shadow-indigo-300`}>
                     <a href={(podcast as { Listen: string })["Listen"]} target="_blank" rel="noopener noreferrer">
                         <td className={`text-lg px-7 py-7 whitespace-nowrap ${style.textTableBody}`}>
                             {(podcast as { Podcast: string }).Podcast}

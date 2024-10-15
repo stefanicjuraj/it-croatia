@@ -10,7 +10,7 @@ export const TableBody = ({ workplaces }: { workplaces: Array<object> }) => {
     return (
         <tbody>
             {workplaces.map((workplace, index) => (
-                <tr key={index} className={`${style.background} ${style.border}`}>
+                <tr key={index} className={`${style.background} ${style.border} hover:shadow hover:shadow-indigo-300`}>
                     <a href={(workplace as { Location: string })["Location"]}
                         target="_blank" rel="noopener noreferrer">
                         <td className={`text-lg px-7 py-7 whitespace-nowrap ${style.textTableBody}`}>

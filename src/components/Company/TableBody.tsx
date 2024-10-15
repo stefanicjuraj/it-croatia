@@ -12,7 +12,7 @@ export const TableBody = ({ companies }: { companies: Array<object> }) => {
     return (
         <tbody>
             {companies.map((company, index) => (
-                <tr key={index} className={`${style.background} ${style.border}`}>
+                <tr key={index} className={`${style.background} ${style.border} hover:shadow hover:shadow-indigo-300`}>
                     <a href={(company as { Website: string })["Website"]} target="_blank" rel="noopener noreferrer">
                         <td className={`text-lg px-7 py-7 whitespace-nowrap ${style.textTableBody}`}>
                             {(company as { Company: string }).Company}
