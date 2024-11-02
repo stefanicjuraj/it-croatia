@@ -22,7 +22,7 @@ export default function Conferences() {
     const [sortOrder, setSortOrder] = useState('');
     const { theme, themeClasses } = useTheme();
     const style = themeClasses(theme);
-    const [viewMode, setViewMode] = useState('card');
+    const [viewMode, setViewMode] = useState('table');
 
     const toggleViewMode = () => {
         setViewMode(prevMode => prevMode === 'card' ? 'table' : 'card');
