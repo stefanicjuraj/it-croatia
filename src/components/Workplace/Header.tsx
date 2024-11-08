@@ -10,7 +10,9 @@ export default function Header() {
     return (
         <header className={`max-w-screen-xl mx-auto mb-16 sm:p-16 px-8 py-12 ${style.backgroundHeader} rounded-3xl text-left ${style.shadowHeader}`}>
             <div className="flex items-center mb-8">
-                <img src={placesToWork} className="mr-3 sm:w-12 w-9" alt="Podcast icon" />
+            <div className={`p-2 rounded-lg ${style.backgroundBody} mr-3`}>
+                <img src={placesToWork} className="w-9 w-9" alt="Places to work icon" />
+            </div>
                 <h1 className={`text-4xl font-bold ${style.headingH1} sm:text-6xl`}>
                     Places to Work
                 </h1>
