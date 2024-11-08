@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 // Components
 import Subscribe from "../components/Subscribe";
 import Footer from "../components/Footer";
-import Badge from "../components/Badge";
 // Utils
 import { useTheme } from "../utils/Theme";
 // Icons
