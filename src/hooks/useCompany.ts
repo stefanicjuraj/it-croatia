@@ -11,7 +11,7 @@ export const useCompany = () => {
   const industryTags = [
     "Information Technology",
     "Software Development",
-    "IT Services",
+    "IT Services & Consulting",
     "Cybersecurity",
     "Telecommunications",
     "Game Development",
