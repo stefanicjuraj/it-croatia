@@ -20,10 +20,10 @@ export const TableBodyCard = ({ conferences }: { conferences: Array<object> }) =
                     <a href={(conference as { Ticket: string })["Ticket"]}
                         target="_blank" rel="noopener noreferrer"
                     >
-                        <div className={`flex justify-center items-center mb-4 w-16 h-16 rounded-full ${style.backgroundBody}`}>
+                        <div className={`flex justify-center items-center mb-4 w-14 h-14 rounded-lg ${style.backgroundBody}`}>
                             <img src={conferencesImage} alt="Conference ticket icon" className="w-8 h-8" />
                         </div>
-                        <h1 className={`my-4 text-2xl font-bold ${style.text}`}>
+                        <h1 className={`my-4 text-xl font-bold ${style.text}`}>
                             {(conference as { Conference: string, Website: string }).Conference}
                         </h1>
                         <p className={`${style.text} mb-8`}>
@@ -34,24 +34,25 @@ export const TableBodyCard = ({ conferences }: { conferences: Array<object> }) =
                             ))}
                         </p>
                         <p className={`${style.text} mb-4 flex text-lg`}>
-                            <img src={community} className="h-7 w-7" />
+                            <img src={community} className="h-6 w-6 mt-1.5" />
                             <span className={`${style.backgroundFilters} text-sm ml-2 px-3 py-2 rounded-lg`}>
                                 {(conference as { Organizer: string })["Organizer"]}
                             </span>
-                            <img src={location} className="ml-3 h-7 w-7" />
+                            <img src={location} className="ml-3 h-6 w-6 mt-1.5" />
                             <span className={`${style.backgroundFilters} text-sm ml-1 px-3 py-2 rounded-lg`}>{(conference as { Location: string }).Location}</span>
                         </p>
                         <p className={`${style.text} mb-4 flex text-lg`}>
-                            <img src={calendar} className="h-7 w-7" />
-                            <span className={`${style.backgroundFilters} text-sm ml-2 px-3 py-2 rounded-lg`}>
+                            <img src={calendar} className="h-6 w-6 mt-1.5" />
+                            <span className={`${style.backgroundFilters} text-sm ml-2 p-2 rounded-lg`}>
                                 {(conference as { startDate: string, endDate: string }).startDate}
                             </span>
                             <span className="mx-2 my-1">-</span>
-                            <span className={`${style.backgroundFilters} text-sm px-3 py-2 rounded-lg`}>
+                            <span className={`${style.backgroundFilters} text-sm p-2 rounded-lg`}>
                                 {(conference as { endDate: string }).endDate}
                             </span>
                         </p>
-                        <p className={`mx-auto mb-2 ${style.text} text-sm text-center inline-flex ${style.backgroundFilters} px-5 py-3 rounded-lg`}>
+                        <hr className={`my-5 ${style.border}`} />
+                        <p className={`mx-auto ${style.text} text-sm text-center inline-flex ${style.backgroundFilters} px-5 py-3 rounded-lg`}>
                             <span className="flex items-center mx-auto">
                                 <span className="flex w-2 h-2 mr-3 bg-indigo-300 rounded-lg animate-pulse"></span>
                             </span>
