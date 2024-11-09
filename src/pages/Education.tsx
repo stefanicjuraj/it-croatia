@@ -6,6 +6,7 @@ import Loading from '../components/Loading';
 import Header from '../components/Education/Header';
 import { Search } from '../components/Search';
 import { FilterOrganizer } from '../components/Education/FilterOrganizer';
+import { FilterType } from '../components/Education/FilterType';
 import TableHead from '../components/Education/TableHead';
 import { TableBody } from '../components/Education/TableBody';
 import Footer from '../components/Footer';
@@ -19,6 +20,8 @@ export default function Education() {
     const [educationSearch, setEducationSearch] = useState("");
     const [selectOrganizer, setselectOrganizer] = useState<string[]>([]);
     const [organizer, setOrganizer] = useState<string[]>([]);
+    const [selectType, setselectType] = useState<string[]>([]);
+    const [type, setType] = useState<string[]>([]);
     const { theme, themeClasses } = useTheme();
     const style = themeClasses(theme);
 
@@ -28,11 +31,18 @@ export default function Education() {
         setOrganizer(organizer);
     }, [education]);
 
+    useEffect(() => {
+        const type = [...new Set(education.map(education => education.Type))]
+            .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+        setType(type);
+    }, [education]);
+
     const searchEducation = education.filter((education) => {
         const educationName = education.Course.toLowerCase();
         const educationOrganizer = selectOrganizer.length === 0 || selectOrganizer.includes(education.Organizer);
+        const educationType = selectType.length === 0 || selectType.includes(education.Type);
         const search = educationSearch.toLowerCase();
-        return educationName.includes(search) && educationOrganizer;
+        return educationName.includes(search) && educationOrganizer && educationType;
     });
 
     const handleOrganizerCheckboxInput = (organizer: string) => {
@@ -40,6 +50,14 @@ export default function Education() {
             prevOrganizer.includes(organizer)
                 ? prevOrganizer.filter(l => l !== organizer)
                 : [...prevOrganizer, organizer]
+        );
+    };
+
+    const handleTypeCheckboxInput = (type: string) => {
+        setselectType(prevType =>
+            prevType.includes(type)
+                ? prevType.filter(l => l !== type)
+                : [...prevType, type]
         );
     };
 
@@ -71,6 +89,11 @@ export default function Education() {
                                 organizer={organizer}
                                 selectOrganizer={selectOrganizer}
                                 checkboxInput={handleOrganizerCheckboxInput}
+                            />
+                            <FilterType
+                                type={type}
+                                selectType={selectType}
+                                checkboxInput={handleTypeCheckboxInput}
                             />
                         </div>
                     </section>
