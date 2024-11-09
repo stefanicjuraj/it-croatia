@@ -37,7 +37,10 @@ export const TableBody = ({ conferences }: { conferences: Array<object> }) => {
                         <br />
                         {(conference as { endDate: string }).endDate}
                         <br />
-                        <p className="text-[#999] text-sm mt-1">
+                        <p className="inline-flex text-[#999] text-sm mt-1">
+                        <span className="flex items-center mx-auto">
+                                <span className="flex w-2 h-2 mr-2 bg-indigo-300 rounded-lg animate-pulse"></span>
+                            </span>
                             {countdown((conference as { startDate: string }).startDate)}
                         </p>
                     </td>
