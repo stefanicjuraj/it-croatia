@@ -14,7 +14,7 @@ export const TableBody = ({ companies }: { companies: Array<object> }) => {
             {companies.map((company, index) => (
                 <tr key={index} className={`${style.background} ${style.border} hover:shadow hover:shadow-indigo-300`}>
                     <a href={(company as { Website: string })["Website"]} target="_blank" rel="noopener noreferrer">
-                        <td className={`text-lg px-7 py-7 whitespace-nowrap ${style.textTableBody}`}>
+                        <td className={`text-md px-7 py-5 whitespace-nowrap ${style.textTableBody}`}>
                             {(company as { Company: string }).Company}
                             <br />
                             <a className={`text-sm ${style.linkText} hover:underline`}
@@ -25,7 +25,7 @@ export const TableBody = ({ companies }: { companies: Array<object> }) => {
                             </a>
                         </td>
                     </a>
-                    <td className={`text-xs ${style.textTableBody} px-5 py-7 whitespace-nowrap`}>
+                    <td className={`text-xs ${style.textTableBody} px-5 py-5 whitespace-nowrap`}>
                         {(company as { Industry?: string[] }).Industry?.map((industry, index) => (
                             <span className={`px-3 py-2 mr-1 ${style.backgroundIndustry} ${style.industryText} rounded-lg`}
                                 key={index}
@@ -34,13 +34,13 @@ export const TableBody = ({ companies }: { companies: Array<object> }) => {
                             </span>
                         ))}
                     </td>
-                    <td className={`px-7 py-7 text-md ${style.textTableBody}`}>
+                    <td className={`px-7 py-5 text-md ${style.textTableBody}`}>
                         {(company as { Location: string[] }).Location.join(' | ')}
                     </td>
-                    <td className={`px-8 py-7 text-md ${style.textTableBody}`}>
+                    <td className={`px-8 py-5 text-md ${style.textTableBody}`}>
                         {(company as { Employees: string }).Employees}
                     </td>
-                    <td className={`px-10 py-7 ${style.iconHover}`}>
+                    <td className={`px-10 py-5 ${style.iconHover}`}>
                         <a className={`inline-flex items-center ${style.iconBg}`}
                             href={(company as { LinkedIn: string })["LinkedIn"]}
                             target="_blank" rel="noopener noreferrer"
@@ -48,7 +48,7 @@ export const TableBody = ({ companies }: { companies: Array<object> }) => {
                             <img src={linkedin} className="w-10 h-10" alt="LinkedIn icon" />
                         </a>
                     </td>
-                    <td className={`px-10 py-7 ${style.iconHover}`}>
+                    <td className={`px-10 py-5 ${style.iconHover}`}>
                         <a className="inline-flex items-center rounded"
                             href={(company as { Glassdoor: string })["Glassdoor"]}
                             target="_blank" rel="noopener noreferrer"
@@ -56,7 +56,7 @@ export const TableBody = ({ companies }: { companies: Array<object> }) => {
                             <img src={glassdoor} className="w-7 h-7" alt="Glassdoor icon" />
                         </a>
                     </td>
-                    <td className={`px-10 py-7 ${style.iconHover}`}>
+                    <td className={`px-10 py-5 ${style.iconHover}`}>
                         <a className="inline-flex items-center rounded-full"
                             href={(company as { Reddit: string })["Reddit"]}
                             target="_blank" rel="noopener noreferrer"

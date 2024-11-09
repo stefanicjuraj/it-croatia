@@ -15,7 +15,7 @@ export const TableBody = ({ conferences }: { conferences: Array<object> }) => {
             {conferences.map((conference, index) => (
                 <tr key={index} className={`${style.background} ${style.border} hover:shadow hover:shadow-indigo-300`}>
                     <a href={(conference as { Website: string })["Website"]} target="_blank" rel="noopener noreferrer">
-                        <td className={`text-lg px-7 py-7 whitespace-nowrap ${style.textTableBody}`}>
+                        <td className={`text-md px-7 py-5 whitespace-nowrap ${style.textTableBody}`}>
                             {(conference as { Conference: string, Website: string }).Conference}
                             <p className="mt-4">
                                 {(conference as { Topic: Array<string> }).Topic.map((topic, index) => (
@@ -26,13 +26,13 @@ export const TableBody = ({ conferences }: { conferences: Array<object> }) => {
                             </p>
                         </td>
                     </a>
-                    <td className={`px-7 py-7 text-md ${style.textTableBody}`}>
+                    <td className={`px-7 py-5 text-md ${style.textTableBody}`}>
                         {(conference as { Organizer: string })["Organizer"]}
                     </td>
-                    <td className={`px-7 py-7 text-md ${style.textTableBody}`}>
+                    <td className={`px-7 py-5 text-md ${style.textTableBody}`}>
                         {(conference as { Location: string }).Location}
                     </td>
-                    <td className={`px-7 py-7 text-md whitespace-nowrap ${style.textTableBody}`}>
+                    <td className={`px-7 py-5 text-md whitespace-nowrap ${style.textTableBody}`}>
                         {(conference as { startDate: string, endDate: string }).startDate}
                         <br />
                         {(conference as { endDate: string }).endDate}
@@ -41,7 +41,7 @@ export const TableBody = ({ conferences }: { conferences: Array<object> }) => {
                             {countdown((conference as { startDate: string }).startDate)}
                         </p>
                     </td>
-                    <td className={`px-10 py-7 ${style.iconHover}`}>
+                    <td className={`px-10 py-5 ${style.iconHover}`}>
                         <a className="inline-flex items-center hover:ring-indigo-500 focus:ring-2 focus:outline-none focus:ring-gray-200 rounded-xl"
                             href={(conference as { Ticket: string })["Ticket"]}
                             target="_blank" rel="noopener noreferrer"

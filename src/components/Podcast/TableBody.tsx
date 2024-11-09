@@ -12,7 +12,7 @@ export const TableBody = ({ podcasts }: { podcasts: Array<object> }) => {
             {podcasts.map((podcast, index) => (
                 <tr key={index} className={`${style.background} ${style.border} hover:shadow hover:shadow-indigo-300`}>
                     <a href={(podcast as { Listen: string })["Listen"]} target="_blank" rel="noopener noreferrer">
-                        <td className={`text-lg px-7 py-7 whitespace-nowrap ${style.textTableBody}`}>
+                        <td className={`text-md px-7 py-5 whitespace-nowrap ${style.textTableBody}`}>
                             {(podcast as { Podcast: string }).Podcast}
                             <p className="mt-4">
                                 {(podcast as { Topic: string[] })?.Topic.map((topic, index) => (
@@ -23,17 +23,17 @@ export const TableBody = ({ podcasts }: { podcasts: Array<object> }) => {
                             </p>
                         </td>
                     </a>
-                    <td className={`px-7 py-7 text-md ${style.textTableBody}`}>
+                    <td className={`px-7 py-5 text-md ${style.textTableBody}`}>
                         {(podcast as { Organizer: string })["Organizer"]}
                     </td>
-                    <td className={`px-7 py-7 text-md whitespace-nowrap ${style.textTableBody}`}>
+                    <td className={`px-7 py-5 text-md whitespace-nowrap ${style.textTableBody}`}>
                         {(podcast as { Platforms: string[] })?.Platforms.map((platforms, index) => (
                             <span key={index}>
                                 {platforms}
                             </span>
                         ))}
                     </td>
-                    <td className="text-lg px-9 py-7">
+                    <td className="text-lg px-9 py-5">
                         <a className="inline-flex items-center hover:shadow hover:ring-indigo-500 focus:ring-2 focus:outline-none focus:ring-gray-200 rounded-xl"
                             href={(podcast as { Listen: string })["Listen"]}
                             target="_blank" rel="noopener noreferrer"

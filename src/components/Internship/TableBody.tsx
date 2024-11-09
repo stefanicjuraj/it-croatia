@@ -12,7 +12,7 @@ export const TableBody = ({ internships }: { internships: Array<object> }) => {
             {internships.map((internship, index) => (
                 <tr key={index} className={`${style.background} ${style.border} hover:shadow hover:shadow-indigo-300`}>
                     <a href={(internship as { Apply: string })["Apply"]} target="_blank" rel="noopener noreferrer">
-                        <td className={`text-lg px-7 py-7 whitespace-nowrap ${style.textTableBody}`}>
+                        <td className={`text-md px-7 py-5 whitespace-nowrap ${style.textTableBody}`}>
                             {(internship as { Internship: string }).Internship}
                             <p className="mt-4">
                                 {(internship as { Department: string[] }).Department.map((topic, index) => (
@@ -23,10 +23,10 @@ export const TableBody = ({ internships }: { internships: Array<object> }) => {
                             </p>
                         </td>
                     </a>
-                    <td className={`px-7 py-7 text-md ${style.textTableBody}`}>
+                    <td className={`px-7 py-5 text-md ${style.textTableBody}`}>
                         {(internship as { Company: string })?.Company}
                     </td>
-                    <td className="px-10 text-lg py-7">
+                    <td className="px-10 text-lg py-5">
                         <a className="inline-flex items-center hover:ring-indigo-500 focus:ring-2 focus:outline-none focus:ring-gray-200 rounded-xl"
                             href={(internship as { Apply: string })["Apply"]}
                             target="_blank" rel="noopener noreferrer"

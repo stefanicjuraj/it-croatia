@@ -12,7 +12,7 @@ export const TableBody = ({ certificate }: { certificate: Array<object> }) => {
             {certificate.map((certificate, index) => (
                 <tr key={index} className={`${style.background} ${style.border} hover:shadow hover:shadow-indigo-300`}>
                     <a href={(certificate as { Enroll: string })["Enroll"]} target="_blank" rel="noopener noreferrer">
-                        <td className={`text-lg px-7 py-7 whitespace-nowrap ${style.textTableBody}`}>
+                        <td className={`text-md px-7 py-5 whitespace-nowrap ${style.textTableBody}`}>
                             {(certificate as { Certificate: string }).Certificate}
                             <p className="mt-4">
                                 {(certificate as { Topic: string[] }).Topic.map((topic, index) => (
@@ -23,10 +23,10 @@ export const TableBody = ({ certificate }: { certificate: Array<object> }) => {
                             </p>
                         </td>
                     </a>
-                    <td className={`px-7 py-7 text-md ${style.textTableBody}`}>
+                    <td className={`px-7 py-5 text-md ${style.textTableBody}`}>
                         {(certificate as { Organizer: string })["Organizer"]}
                     </td>
-                    <td className="px-10 text-lg py-7">
+                    <td className="px-10 text-lg py-5">
                         <a href={(certificate as { Enroll: string })["Enroll"]} className="inline-flex items-center hover:ring-indigo-500 focus:ring-2 focus:outline-none focus:ring-gray-200 rounded-xl" target="_blank" rel="noopener noreferrer"
                         >
                             <img src={apply} className="w-8 h-8" alt="Apply for certificate icon" />
