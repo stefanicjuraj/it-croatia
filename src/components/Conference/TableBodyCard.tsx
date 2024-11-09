@@ -52,7 +52,7 @@ export const TableBodyCard = ({ conferences }: { conferences: Array<object> }) =
                             </span>
                         </p>
                         <hr className={`my-5 ${style.border}`} />
-                        <p className={`mx-auto ${style.text} text-sm text-center inline-flex ${style.backgroundFilters} px-5 py-3 rounded-lg`}>
+                        <p className={`mx-auto ${style.text} text-sm font-bold text-center inline-flex ${style.backgroundFilters} px-5 py-3 rounded-lg`}>
                             <span className="flex items-center mx-auto">
                                 <span className="flex w-2 h-2 mr-3 bg-indigo-300 rounded-lg animate-pulse"></span>
                             </span>
