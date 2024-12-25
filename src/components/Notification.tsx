@@ -22,7 +22,7 @@ export default function Notification() {
                 </div>
                 <div className="px-4 my-4">
                     <p className="text-sm">
-                        • Browse IT related terms, phrases, and definitions in the dictionary.
+                        Browse IT related terms, phrases, and definitions in the dictionary.
                     </p>
                     <Link to="/dictionary">
                         <p className={`text-sm text-center p-3 mx-2 my-2 ${style.backgroundFilters} rounded-lg`}>
@@ -32,21 +32,21 @@ export default function Notification() {
                 </div>
                 <div className="px-4 my-4">
                     <p className="text-sm">
-                        • Search remote-friendly companies by applying the remote location filter.
+                        Search remote-friendly companies by applying the remote location filter.
                     </p>
                     <Link to="/companies">
                         <p className={`text-sm text-center p-3 mx-2 my-2 ${style.backgroundFilters} rounded-lg`}>
-                            /companies &rarr; Location &rarr; Remote
+                            it-croatia.com/companies &rarr; Location &rarr; Remote
                         </p>
                     </Link>
                 </div>
                 <div className="px-4 my-4">
                     <p className="text-sm">
-                        • Toggle between the conferences table and card view modes.
+                        Toggle between the conferences table and card view modes.
                     </p>
                     <Link to="/conferences">
                         <p className={`text-sm text-center p-3 mx-2 my-2 ${style.backgroundFilters} rounded-lg`}>
-                            /conferences &rarr; Toggle view
+                            it-croatia.com/conferences &rarr; Toggle view
                         </p>
                     </Link>
                 </div>
