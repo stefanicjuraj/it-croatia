@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 // Components
-import Subscribe from "../components/Subscribe";
 import Footer from "../components/Footer";
 // Utils
 import { useTheme } from "../utils/Theme";
@@ -356,19 +355,11 @@ export default function Home() {
                     >
                         <img
                             src={redditImage}
-                            className="w-full mx-auto mt-16 mb-32 shadow-md sm:w-1/3 rounded-xl hover:border-2 hover:border-indigo-500"
+                            className="w-full mx-auto mt-16 mb-16 shadow-md sm:w-1/3 rounded-xl hover:border-2 hover:border-indigo-500"
                         ></img>
                     </a>
-                    <h2 className="mb-4 text-5xl font-bold">Monthly updates</h2>
-                    <h3 className="max-w-screen-sm mx-auto text-xl italic font-normal">
-                        Receive monthly updates of the additions of newly
-                        established entities and removals of inactive or defunct
-                        entities from the collection.
-                    </h3>
-                    <Subscribe />
                 </div>
             </section>
-
             <Footer />
         </div>
     );
