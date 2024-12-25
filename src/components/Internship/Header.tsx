@@ -10,9 +10,6 @@ export default function Header() {
     return (
         <header className={`max-w-screen-xl mx-auto mb-16 sm:p-16 px-8 py-12 ${style.backgroundHeader} rounded-3xl text-left ${style.shadowHeader}`}>
             <div className="flex items-center mb-8">
-                <div className={`p-2 rounded-lg ${style.backgroundBody} mr-3`}>
-                    <img src={internship} className="w-9 w-9" alt="Internship icon" />
-                </div>
                 <h1 className={`text-4xl font-bold ${style.headingH1} sm:text-6xl`}>
                     Internships
                 </h1>
