@@ -19,7 +19,7 @@ export default function Conferences() {
     const [conferenceSearch, setConferenceSearch] = useState("");
     const [selectLocations, setselectLocations] = useState<string[]>([]);
     const [locations, setLocations] = useState<string[]>([]);
-    const [sortOrder, setSortOrder] = useState('');
+    const [sortOrder, setSortOrder] = useState('asc');
     const { theme, themeClasses } = useTheme();
     const style = themeClasses(theme);
     const [viewMode, setViewMode] = useState('table');
