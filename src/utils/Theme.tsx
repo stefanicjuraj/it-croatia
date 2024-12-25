@@ -82,7 +82,7 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
             ? {
                 // background
                 backgroundBody: "bg-[#111]",
-                background: "bg-[#222]",
+                background: "bg-indigo-400",
                 backgroundNavbar: "bg-[#111]",
                 backgroundHeader: "bg-[#222]",
                 backgroundFilters: "bg-[#333]",
@@ -90,7 +90,7 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
                 backgroundIndustry: "bg-indigo-500",
                 backgroundHeaderText: "bg-[#333]",
                 // heading
-                headingH1: "text-indigo-300",
+                headingH1: "text-indigo-500",
                 heading: "text-white",
                 shadowHeader: "shadow-md shadow-[#111]",
                 // border

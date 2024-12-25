@@ -7,6 +7,23 @@ body {
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
+  /* background */
+  --dot-bg: #f9f9f9;
+  --dot-color: #6875F5;
+  --dot-size: 1px;
+  --dot-space: 32px;
+  background: linear-gradient(
+        90deg,
+        var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center / var(--dot-space) var(--dot-space),
+    linear-gradient(
+        var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center / var(--dot-space) var(--dot-space),
+    var(--dot-color);
 }
 
 /* animation */

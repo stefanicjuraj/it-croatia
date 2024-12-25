@@ -10,7 +10,6 @@ import internship from "/assets/icons/internship.svg";
 import education from "/assets/icons/education.svg";
 import certificate from "/assets/icons/certificate.svg";
 import podcast from "/assets/icons/podcast.svg";
-import arrow from "/assets/icons/arrow.svg";
 import community from "/assets/icons/community.svg";
 import placesToWork from "/assets/icons/places-to-work.svg";
 import dictionary from "/assets/icons/dictionary.svg";
@@ -44,15 +43,15 @@ export default function Home() {
     }, []);
 
     return (
-        <div className={`${style.backgroundBody}`}>
+        <div>
             <section className={`mx-auto pt-40 ${style.text} max-w-screen-xl`}>
                 <div className="px-4 py-4 mb-8 text-center animation glow delay-1">
                     <h1
-                        className={`mb-12 font-bold text-center ${style.headingH1} text-7xl`}
+                        className={`mb-12 font-black text-center ${style.headingH1} text-7xl`}
                     >
                         IT Croatia
                     </h1>
-                    <p className="w-full mx-auto text-2xl text-center sm:w-4/5 sm:text-2xl">
+                    <p className="w-full mx-auto text-2xl text-black font-black text-center sm:w-4/5 sm:text-2xl">
                         Explore a collection of IT
                         <span className={`${style.headingH1} mx-2`}>
                             {items[currentItem]}
@@ -63,7 +62,7 @@ export default function Home() {
                 <section className="px-8 py-8 space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-16 md:space-y-0">
                     <Link to="/companies">
                         <div
-                            className={`${style.background} sm:mb-0 mb-8 px-6 py-6 rounded-xl hover:ring-1 hover:ring-indigo-300 animation glow delay-2`}
+                            className={`${style.background} sm:mb-0 mb-8 px-6 py-6 rounded-xl hover:ring-1 hover:ring-indigo-300 animation glow delay-2 border-b-8 border-r-8 border-black`}
                         >
                             <div
                                 className={`flex justify-center items-center mb-4 w-16 h-16 rounded-full ${style.backgroundBody}`}
@@ -77,23 +76,16 @@ export default function Home() {
                             <h1 className="mb-2 text-2xl font-bold">
                                 Companies
                             </h1>
-                            <p className={`${style.text}`}>
+                            <p className={`${style.text} mb-4`}>
                                 View companies conducting business operations,
                                 providing services, or offering consultancy in
                                 Croatia.
                             </p>
-                            <div className="flex flex-row-reverse px-1 py-1">
-                                <img
-                                    src={arrow}
-                                    className="w-8 h-8"
-                                    alt="arrow"
-                                />
-                            </div>
                         </div>
                     </Link>
                     <Link to="/conferences">
                         <div
-                            className={`${style.background} sm:mb-0 mb-8 px-6 py-6 rounded-xl hover:ring-1 hover:ring-indigo-300 animation glow delay-3`}
+                            className={`${style.background} sm:mb-0 mb-8 px-6 py-6 rounded-xl hover:ring-1 hover:ring-indigo-300 animation glow delay-2 border-b-8 border-r-8 border-black`}
                         >
                             <div
                                 className={`flex justify-center items-center mb-4 w-16 h-16 rounded-full ${style.backgroundBody}`}
@@ -107,23 +99,16 @@ export default function Home() {
                             <h1 className="mb-2 text-2xl font-bold">
                                 Conferences
                             </h1>
-                            <p className={`${style.text}`}>
+                            <p className={`${style.text} mb-4`}>
                                 Attend conferences and presentations with
                                 industry knowledge professionals and
                                 enthusiasts.
                             </p>
-                            <div className="flex flex-row-reverse px-1 py-1">
-                                <img
-                                    src={arrow}
-                                    className="w-8 h-8"
-                                    alt="arrow"
-                                />
-                            </div>
                         </div>
                     </Link>
                     <Link to="/education">
                         <div
-                            className={`${style.background} sm:mb-0 mb-8 px-6 py-6 rounded-xl hover:ring-1 hover:ring-indigo-300 animation glow delay-4`}
+                            className={`${style.background} sm:mb-0 mb-8 px-6 py-6 rounded-xl hover:ring-1 hover:ring-indigo-300 animation glow delay-2 border-b-8 border-r-8 border-black`}
                         >
                             <div
                                 className={`flex justify-center items-center mb-4 w-16 h-16 rounded-full ${style.backgroundBody}`}
@@ -137,23 +122,16 @@ export default function Home() {
                             <h1 className="mb-2 text-2xl font-bold">
                                 Education
                             </h1>
-                            <p className={`${style.text}`}>
+                            <p className={`${style.text} mb-4`}>
                                 Enroll into colleges, courses, lectures, and
-                                classes to learn more about IT and software
+                                classes to learn more about the IT world and software
                                 development.
                             </p>
-                            <div className="flex flex-row-reverse px-1 py-1">
-                                <img
-                                    src={arrow}
-                                    className="w-8 h-8"
-                                    alt="arrow"
-                                />
-                            </div>
                         </div>
                     </Link>
                     <Link to="/certificates">
                         <div
-                            className={`${style.background} sm:mb-0 mb-8 px-6 py-6 rounded-xl hover:ring-1 hover:ring-indigo-300 animation glow delay-5`}
+                            className={`${style.background} sm:mb-0 mb-8 px-6 py-6 rounded-xl hover:ring-1 hover:ring-indigo-300 animation glow delay-2 border-b-8 border-r-8 border-black`}
                         >
                             <div
                                 className={`flex justify-center items-center mb-4 w-16 h-16 rounded-full ${style.backgroundBody}`}
@@ -167,23 +145,16 @@ export default function Home() {
                             <h1 className="mb-2 text-2xl font-bold">
                                 Certificates
                             </h1>
-                            <p className={`${style.text}`}>
+                            <p className={`${style.text} mb-4`}>
                                 Search for the certifications to master and
                                 demonstrate your professional knowledge and
                                 skills.
                             </p>
-                            <div className="flex flex-row-reverse px-1 py-1">
-                                <img
-                                    src={arrow}
-                                    className="w-8 h-8"
-                                    alt="arrow"
-                                />
-                            </div>
                         </div>
                     </Link>
                     <Link to="/communities">
                         <div
-                            className={`${style.background} sm:mb-0 mb-8 px-6 py-6 rounded-xl hover:ring-1 hover:ring-indigo-300 animation glow delay-6`}
+                            className={`${style.background} sm:mb-0 mb-8 px-6 py-6 rounded-xl hover:ring-1 hover:ring-indigo-300 animation glow delay-2 border-b-8 border-r-8 border-black`}
                         >
                             <div
                                 className={`flex justify-center items-center mb-4 w-16 h-16 rounded-full ${style.backgroundBody}`}
@@ -197,23 +168,16 @@ export default function Home() {
                             <h1 className="mb-2 text-2xl font-bold">
                                 Communities
                             </h1>
-                            <p className={`${style.text}`}>
+                            <p className={`${style.text} mb-4`}>
                                 Find communities and groups to connect and
                                 network with other IT professionals and
                                 enthusiasts.
                             </p>
-                            <div className="flex flex-row-reverse px-1 py-1">
-                                <img
-                                    src={arrow}
-                                    className="w-8 h-8"
-                                    alt="arrow"
-                                />
-                            </div>
                         </div>
                     </Link>
                     <Link to="/places-to-work">
                         <div
-                            className={`${style.background} sm:mb-0 mb-8 px-6 py-6 rounded-xl hover:ring-1 hover:ring-indigo-300 animation glow delay-7`}
+                            className={`${style.background} sm:mb-0 mb-8 px-6 py-6 rounded-xl hover:ring-1 hover:ring-indigo-300 animation glow delay-2 border-b-8 border-r-8 border-black`}
                         >
                             <div
                                 className={`flex justify-center items-center mb-4 w-16 h-16 rounded-full ${style.backgroundBody}`}
@@ -227,23 +191,16 @@ export default function Home() {
                             <h1 className="mb-2 text-2xl font-bold">
                                 Places to Work
                             </h1>
-                            <p className={`${style.text}`}>
+                            <p className={`${style.text} mb-4`}>
                                 A collection of places to visit and work in the
                                 best coffee shops, bars, and co-working places
                                 in Croatia.
                             </p>
-                            <div className="flex flex-row-reverse px-1 py-1">
-                                <img
-                                    src={arrow}
-                                    className="w-8 h-8"
-                                    alt="arrow"
-                                />
-                            </div>
                         </div>
                     </Link>
                     <Link to="/podcasts">
                         <div
-                            className={`${style.background} sm:mb-0 mb-8 px-6 py-6 rounded-xl hover:ring-1 hover:ring-indigo-300 animation glow delay-8`}
+                            className={`${style.background} sm:mb-0 mb-8 px-6 py-6 rounded-xl hover:ring-1 hover:ring-indigo-300 animation glow delay-2 border-b-8 border-r-8 border-black`}
                         >
                             <div
                                 className={`flex justify-center items-center mb-4 w-16 h-16 rounded-full ${style.backgroundBody}`}
@@ -257,23 +214,16 @@ export default function Home() {
                             <h1 className="mb-2 text-2xl font-bold">
                                 Podcasts
                             </h1>
-                            <p className={`${style.text}`}>
+                            <p className={`${style.text} mb-4`}>
                                 Listen to podcasts and interviews about IT
                                 related topics with industry professionals and
                                 enthusiasts.
                             </p>
-                            <div className="flex flex-row-reverse px-1 py-1">
-                                <img
-                                    src={arrow}
-                                    className="w-8 h-8"
-                                    alt="arrow"
-                                />
-                            </div>
                         </div>
                     </Link>
                     <Link to="/internships">
                         <div
-                            className={`${style.background} sm:mb-0 mb-8 px-6 py-6 rounded-xl hover:ring-1 hover:ring-indigo-300 animation glow delay-9`}
+                            className={`${style.background} sm:mb-0 mb-8 px-6 py-6 rounded-xl hover:ring-1 hover:ring-indigo-300 animation glow delay-2 border-b-8 border-r-8 border-black`}
                         >
                             <div
                                 className={`flex justify-center items-center mb-4 w-16 h-16 rounded-full ${style.backgroundBody}`}
@@ -287,22 +237,15 @@ export default function Home() {
                             <h1 className="mb-2 text-2xl font-bold">
                                 Internships
                             </h1>
-                            <p className={`${style.text}`}>
+                            <p className={`${style.text} mb-4`}>
                                 Start your career and enhance your professional
                                 knowledge by applying to internship programs.
                             </p>
-                            <div className="flex flex-row-reverse px-1 py-1">
-                                <img
-                                    src={arrow}
-                                    className="w-8 h-8"
-                                    alt="arrow"
-                                />
-                            </div>
                         </div>
                     </Link>
                     <Link to="/dictionary">
                         <div
-                            className={`${style.background} sm:mb-0 mb-8 px-6 py-6 rounded-xl hover:ring-1 hover:ring-indigo-300 animation glow delay-9`}
+                            className={`${style.background} sm:mb-0 mb-8 px-6 py-6 rounded-xl hover:ring-1 hover:ring-indigo-300 animation glow delay-2 border-b-8 border-r-8 border-black`}
                         >
                             <div
                                 className={`flex justify-center items-center mb-4 w-16 h-16 rounded-full ${style.backgroundBody}`}
@@ -316,18 +259,11 @@ export default function Home() {
                             <h1 className="mb-2 text-2xl font-bold">
                                 Dictionary
                             </h1>
-                            <p className={`${style.text}`}>
+                            <p className={`${style.text} mb-4`}>
                                 View a collection of IT words, terms, phrases,
                                 and definitions translated from English to
                                 Croatian language.
                             </p>
-                            <div className="flex flex-row-reverse px-1 py-1">
-                                <img
-                                    src={arrow}
-                                    className="w-7 h-7"
-                                    alt="arrow"
-                                />
-                            </div>
                         </div>
                     </Link>
                 </section>
