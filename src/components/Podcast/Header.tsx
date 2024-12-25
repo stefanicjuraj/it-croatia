@@ -1,7 +1,4 @@
-// Utils
 import { useTheme } from "../../utils/Theme";
-// Icons
-import podcast from "/assets/icons/podcast.svg";
 
 export default function Header() {
     const { theme, themeClasses } = useTheme();

@@ -1,7 +1,4 @@
-// Utils
 import { useTheme } from "../../utils/Theme";
-// Icons
-import education from "/assets/icons/education.svg";
 
 export default function Header() {
     const { theme, themeClasses } = useTheme();

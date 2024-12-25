@@ -1,7 +1,4 @@
-// Utils
 import { useTheme } from "../../utils/Theme";
-// Icons
-import company from "/assets/icons/company.svg";
 
 export default function Header() {
     const { theme, themeClasses } = useTheme();

@@ -1,7 +1,4 @@
-// Utils
 import { useTheme } from "../../utils/Theme";
-// Icons
-import placesToWork from "/assets/icons/places-to-work.svg";
 
 export default function Header() {
     const { theme, themeClasses } = useTheme();
