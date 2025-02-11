@@ -17,7 +17,7 @@ export const TableBodyCard = ({ conferences }: { conferences: Array<object> }) =
         <section className="max-w-screen-xl px-4 py-4 mx-auto space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 md:space-y-0" >
             {conferences.map((conference, index) => (
                 <div key={index} className={`${style.background} sm:mb-0 mb-8 px-6 py-6 rounded-xl hover:ring-1 hover:ring-indigo-300`}>
-                    <a href={(conference as { Ticket: string })["Ticket"]}
+                    <a href={(conference as { Website: string })["Website"]}
                         target="_blank" rel="noopener noreferrer"
                     >
                         <div className={`flex justify-center items-center mb-4 w-14 h-14 rounded-lg ${style.backgroundBody}`}>

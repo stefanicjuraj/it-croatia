@@ -46,7 +46,7 @@ export const TableBody = ({ conferences }: { conferences: Array<object> }) => {
                     </td>
                     <td className={`px-10 py-5 ${style.iconHover}`}>
                         <a className="inline-flex items-center hover:ring-indigo-500 focus:ring-2 focus:outline-none focus:ring-gray-200 rounded-xl"
-                            href={(conference as { Ticket: string })["Ticket"]}
+                            href={(conference as { Website: string })["Website"]}
                             target="_blank" rel="noopener noreferrer"
                         >
                             <img src={ticket} className="w-8 h-8" alt="Conference ticket icon" />
